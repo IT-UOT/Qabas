@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613538864977",
+    "project_id": "it-mentor-f477c",
+    "storage_bucket": "it-mentor-f477c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613538864977:android:f270d70b5379218c5c7d70",
+        "android_client_info": {
+          "package_name": "ly.itmentor.itmentor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613538864977-8ne2vk7k4pons1meldnfe0mr2u55vosd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKKEi2AaVRBDiFksoAs6JFN4BU99YwAVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613538864977-8ne2vk7k4pons1meldnfe0mr2u55vosd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
