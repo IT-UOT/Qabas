@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:itmentor/data/department_repository.dart';
+import 'package:itmentor/services/locator.dart';
 import '../blocs/home_screen_bloc/home_screen_cubit.dart';
 import '../services/api_service.dart';
 import 'package:http/http.dart' as http;
@@ -12,7 +13,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => HomeScreenCubit(DepartmentRepository(ApiService(http.Client()))),
+      // the cubit should be implemented by injectable so it can be general in the app
+      create: (_) => HomeScreenCubit(locator<DepartmentRepository>()),
+
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(top: 24.0, left: 16, right: 16),
