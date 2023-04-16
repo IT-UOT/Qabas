@@ -1,8 +1,10 @@
 import 'package:itmentor/models/department.dart';
 import 'package:itmentor/services/api_service.dart';
+import 'package:itmentor/services/fake_data_service.dart';
 
 class DepartmentRepository {
-  final ApiService _apiService;
+  final FakeDataService _apiService;
+
 
   DepartmentRepository(this._apiService);
 

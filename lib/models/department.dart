@@ -1,26 +1,24 @@
 
-import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'department_model.freezed.dart';
 
-@freezed
-class DepartmentModel with _$DepartmentModel {
-  final String name;
+class DepartmentModel {
+final String name;
 
-  const factory DepartmentModel({
-    required String name,
-  }) = _DepartmentModel;
+DepartmentModel({required this.name});
 
-  factory DepartmentModel.fromJson(Map<String, dynamic> json) => _$DepartmentModelFromJson(json);
-
-  Map<String, dynamic> toJson() => _$DepartmentModelToJson(this);
-
-  factory DepartmentModel.fromMap(Map<String, dynamic> map) => DepartmentModel(
-    name: map['name'],
+//from json
+factory DepartmentModel.fromJson(Map<String, dynamic> json) {
+  return DepartmentModel(
+    name: json['name'],
   );
 
-  Map<String, dynamic> toMap() => {
-    'name': name,
-  };
+}
 
+// from map
+
+factory DepartmentModel.fromMap(Map<String, dynamic> map) {
+  return DepartmentModel(
+    name: map['name'],
+  );
+}
 }

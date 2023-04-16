@@ -46,14 +46,14 @@ class FirebaseService{
   // fetch all departments as List<DepartmentModel>
   Future<List<DepartmentModel>> fetchDepartments() async {
     final user = _auth.currentUser;
-    if (user == null) {
-      throw Exception('User is null!');
-    }
+    // if (user == null) {
+    //   throw Exception('User is null!');
+    // }
     final snapshot = await _firestore
         .collection('departments')
         .orderBy('createdAt', descending: true)
         .get();
-    return snapshot.docs.map((e) => DepartmentModel.fromMap(e.data())).toList() as List<DepartmentModel>;
+    return snapshot.docs.map((e) => DepartmentModel.fromMap(e.data())).toList();
   }
 
 }
