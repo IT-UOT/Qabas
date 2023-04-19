@@ -29,31 +29,18 @@ class FirebaseService{
     await _auth.signOut();
   }
 
-  // upload department
-  Future<void> uploadDepartment(String departmentName) async {
-    final user = _auth.currentUser;
-    if (user == null) {
-      throw Exception('User is null!');
+  Future<List<DepartmentModel>> fetchData()async{
+    List<DepartmentModel> departments = [];
+    try{
+      var snapshot = await _firestore.collection('departments').get();
+      departments = snapshot.docs.map((doc) => DepartmentModel.fromMap(doc.data())).toList();
+
+    }catch (e){
+      print(e);
+      rethrow;
     }
-    final department = _firestore.collection('departments').doc();
-    await department.set({
-      'name': departmentName,
-      'userId': user.uid,
-      'createdAt': FieldValue.serverTimestamp(),
-    });
+    return departments;
   }
 
-  // fetch all departments as List<DepartmentModel>
-  Future<List<DepartmentModel>> fetchDepartments() async {
-    final user = _auth.currentUser;
-    // if (user == null) {
-    //   throw Exception('User is null!');
-    // }
-    final snapshot = await _firestore
-        .collection('departments')
-        .orderBy('createdAt', descending: true)
-        .get();
-    return snapshot.docs.map((e) => DepartmentModel.fromMap(e.data())).toList();
-  }
 
 }

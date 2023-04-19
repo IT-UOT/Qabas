@@ -11,6 +11,6 @@ GetIt locator = GetIt.instance;
 void setupLocator() {
   locator.registerLazySingleton(() => LoggingHelper());
   locator.registerLazySingleton(() => FirebaseService());
-  locator.registerLazySingleton(() => DepartmentRepository(FakeDataService()));
+  locator.registerLazySingleton(() => DepartmentRepository(FirebaseService()));
 
 }

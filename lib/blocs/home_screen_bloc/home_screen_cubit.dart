@@ -16,6 +16,7 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
   }
 
   Future<void> _loadDepartments() async {
+     emit( const HomeScreenState.loading());
     try {
       final departments = await _departmentRepository.getDepartments();
       emit(HomeScreenState.loaded(departments));
