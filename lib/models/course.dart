@@ -1,7 +1,7 @@
 class CourseModel{
   final String name;
   //final List<String> requirments;
-  final Map<String,String> links;
+  final Map<String,dynamic> links;
 
   CourseModel({
     required this.name,
