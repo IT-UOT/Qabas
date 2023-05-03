@@ -63,13 +63,18 @@ class _HomeScreenState extends State<HomeScreen>
               controller: _tabController,
               backgroundColor: Theme.of(context).colorScheme.primary,
               unselectedBackgroundColor: Colors.white,
-              labelStyle: const TextStyle( fontSize: 12,
-                  color: Colors.white, fontWeight: FontWeight.w500),
-              unselectedLabelStyle: const TextStyle(
+              labelStyle: const TextStyle(
+                  fontFamily: 'Alexandria',
                   fontSize: 12,
-                  color: Color(0xff898F9B), fontWeight: FontWeight.w500),
+                  color: Colors.white,
+                  fontWeight: FontWeight.w500),
+              unselectedLabelStyle: const TextStyle(
+                  fontFamily: 'Alexandria',
+                  fontSize: 12,
+                  color: Color(0xff898F9B),
+                  fontWeight: FontWeight.w500),
               borderWidth: 2,
-              borderColor: Colors.transparent,
+              borderColor: Theme.of(context).colorScheme.primary,
               unselectedBorderColor: const Color(0xffD1DAE9),
               radius: 100,
               contentPadding: const EdgeInsets.symmetric(horizontal: 20),
@@ -104,17 +109,29 @@ class _HomeScreenState extends State<HomeScreen>
                         itemCount: department.courses.length,
                         physics: const BouncingScrollPhysics(),
                         itemBuilder: (context, index) {
-                          return Card(
-                            elevation: 0,
-                            shape: const RoundedRectangleBorder(
-                              side: BorderSide(
-                                color: Color(0xffD1DAE9),
-                                width: 2,
-                              ),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12)),
+                          return Padding(
+                            padding: const EdgeInsets.only(
+                              top: 8,
+                              bottom: 8,
+                              left: 8,
                             ),
                             child: ExpansionTile(
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Color(0xffD1DAE9),
+                                  width: 2,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12)),
+                              ),
+                              collapsedShape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  color: Color(0xffD1DAE9),
+                                  width: 2,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12)),
+                              ),
                               title: Text(
                                 department.courses[index].name,
                                 style: const TextStyle(
@@ -138,16 +155,24 @@ class _HomeScreenState extends State<HomeScreen>
                                                     color: Color(0xff898F9B))),
                                             onTap: () async {
                                               // launch url
-                                              launchUrl(
-                                                      Uri.parse(e.value), mode: LaunchMode.externalApplication);
+                                              launchUrl(Uri.parse(e.value),
+                                                  mode: LaunchMode
+                                                      .externalApplication);
                                               //    : throw 'Could not launch $e.value';
                                             },
                                           ),
-                                          const Padding(
-                                            padding: EdgeInsets.symmetric(
-                                                horizontal: 16),
-                                            child: Divider(),
-                                          ),
+                                          // check the last link to not add divider
+                                          department.courses[index].links
+                                                      .entries.last.key !=
+                                                  e.key
+                                              ? const Padding(
+                                                  padding: EdgeInsets.symmetric(
+                                                      horizontal: 16),
+                                                  child: Divider(),
+                                                )
+                                              : const SizedBox(
+                                                  height: 8,
+                                                ),
                                         ],
                                       ))
                                   .toList(),
