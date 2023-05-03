@@ -44,7 +44,13 @@ class FirebaseService {
               courses.add(CourseModel.fromMap(course));
 
             });
-            departments.add(DepartmentModel(name: values['name'], courses: courses));
+            List<String> depRequirements = [];
+            values['depRequirements'].keys.forEach((depRequirement) {
+              depRequirements.add(depRequirement);
+            });
+
+
+            departments.add(DepartmentModel(name: values['name'], courses: courses, depMapImgSrc: values['depMapImgSrc'], depRequirements: depRequirements));
           });
         });
        // print(departments);
