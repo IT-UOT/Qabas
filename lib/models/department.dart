@@ -10,7 +10,7 @@ final List<CourseModel> courses;
 DepartmentModel({required this.name, required this.courses});
 
 //from json
-factory DepartmentModel.fromJson(Map<String, dynamic> json) {
+factory DepartmentModel.fromJson(Map<dynamic, dynamic> json) {
   return DepartmentModel(
     name: json['name'],
     courses: json['courses'], 
@@ -20,10 +20,19 @@ factory DepartmentModel.fromJson(Map<String, dynamic> json) {
 
 // from map
 
-factory DepartmentModel.fromMap(Map<String, dynamic> map) {
+factory DepartmentModel.fromMap(Map<dynamic, dynamic> map) {
   return DepartmentModel(
     name: map['name'],
     courses: map['courses'],
   );
+}
+
+// to map
+
+Map<dynamic, dynamic> toMap() {
+  return {
+    'name': name,
+    'courses': courses.map((e) => e.toMap()).toList(),
+  };
 }
 }

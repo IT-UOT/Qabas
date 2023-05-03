@@ -11,10 +11,9 @@ part 'home_screen_cubit.freezed.dart';
 class HomeScreenCubit extends Cubit<HomeScreenState> {
   final DepartmentRepository _departmentRepository;
 
-  HomeScreenCubit(this._departmentRepository) : super(HomeScreenState.initial());
-  // {
-  //   _loadDepartments();
-  // }
+  HomeScreenCubit(this._departmentRepository) : super(const HomeScreenState.initial()){
+     loadDepartments();
+   }
 
   Future<void> loadDepartments() async {
      emit( const HomeScreenState.loading());
@@ -22,6 +21,7 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
       final departments = await _departmentRepository.getDepartments();
       emit(HomeScreenState.loaded(departments));
     } catch (e) {
+      print(e);
       emit(HomeScreenState.error(e.toString()));
     }
   }

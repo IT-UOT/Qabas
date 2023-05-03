@@ -50,3 +50,4 @@ To get started with the app, follow these instructions:
 
 Contributions to the project are welcome and encouraged! If you find a bug or have a feature request, please submit an issue. If you'd like to contribute code, please fork the repository and submit a pull request.
 
+## Change Log

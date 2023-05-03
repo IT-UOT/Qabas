@@ -1,10 +1,10 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../models/department.dart';
 import '../models/course.dart';
 
-class FirebaseService{
+class FirebaseService {
 
   // static FirebaseService _instance;
   // static FirebaseService get instance {
@@ -16,9 +16,8 @@ class FirebaseService{
 
   // FirebaseService._init();
 
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  //final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
-
 
 
   Future<User?> signInAnonymously() async {
@@ -30,36 +29,48 @@ class FirebaseService{
     await _auth.signOut();
   }
 
-  Future<List<DepartmentModel>> fetchData()async{
+  Future<List<DepartmentModel>> fetchData() async {
+    DatabaseReference ref = FirebaseDatabase.instance.ref().child('departments');
+
     List<DepartmentModel> departments = [];
-    try{
-      var snapshot = await _firestore.collection('Departments').get();
-      var snapshot2 = await _firestore.collection('Departments').doc(snapshot.docs[0].id).collection("Courses").get();
-      var arr = [];
-      // for(int i=0; i<snapshot.docs.length; i++) {
-      //   arr[i] = await _firestore.collection('Departments').doc(snapshot.docs[i].id).collection("Courses").get();
-      // }
-      int i = 0;
-      snapshot.docs.forEach((element) async{
-        arr.add(await _firestore.collection('Departments').doc(snapshot.docs[i].id).collection("Courses").get());
-        i++;
-      });
+    try {
+        // fetch data from firebase database
+        await ref.get().then((DataSnapshot snapshot) {
 
-      snapshot.docs.forEach((element) async{
-        var courses = await  _firestore.collection('Departments').doc(element.id).collection("Courses").get();
+          Map<dynamic, dynamic> values = snapshot.value as Map<dynamic, dynamic>;
+          values.forEach((key, values) {
+            List<CourseModel> courses = [];
+            values['courses'].forEach((course) {
+              courses.add(CourseModel.fromMap(course));
 
-        departments.add(
-            DepartmentModel(
-              name: element.data()["name"],
-              courses: courses.docs.map((element) => CourseModel(name: element.data()['name'], links: element.data()['links'])).toList(),
-            )
-        );
-      });
-       }catch (e){
+            });
+            departments.add(DepartmentModel(name: values['name'], courses: courses));
+          });
+        });
+       // print(departments);
+
+    }
+    catch (e) {
       print(e);
       rethrow;
     }
     return departments;
+  }
+
+
+  Future<void> addData(DepartmentModel departmentModel) async {
+    DatabaseReference ref = FirebaseDatabase.instance.ref().child('departments');
+
+
+    try {
+
+      await ref.push().set(departmentModel.toMap());
+
+    }
+    catch (e) {
+      print(e);
+      rethrow;
+    }
   }
 
 

@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -52,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '613538864977',
     projectId: 'it-mentor-f477c',
     authDomain: 'it-mentor-f477c.firebaseapp.com',
+    databaseURL: 'https://it-mentor-f477c-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'it-mentor-f477c.appspot.com',
     measurementId: 'G-B0L9TQ6VHH',
   );
@@ -61,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:613538864977:android:f270d70b5379218c5c7d70',
     messagingSenderId: '613538864977',
     projectId: 'it-mentor-f477c',
+    databaseURL: 'https://it-mentor-f477c-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'it-mentor-f477c.appspot.com',
   );
 
@@ -69,6 +68,18 @@ class DefaultFirebaseOptions {
     appId: '1:613538864977:ios:67d6a4c4a2f767f05c7d70',
     messagingSenderId: '613538864977',
     projectId: 'it-mentor-f477c',
+    databaseURL: 'https://it-mentor-f477c-default-rtdb.europe-west1.firebasedatabase.app',
+    storageBucket: 'it-mentor-f477c.appspot.com',
+    iosClientId: '613538864977-1gmlniobhh80oqm16ugo33hlrr5bl9so.apps.googleusercontent.com',
+    iosBundleId: 'ly.itmentor.itmentor',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyA0IsFEK3z0xC4o6j-D4pwihmRffNKJusk',
+    appId: '1:613538864977:ios:67d6a4c4a2f767f05c7d70',
+    messagingSenderId: '613538864977',
+    projectId: 'it-mentor-f477c',
+    databaseURL: 'https://it-mentor-f477c-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'it-mentor-f477c.appspot.com',
     iosClientId: '613538864977-1gmlniobhh80oqm16ugo33hlrr5bl9so.apps.googleusercontent.com',
     iosBundleId: 'ly.itmentor.itmentor',
