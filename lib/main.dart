@@ -18,10 +18,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   setupLocator();
-  // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-  //     statusBarColor: Colors.red,
-  //   systemNavigationBarColor: Colors.red,
-  // ));
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
     //statusBarColor: Colors.w, // set color here
     systemNavigationBarColor: Colors.white,
