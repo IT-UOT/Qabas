@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:itmentor/blocs/home_screen_bloc/home_screen_cubit.dart';
 
 import 'package:itmentor/screens/home_screen.dart';
 import 'package:itmentor/services/locator.dart';
@@ -24,7 +25,8 @@ void main() async {
   ));
 
   HydratedBloc.storage = await HydratedStorage.build(storageDirectory:  await getApplicationDocumentsDirectory());
-Bloc.observer = Observer();
+ locator<HomeScreenCubit>().hydrate();
+  Bloc.observer = Observer();
   runApp(MyApp());
 }
 
