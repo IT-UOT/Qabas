@@ -77,7 +77,7 @@ class FirebaseService {
 
     try {
 
-      await ref.push().set(departmentModel.toMap());
+      await ref.push().set(departmentModel.toJson());
 
     }
     catch (e) {

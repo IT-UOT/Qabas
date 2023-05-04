@@ -3,11 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:itmentor/screens/error_screen.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+
 import 'package:itmentor/screens/home_screen.dart';
 import 'package:itmentor/services/locator.dart';
-import 'blocs/home_screen_bloc/home_screen_cubit.dart';
-import 'data/department_repository.dart';
+import 'package:path_provider/path_provider.dart';
+
+import 'blocs/observer.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -20,6 +22,13 @@ void main() async {
   //     statusBarColor: Colors.red,
   //   systemNavigationBarColor: Colors.red,
   // ));
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(
+    //statusBarColor: Colors.w, // set color here
+    systemNavigationBarColor: Colors.white,
+  ));
+
+  HydratedBloc.storage = await HydratedStorage.build(storageDirectory:  await getApplicationDocumentsDirectory());
+Bloc.observer = Observer();
   runApp(MyApp());
 }
 

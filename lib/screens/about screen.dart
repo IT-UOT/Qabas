@@ -16,7 +16,7 @@ class AboutScreen extends StatelessWidget {
             child: const Text('اشريلي قهوة'),
           ),
           const SizedBox(height: 16),
-          const Text("Arab X Ben Nouba")
+          const Text("Arab X Ben Nouba"),
         ],
       ),
     );

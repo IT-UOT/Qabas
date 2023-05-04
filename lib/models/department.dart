@@ -1,46 +1,19 @@
 
-
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'course.dart';
 
-class DepartmentModel {
-final String name;
-final String depMapImgSrc;
-final List<String> depRequirements;
-final List<CourseModel> courses;
+part 'department.g.dart';
+part 'department.freezed.dart';
+@freezed
+class DepartmentModel with _$DepartmentModel {
+const factory DepartmentModel({
+    required String name,
+    required List<CourseModel> courses,
+    required String depMapImgSrc,
+    required List<String> depRequirements,
+  }) = _DepartmentModel;
 
-DepartmentModel({required this.name, required this.courses, required this.depMapImgSrc, required this.depRequirements });
+factory DepartmentModel.fromJson(Map<String, Object> json)  => _$DepartmentModelFromJson(json);
 
-//from json
-factory DepartmentModel.fromJson(Map<dynamic, dynamic> json) {
-  return DepartmentModel(
-    name: json['name'],
-    courses: json['courses'],
-    depMapImgSrc: json['depMapImgSrc'],
-    depRequirements: json['depRequirements'],
-  );
-
-}
-
-// from map
-
-factory DepartmentModel.fromMap(Map<dynamic, dynamic> map) {
-  return DepartmentModel(
-    name: map['name'],
-    courses: map['courses'],
-    depMapImgSrc: map['depMapImgSrc'],
-    depRequirements: map['depRequirements'],
-  );
-}
-
-// to map
-
-Map<dynamic, dynamic> toMap() {
-  return {
-    'name': name,
-    'courses': courses.map((e) => e.toMap()).toList(),
-    'depMapImgSrc': depMapImgSrc,
-    'depRequirements': depRequirements,
-  };
-}
 }

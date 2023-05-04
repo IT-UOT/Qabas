@@ -12,31 +12,52 @@ import '../services/locator.dart';
 import 'error_screen.dart';
 
 class DepartmentsScreen extends StatefulWidget {
-  const DepartmentsScreen({Key? key,}) : super(key: key);
+  const DepartmentsScreen({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<DepartmentsScreen> createState() => _DepartmentsScreenState();
 }
 
-class _DepartmentsScreenState extends State<DepartmentsScreen> with SingleTickerProviderStateMixin{
-
+class _DepartmentsScreenState extends State<DepartmentsScreen>
+    with SingleTickerProviderStateMixin {
   int currentTabIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       // the cubit should be implemented by injectable so it can be general in the app
-      create: (_) => HomeScreenCubit(locator<DepartmentRepository>()),
+      create: (_) => locator<HomeScreenCubit>(),
 
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(
           child: BlocBuilder<HomeScreenCubit, HomeScreenState>(
             builder: (context, state) {
-              return state.maybeWhen(
-                loaded: (departments) {
-                  return DefaultTabController(
+              return state.maybeMap(
+
+                (values)=> Container(),
+                loading: (e) => const Center(child: CircularProgressIndicator()),
+                error: (e) => ErrorScreen(message: e.message),
+                orElse: () => const ErrorScreen(),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/*
+
+                loading: () => const Center(child:  CircularProgressIndicator()),
+                error: (e) => ErrorScreen(message: e),
+                orElse: () => const ErrorScreen(),
+ */
+/*
+DefaultTabController(
                     length: departments.length,
                     initialIndex: currentTabIndex,
                     child: Padding(
@@ -250,16 +271,5 @@ class _DepartmentsScreenState extends State<DepartmentsScreen> with SingleTicker
                         ],
                       ),
                     ),
-                  );
-                },
-                loading: () => const Center(child:  CircularProgressIndicator()),
-                error: (e) => ErrorScreen(message: e),
-                orElse: () => const ErrorScreen(),
-              );
-            },
-          ),
-        ),
-      ),
-    );
-  }
-}
+                  )
+ */

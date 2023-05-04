@@ -1,34 +1,18 @@
-class CourseModel{
-  final String name;
-  final String courseCode;
-  final List<dynamic> requirements;
-  final Map<dynamic, dynamic> links;
+import 'package:freezed_annotation/freezed_annotation.dart';
+part 'course.g.dart';
 
-  CourseModel({
-    required this.name,
-    required this.requirements,
-    required this.links,
-    required this.courseCode,
-  });
+part 'course.freezed.dart';
+//@JsonSerializable(explicitToJson: true)
+@freezed
+class CourseModel with _$CourseModel{
 
-  //from map
-  factory CourseModel.fromMap(Map<dynamic, dynamic> map) {
-    return CourseModel(
-      name: map['name'],
-      requirements: map['requirments'],
-      links: map['links'],
-      courseCode: map['courseCode'],
-    );
-  }
+  const factory CourseModel({
+    required String name,
+    required String courseCode,
+    required List<dynamic> requirements,
+    required Map<dynamic, dynamic> links,
+  }) = _CourseModel;
 
-  // to map
-  Map<dynamic, dynamic> toMap() {
-    return {
-      'name': name,
-      'requirements': requirements,
-      'links': links,
-      'courseCode': courseCode,
-    };
-  }
+  factory CourseModel.fromJson(Map<String, Object> json)  => _$CourseModelFromJson(json);
 
 }

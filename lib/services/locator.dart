@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:itmentor/blocs/home_screen_bloc/home_screen_cubit.dart';
 import 'package:itmentor/services/api_service.dart';
 import 'package:itmentor/services/fake_data_service.dart';
 
@@ -12,5 +13,6 @@ void setupLocator() {
   locator.registerLazySingleton(() => LoggingHelper());
   locator.registerLazySingleton(() => FirebaseService());
   locator.registerLazySingleton(() => DepartmentRepository(FirebaseService()));
+  locator.registerLazySingleton(() => HomeScreenCubit(locator<DepartmentRepository>()));
 
 }

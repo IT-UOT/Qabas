@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen>
 
   int _currentIndex = 0;
   final List<Widget> _tabs = const  [
-    DepartmentsScreen(),
+      DepartmentsScreen(),
     //CoursesScreen(),
     AboutScreen(),
 
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen>
         appBar: AppBar(
 
           title: const Text('مرشد الطالب'),
-       //   centerTitle: false,
+         centerTitle: true,
 
         ),
         body: _tabs[_currentIndex],

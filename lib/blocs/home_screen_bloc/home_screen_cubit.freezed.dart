@@ -14,10 +14,30 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+HomeScreenState _$HomeScreenStateFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'default':
+      return _HomeScreenState.fromJson(json);
+    case 'initial':
+      return _Initial.fromJson(json);
+    case 'loading':
+      return _Loading.fromJson(json);
+    case 'loaded':
+      return _Loaded.fromJson(json);
+    case 'error':
+      return _Error.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'HomeScreenState',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
 /// @nodoc
 mixin _$HomeScreenState {
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DepartmentModel> departments) loaded,
@@ -25,7 +45,8 @@ mixin _$HomeScreenState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DepartmentModel> departments)? loaded,
@@ -33,7 +54,8 @@ mixin _$HomeScreenState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DepartmentModel> departments)? loaded,
@@ -42,7 +64,8 @@ mixin _$HomeScreenState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
@@ -50,7 +73,8 @@ mixin _$HomeScreenState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
@@ -58,7 +82,8 @@ mixin _$HomeScreenState {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
@@ -66,6 +91,7 @@ mixin _$HomeScreenState {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -87,6 +113,143 @@ class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
 }
 
 /// @nodoc
+abstract class _$$_HomeScreenStateCopyWith<$Res> {
+  factory _$$_HomeScreenStateCopyWith(
+          _$_HomeScreenState value, $Res Function(_$_HomeScreenState) then) =
+      __$$_HomeScreenStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_HomeScreenStateCopyWithImpl<$Res>
+    extends _$HomeScreenStateCopyWithImpl<$Res, _$_HomeScreenState>
+    implements _$$_HomeScreenStateCopyWith<$Res> {
+  __$$_HomeScreenStateCopyWithImpl(
+      _$_HomeScreenState _value, $Res Function(_$_HomeScreenState) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_HomeScreenState implements _HomeScreenState {
+  const _$_HomeScreenState({final String? $type}) : $type = $type ?? 'default';
+
+  factory _$_HomeScreenState.fromJson(Map<String, dynamic> json) =>
+      _$$_HomeScreenStateFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'HomeScreenState()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_HomeScreenState);
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<DepartmentModel> departments) loaded,
+    required TResult Function(String message) error,
+  }) {
+    return $default();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<DepartmentModel> departments)? loaded,
+    TResult? Function(String message)? error,
+  }) {
+    return $default?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<DepartmentModel> departments)? loaded,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Error value) error,
+  }) {
+    return $default(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Error value)? error,
+  }) {
+    return $default?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if ($default != null) {
+      return $default(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_HomeScreenStateToJson(
+      this,
+    );
+  }
+}
+
+abstract class _HomeScreenState implements HomeScreenState {
+  const factory _HomeScreenState() = _$_HomeScreenState;
+
+  factory _HomeScreenState.fromJson(Map<String, dynamic> json) =
+      _$_HomeScreenState.fromJson;
+}
+
+/// @nodoc
 abstract class _$$_InitialCopyWith<$Res> {
   factory _$$_InitialCopyWith(
           _$_Initial value, $Res Function(_$_Initial) then) =
@@ -102,9 +265,15 @@ class __$$_InitialCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Initial implements _Initial {
-  const _$_Initial();
+  const _$_Initial({final String? $type}) : $type = $type ?? 'initial';
+
+  factory _$_Initial.fromJson(Map<String, dynamic> json) =>
+      _$$_InitialFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -117,12 +286,14 @@ class _$_Initial implements _Initial {
         (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DepartmentModel> departments) loaded,
@@ -133,7 +304,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DepartmentModel> departments)? loaded,
@@ -144,7 +316,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DepartmentModel> departments)? loaded,
@@ -159,7 +332,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
@@ -170,7 +344,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
@@ -181,7 +356,8 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
@@ -193,10 +369,19 @@ class _$_Initial implements _Initial {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InitialToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Initial implements HomeScreenState {
   const factory _Initial() = _$_Initial;
+
+  factory _Initial.fromJson(Map<String, dynamic> json) = _$_Initial.fromJson;
 }
 
 /// @nodoc
@@ -215,9 +400,15 @@ class __$$_LoadingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Loading implements _Loading {
-  const _$_Loading();
+  const _$_Loading({final String? $type}) : $type = $type ?? 'loading';
+
+  factory _$_Loading.fromJson(Map<String, dynamic> json) =>
+      _$$_LoadingFromJson(json);
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -230,12 +421,14 @@ class _$_Loading implements _Loading {
         (other.runtimeType == runtimeType && other is _$_Loading);
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DepartmentModel> departments) loaded,
@@ -246,7 +439,8 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DepartmentModel> departments)? loaded,
@@ -257,7 +451,8 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DepartmentModel> departments)? loaded,
@@ -272,7 +467,8 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
@@ -283,7 +479,8 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
@@ -294,7 +491,8 @@ class _$_Loading implements _Loading {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
@@ -306,10 +504,19 @@ class _$_Loading implements _Loading {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LoadingToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Loading implements HomeScreenState {
   const factory _Loading() = _$_Loading;
+
+  factory _Loading.fromJson(Map<String, dynamic> json) = _$_Loading.fromJson;
 }
 
 /// @nodoc
@@ -342,10 +549,15 @@ class __$$_LoadedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Loaded implements _Loaded {
-  const _$_Loaded(final List<DepartmentModel> departments)
-      : _departments = departments;
+  const _$_Loaded(final List<DepartmentModel> departments,
+      {final String? $type})
+      : _departments = departments,
+        $type = $type ?? 'loaded';
+
+  factory _$_Loaded.fromJson(Map<String, dynamic> json) =>
+      _$$_LoadedFromJson(json);
 
   final List<DepartmentModel> _departments;
   @override
@@ -354,6 +566,9 @@ class _$_Loaded implements _Loaded {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_departments);
   }
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -369,6 +584,7 @@ class _$_Loaded implements _Loaded {
                 .equals(other._departments, _departments));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_departments));
@@ -381,7 +597,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DepartmentModel> departments) loaded,
@@ -392,7 +609,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DepartmentModel> departments)? loaded,
@@ -403,7 +621,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DepartmentModel> departments)? loaded,
@@ -418,7 +637,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
@@ -429,7 +649,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
@@ -440,7 +661,8 @@ class _$_Loaded implements _Loaded {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
@@ -452,10 +674,19 @@ class _$_Loaded implements _Loaded {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_LoadedToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Loaded implements HomeScreenState {
   const factory _Loaded(final List<DepartmentModel> departments) = _$_Loaded;
+
+  factory _Loaded.fromJson(Map<String, dynamic> json) = _$_Loaded.fromJson;
 
   List<DepartmentModel> get departments;
   @JsonKey(ignore: true)
@@ -493,12 +724,19 @@ class __$$_ErrorCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_Error implements _Error {
-  const _$_Error(this.message);
+  const _$_Error(this.message, {final String? $type})
+      : $type = $type ?? 'error';
+
+  factory _$_Error.fromJson(Map<String, dynamic> json) =>
+      _$$_ErrorFromJson(json);
 
   @override
   final String message;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -513,6 +751,7 @@ class _$_Error implements _Error {
             (identical(other.message, message) || other.message == message));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
@@ -524,7 +763,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
+  TResult when<TResult extends Object?>(
+    TResult Function() $default, {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(List<DepartmentModel> departments) loaded,
@@ -535,7 +775,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult? Function()? $default, {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(List<DepartmentModel> departments)? loaded,
@@ -546,7 +787,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function()? $default, {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(List<DepartmentModel> departments)? loaded,
@@ -561,7 +803,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object?>({
+  TResult map<TResult extends Object?>(
+    TResult Function(_HomeScreenState value) $default, {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
@@ -572,7 +815,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult? Function(_HomeScreenState value)? $default, {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
@@ -583,7 +827,8 @@ class _$_Error implements _Error {
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_HomeScreenState value)? $default, {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
@@ -595,10 +840,19 @@ class _$_Error implements _Error {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ErrorToJson(
+      this,
+    );
+  }
 }
 
 abstract class _Error implements HomeScreenState {
   const factory _Error(final String message) = _$_Error;
+
+  factory _Error.fromJson(Map<String, dynamic> json) = _$_Error.fromJson;
 
   String get message;
   @JsonKey(ignore: true)
