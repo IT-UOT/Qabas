@@ -43,7 +43,7 @@ class _DepartmentsScreenState extends State<DepartmentsScreen>
                     length: departments.length,
                     initialIndex: currentTabIndex,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                      padding: const EdgeInsets.only( right: 16, top: 16),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -82,170 +82,174 @@ class _DepartmentsScreenState extends State<DepartmentsScreen>
                               physics: const BouncingScrollPhysics(),
                               children: [
                                 for (var department in departments)
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 8,
-                                          bottom: 8,
-                                          left: 8,
-                                        ),
-                                        child: ListTile(
-                                          shape: const RoundedRectangleBorder(
-                                            side: BorderSide(
-                                              color: Color(0xffD1DAE9),
-                                              width: 2,
+                                  SingleChildScrollView(
+                                    physics: const BouncingScrollPhysics(),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 8,
+                                            bottom: 8,
+                                            left: 24,
+                                          ),
+                                          child: ListTile(
+                                            shape: const RoundedRectangleBorder(
+                                              side: BorderSide(
+                                                color: Color(0xffD1DAE9),
+                                                width: 2,
+                                              ),
+                                              borderRadius:
+                                              BorderRadius.all(Radius.circular(12)),
                                             ),
-                                            borderRadius:
-                                            BorderRadius.all(Radius.circular(12)),
-                                          ),
-                                          title: const Text(
-                                            "خريطة القسم",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 12,
-                                                color: Colors.black),
-                                          ),
-                                          leading: Icon(
-                                            Icons.map_outlined,
-                                            color: Theme.of(context).colorScheme.primary,
-                                          ),
-                                          trailing: const Icon(
-                                            Icons.arrow_forward_ios,
-                                            color: Color(0xff898F9B),
-                                            size: 12,
-                                          ),
-                                          onTap: () {
-                                            Navigator.of(context).push(MaterialPageRoute(
-                                                builder: (context) => Directionality(
-                                                  textDirection: TextDirection.rtl,
+                                            title: const Text(
+                                              "خريطة القسم",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 12,
+                                                  color: Colors.black),
+                                            ),
+                                            leading: Icon(
+                                              Icons.map_outlined,
+                                              color: Theme.of(context).colorScheme.primary,
+                                            ),
+                                            trailing: const Icon(
+                                              Icons.arrow_forward_ios,
+                                              color: Color(0xff898F9B),
+                                              size: 12,
+                                            ),
+                                            onTap: () {
+                                              Navigator.of(context).push(MaterialPageRoute(
+                                                  builder: (context) => Directionality(
+                                                    textDirection: TextDirection.rtl,
 
-                                                  child: Scaffold(
-                                                    appBar: AppBar(),
-                                                    body:   PhotoViewGallery(
-                                                      scrollPhysics: const BouncingScrollPhysics(),
+                                                    child: Scaffold(
+                                                      appBar: AppBar(),
+                                                      body:   PhotoViewGallery(
+                                                        scrollPhysics: const BouncingScrollPhysics(),
 
-                                                      pageOptions: [
-                                                        PhotoViewGalleryPageOptions(
-                                                          imageProvider: NetworkImage(department.depMapImgSrc),
-                                                          minScale: PhotoViewComputedScale.contained * 5,
-                                                          maxScale: PhotoViewComputedScale.covered * 1,
-                                                          errorBuilder:  (context, error, stackTrace) {
-                                                            return const Center(child: Text("حدث خطأ أثناء تحميل الصورة"));
-                                                          },
+                                                        pageOptions: [
+                                                          PhotoViewGalleryPageOptions(
+                                                            imageProvider: NetworkImage(department.depMapImgSrc),
+                                                            minScale: PhotoViewComputedScale.contained * 5,
+                                                            maxScale: PhotoViewComputedScale.covered * 1,
+                                                            errorBuilder:  (context, error, stackTrace) {
+                                                              return const Center(child: Text("حدث خطأ أثناء تحميل الصورة"));
+                                                            },
 
+                                                          ),
+                                                        ],
+                                                        backgroundDecoration: BoxDecoration(
+                                                          color: Theme.of(context).canvasColor,
                                                         ),
-                                                      ],
-                                                      backgroundDecoration: BoxDecoration(
-                                                        color: Theme.of(context).canvasColor,
+
                                                       ),
-
                                                     ),
-                                                  ),
-                                                )));
-                                            print(department.depMapImgSrc);
-                                          },
-                                        ),
-                                      ),
-                                      const SizedBox(
-                                        height: 8,
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                          top: 8,
-                                          bottom: 8,
-                                          left: 8,
-                                        ),
-                                        child: ExpansionTile(
-                                          leading:  Icon(
-                                            Icons.folder_copy_outlined,
-                                            color:  Theme.of(context).colorScheme.primary,
+                                                  )));
+                                              print(department.depMapImgSrc);
+                                            },
                                           ),
-                                          shape: const RoundedRectangleBorder(
-                                            side: BorderSide(
-                                              color: Color(0xffD1DAE9),
-                                              width: 2,
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 8,
+                                            bottom: 8,
+                                            left: 24,
+                                          ),
+                                          child: ExpansionTile(
+                                            leading:  Icon(
+                                              Icons.folder_copy_outlined,
+                                              color:  Theme.of(context).colorScheme.primary,
                                             ),
-                                            borderRadius:
-                                            BorderRadius.all(Radius.circular(12)),
-                                          ),
-                                          collapsedShape:
-                                          const RoundedRectangleBorder(
-                                            side: BorderSide(
-                                              color: Color(0xffD1DAE9),
-                                              width: 2,
+                                            shape: const RoundedRectangleBorder(
+                                              side: BorderSide(
+                                                color: Color(0xffD1DAE9),
+                                                width: 2,
+                                              ),
+                                              borderRadius:
+                                              BorderRadius.all(Radius.circular(12)),
                                             ),
-                                            borderRadius:
-                                            BorderRadius.all(Radius.circular(12)),
-                                          ),
-                                          title:const  Text(
-                                            "متطلبات القسم",
-                                            style:  TextStyle(
-                                                fontWeight: FontWeight.w500,
-                                                fontSize: 12,
-                                                color: Colors.black),
-                                          ),
-                                          children: department.depRequirements
-                                              .map((e) => Column(
-                                            children: [
-                                              ListTile(
-                                                title: Text(e,
-                                                    style: const TextStyle(
-                                                        fontWeight:
-                                                        FontWeight.w500,
-                                                        fontSize: 12,
-                                                        color: Color(
-                                                            0xff898F9B))),
-
+                                            collapsedShape:
+                                            const RoundedRectangleBorder(
+                                              side: BorderSide(
+                                                color: Color(0xffD1DAE9),
+                                                width: 2,
                                               ),
-                                              department.depRequirements.last!=
-                                                  e
-                                                  ? const Padding(
-                                                padding: EdgeInsets
-                                                    .symmetric(
-                                                    horizontal: 16),
-                                                child: Divider(),
-                                              )
-                                                  : const SizedBox(
-                                                height: 8,
-                                              ),
+                                              borderRadius:
+                                              BorderRadius.all(Radius.circular(12)),
+                                            ),
+                                            title:const  Text(
+                                              "متطلبات القسم",
+                                              style:  TextStyle(
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 12,
+                                                  color: Colors.black),
+                                            ),
+                                            children: department.depRequirements
+                                                .map((e) => Column(
+                                              children: [
+                                                ListTile(
+                                                  title: Text(e,
+                                                      style: const TextStyle(
+                                                          fontWeight:
+                                                          FontWeight.w500,
+                                                          fontSize: 12,
+                                                          color: Color(
+                                                              0xff898F9B))),
 
-                                            ],
-                                          ))
-                                              .toList(),
-                                        ),
-                                      ),
-
-                                      const SizedBox(
-                                        height: 8,
-                                      ),
-                                      const Text(
-                                        "المواد",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14,
-                                            color: Colors.black),
-                                      ),
-                                      const SizedBox(
-                                        height: 8,
-                                      ),
-                                      Expanded(
-                                        child: ListView.builder(
-                                            itemCount: department.courses.length,
-                                            physics: const BouncingScrollPhysics(),
-                                            itemBuilder: (context, index) {
-                                              return Padding(
-                                                padding: const EdgeInsets.only(
-                                                  top: 8,
-                                                  bottom: 8,
-                                                  left: 8,
                                                 ),
-                                                child: CourseWidget( course:  department.courses[index]),
-                                              );
-                                            }),
-                                      ),
-                                    ],
+                                                department.depRequirements.last!=
+                                                    e
+                                                    ? const Padding(
+                                                  padding: EdgeInsets
+                                                      .symmetric(
+                                                      horizontal: 16),
+                                                  child: Divider(),
+                                                )
+                                                    : const SizedBox(
+                                                  height: 8,
+                                                ),
+
+                                              ],
+                                            ))
+                                                .toList(),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        const Text(
+                                          "المواد",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 14,
+                                              color: Colors.black),
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        ...department.courses.map((e) =>  Padding(
+                                          padding: const EdgeInsets.only(
+                                            top: 8,
+                                            bottom: 8,
+                                            left: 24,
+                                          ),
+                                          child: CourseWidget( course:  e),
+                                        )).toList(),
+
+                                        // Expanded(
+                                        //   child: ListView.builder(
+                                        //       itemCount: department.courses.length,
+                                        //       physics: const NeverScrollableScrollPhysics(),
+                                        //       itemBuilder: (context, index) {
+                                        //         return;
+                                        //       }),
+                                        // ),
+                                      ],
+                                    ),
                                   ),
                               ],
                             ),
