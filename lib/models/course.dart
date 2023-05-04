@@ -1,20 +1,23 @@
 class CourseModel{
   final String name;
-  //final List<String> requirments;
+  final String courseCode;
+  final List<dynamic> requirements;
   final Map<dynamic, dynamic> links;
 
   CourseModel({
     required this.name,
-    //required this.requirments,
+    required this.requirements,
     required this.links,
+    required this.courseCode,
   });
 
   //from map
   factory CourseModel.fromMap(Map<dynamic, dynamic> map) {
     return CourseModel(
       name: map['name'],
-      //requirments: map['requirments'],
+      requirements: map['requirments'],
       links: map['links'],
+      courseCode: map['courseCode'],
     );
   }
 
@@ -22,8 +25,9 @@ class CourseModel{
   Map<dynamic, dynamic> toMap() {
     return {
       'name': name,
-      //'requirments': requirments,
+      'requirements': requirements,
       'links': links,
+      'courseCode': courseCode,
     };
   }
 

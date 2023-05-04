@@ -41,7 +41,14 @@ class FirebaseService {
           values.forEach((key, values) {
             List<CourseModel> courses = [];
             values['courses'].forEach((course) {
-              courses.add(CourseModel.fromMap(course));
+               var requirements = course['requirements'].keys.toList();
+              // print(course['courseCode']);
+               // course['requirements'].keys.toList().map((e) {
+               //   print("######$e");
+               //   requirements.add(e);
+               // });
+              //print(course['requirements'].keys.toList());
+              courses.add(CourseModel( name: course['name'], requirements: requirements, links: course['links'], courseCode: course['courseCode'].toString()));
 
             });
             List<String> depRequirements = [];
