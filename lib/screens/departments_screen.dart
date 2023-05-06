@@ -10,6 +10,7 @@ import '../blocs/home_screen_bloc/home_screen_cubit.dart';
 import '../data/department_repository.dart';
 import '../services/locator.dart';
 import 'error_screen.dart';
+import 'widgets/loading_widget.dart';
 
 class DepartmentsScreen extends StatefulWidget {
   const DepartmentsScreen({
@@ -37,8 +38,8 @@ class _DepartmentsScreenState extends State<DepartmentsScreen>
             builder: (context, state) {
               return state.when(
                       () => Container(),
-                  initial: ()=> const Center(child:  CircularProgressIndicator()),
-                  loading: ()=> const Center(child:  CircularProgressIndicator()),
+                  initial: ()=> const LoadingWidget(),
+                  loading: ()=> const LoadingWidget(),
                   loaded: (departments)=> DefaultTabController(
                     length: departments.length,
                     initialIndex: currentTabIndex,

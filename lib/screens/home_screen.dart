@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:itmentor/data/department_repository.dart';
 import 'package:itmentor/models/course.dart';
 import 'package:itmentor/screens/departments_screen.dart';
+import 'package:itmentor/screens/news_screen.dart';
 import 'package:itmentor/screens/widgets/course_widget.dart';
 import 'package:itmentor/services/locator.dart';
 import 'package:photo_view/photo_view.dart';
@@ -30,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen>
   int _currentIndex = 0;
   final List<Widget> _tabs = const  [
       DepartmentsScreen(),
+    NewsScreen(),
     //CoursesScreen(),
     AboutScreen(),
 
@@ -58,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen>
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               selectedIcon: Icon(Icons.home),
-              label: 'الرئيسية',
+              label: 'الحوش',
             ),
             // NavigationDestination(
             //   icon: Icon(Icons.book_outlined),
@@ -66,9 +68,14 @@ class _HomeScreenState extends State<HomeScreen>
             //   label: 'المواد',
             // ),
             NavigationDestination(
+              icon: Icon(Icons.article_outlined),
+              selectedIcon: Icon(Icons.article),
+              label: 'شن صاير؟',
+            ),
+            NavigationDestination(
               icon: Icon(Icons.info_outline),
               selectedIcon: Icon(Icons.info),
-              label: 'حول التطبيق',
+              label: 'مني انتو!',
             ),
           ],
 

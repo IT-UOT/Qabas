@@ -52,3 +52,4 @@ Contributions to the project are welcome and encouraged! If you find a bug or ha
 
 ## Change Log
 3-may-2023: added "Department Map" & "Department Requirements" to the department screen
+7-may-2023: added "News" tab and almost everything related to it

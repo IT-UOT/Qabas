@@ -24,13 +24,15 @@ void main() async {
     systemNavigationBarColor: Colors.white,
   ));
 
-  HydratedBloc.storage = await HydratedStorage.build(storageDirectory:  await getApplicationDocumentsDirectory());
- locator<HomeScreenCubit>().hydrate();
+  //HydratedBloc.storage = await HydratedStorage.build(storageDirectory:  await getApplicationDocumentsDirectory());
+ //locator<HomeScreenCubit>().hydrate();
   Bloc.observer = Observer();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  //0xFFD87307
+  //0xFF6F07D8
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Alexandria',
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF6F07D8)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFD87307)),
       ),
       home: const HomeScreen(),
     );

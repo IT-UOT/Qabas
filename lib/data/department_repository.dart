@@ -1,20 +1,23 @@
 import 'package:itmentor/models/department.dart';
 import 'package:itmentor/services/api_service.dart';
 import 'package:itmentor/services/fake_data_service.dart';
+import 'package:itmentor/services/locator.dart';
 
 import '../services/firebase_service.dart';
 
 class DepartmentRepository {
   //final FakeDataService _apiService;
-  final FirebaseService _firebaseService;
+  final FirebaseService _firebaseService = locator<FirebaseService>();
+  List<DepartmentModel> departments = [];
 
 
-  DepartmentRepository(this._firebaseService);
+ // DepartmentRepository(this._firebaseService);
 
   Future<List<DepartmentModel>> getDepartments() async {
-    final res = await _firebaseService.fetchData().onError((error, stackTrace) {
+    final res = await _firebaseService.fetchDepartments().onError((error, stackTrace) {
       throw error.toString();
     });
-    return res;
+    departments = res;
+    return departments;
   }
 }

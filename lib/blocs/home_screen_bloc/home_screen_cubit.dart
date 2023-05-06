@@ -1,18 +1,20 @@
-import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../data/department_repository.dart';
 import '../../models/department.dart';
+import '../../services/locator.dart';
+import '../../services/logging_service.dart';
 
 part 'home_screen_state.dart';
 part 'home_screen_cubit.g.dart';
 part 'home_screen_cubit.freezed.dart';
 
-class HomeScreenCubit extends HydratedCubit<HomeScreenState> {
-  final DepartmentRepository _departmentRepository;
+class HomeScreenCubit extends Cubit<HomeScreenState> {
+  final DepartmentRepository _departmentRepository = locator<DepartmentRepository>();
 
-  HomeScreenCubit(this._departmentRepository) : super(const HomeScreenState.initial()){
+  HomeScreenCubit() : super(const HomeScreenState.initial()){
      loadDepartments();
    }
 
@@ -22,7 +24,7 @@ class HomeScreenCubit extends HydratedCubit<HomeScreenState> {
       final departments = await _departmentRepository.getDepartments();
       emit(HomeScreenState.loaded(departments));
     } catch (e) {
-      print(e);
+      locator<LoggingHelper>().error(e.toString());
       emit(HomeScreenState.error(e.toString()));
     }
   }
