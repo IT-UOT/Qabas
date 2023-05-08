@@ -8,6 +8,7 @@ import 'package:itmentor/blocs/home_screen_bloc/home_screen_cubit.dart';
 
 import 'package:itmentor/screens/home_screen.dart';
 import 'package:itmentor/services/locator.dart';
+import 'package:itmentor/utilities/consts.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'blocs/observer.dart';
@@ -31,19 +32,16 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  //0xFFD87307
-  //0xFF6F07D8
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'IT Mentor',
       locale: const Locale('ar'),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        fontFamily: 'Alexandria',
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFD87307)),
-      ),
+      theme: Consts.lightTheme,
+      darkTheme: Consts.darkTheme,
+      themeMode: ThemeMode.light,
       home: const HomeScreen(),
     );
   }

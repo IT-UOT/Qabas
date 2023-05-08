@@ -10,7 +10,7 @@ part 'news_state.dart';
 part 'news_cubit.freezed.dart';
 
 class NewsCubit extends Cubit<NewsState> {
-  final NewsRepository _newsRepository = locator<NewsRepository>();
+  final NewsRepository _newsRepository = NewsRepository();
   NewsCubit() : super(const NewsState.initial()){
     loadNews();
   }

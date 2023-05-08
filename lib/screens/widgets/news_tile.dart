@@ -4,6 +4,8 @@ import 'package:itmentor/models/news.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
+import '../../utilities/consts.dart';
+
 class NewsTile extends StatefulWidget {
   const NewsTile({Key? key, required this.newsModel}) : super(key: key);
   final NewsModel newsModel;
@@ -19,48 +21,45 @@ class _NewsTileState extends State<NewsTile> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        side: BorderSide(
-          color: Theme.of(context).colorScheme.outline,
-        ),
-        borderRadius: const BorderRadius.all(Radius.circular(12)),
-      ),
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+     // elevation: 0,
+
+      margin: const EdgeInsets.symmetric(horizontal: Consts.paddingMedium, vertical: Consts.paddingSmall),
       child: Container(
           padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (widget.newsModel.author != null)
-                Text(
-                  widget.newsModel.author!,
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
               Text(
                 DateFormat.yMMMd()
                     .format(DateTime.parse(widget.newsModel.publishedAt)),
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               Text(
                 widget.newsModel.title,
-                style: Theme.of(context).textTheme.headlineMedium,
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 8),
 
-              AnimatedCrossFade(
-                duration: const Duration(milliseconds: 300),
-                crossFadeState: _showFullText
-                    ? CrossFadeState.showSecond
-                    : CrossFadeState.showFirst,
-                firstChild: SelectableText(
-                  '${widget.newsModel.content.substring(0, 50)}...',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                secondChild: SelectableText(
-                  widget.newsModel.content,
-                  style: Theme.of(context).textTheme.bodyLarge,
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    _showFullText = !_showFullText;
+                  });
+                },
+                child: AnimatedCrossFade(
+                  duration: const Duration(milliseconds: 300),
+                  crossFadeState: _showFullText
+                      ? CrossFadeState.showSecond
+                      : CrossFadeState.showFirst,
+                  firstChild: Text(
+                    '${widget.newsModel.content.substring(0, 100)}...',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  secondChild: Text(
+                    widget.newsModel.content,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -89,48 +88,46 @@ class _NewsTileState extends State<NewsTile> {
                 ),
 
               const SizedBox(height: 8),
-              const Divider(),
+              //const Divider(),
 
-              Row(
-                children: [
-                  FilledButton(
-                      onPressed: () {
-                        setState(() {
-                          _showFullText = !_showFullText;
-                        });
-                      },
-                      child:
-                          Text(_showFullText ? "خلاص عرفت" : "تبي تعرف أكثر؟")),
-                  const SizedBox(width: 8),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.share),
-                  ),
-                  const SizedBox(width: 8),
-                  AnimatedSwitcher(
-                    duration:const Duration(milliseconds: 300),
-                    transitionBuilder: (Widget child, Animation<double> animation) {
-                      return ScaleTransition(
-                        scale: animation,
-                        child: child,
-                      );
-                    },
-                    child: IconButton(
-                      key: ValueKey<bool>(_isFavorite),
-                      icon: Icon(
-                        _isFavorite ? Icons.favorite : Icons.favorite_border,
-                    //    color: _isFavorite ? Colors.red : null,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          _isFavorite = !_isFavorite;
-                        });
-                      },
-                    ),
-                  )
-
-                ],
-              )
+              // Row(
+              //   children: [
+              //     FilledButton(
+              //         onPressed: () {
+              //
+              //         },
+              //         child:
+              //             Text(_showFullText ? "خلاص عرفت" : "تبي تعرف أكثر؟")),
+              //     const SizedBox(width: 8),
+              //     IconButton(
+              //       onPressed: () {},
+              //       icon: const Icon(Icons.share),
+              //     ),
+              //     const SizedBox(width: 8),
+              //     AnimatedSwitcher(
+              //       duration:const Duration(milliseconds: 300),
+              //       transitionBuilder: (Widget child, Animation<double> animation) {
+              //         return ScaleTransition(
+              //           scale: animation,
+              //           child: child,
+              //         );
+              //       },
+              //       child: IconButton(
+              //         key: ValueKey<bool>(_isFavorite),
+              //         icon: Icon(
+              //           _isFavorite ? Icons.favorite : Icons.favorite_border,
+              //       //    color: _isFavorite ? Colors.red : null,
+              //         ),
+              //         onPressed: () {
+              //           setState(() {
+              //             _isFavorite = !_isFavorite;
+              //           });
+              //         },
+              //       ),
+              //     )
+              //
+              //   ],
+              // )
               // Text(
               //   newsModel.content,
               //   style: const TextStyle(

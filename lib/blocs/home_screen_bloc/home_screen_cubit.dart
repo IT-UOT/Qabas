@@ -12,7 +12,7 @@ part 'home_screen_cubit.g.dart';
 part 'home_screen_cubit.freezed.dart';
 
 class HomeScreenCubit extends Cubit<HomeScreenState> {
-  final DepartmentRepository _departmentRepository = locator<DepartmentRepository>();
+  final DepartmentRepository _departmentRepository = DepartmentRepository();
 
   HomeScreenCubit() : super(const HomeScreenState.initial()){
      loadDepartments();

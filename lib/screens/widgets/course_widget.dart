@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itmentor/utilities/consts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../models/course.dart';
@@ -14,44 +15,23 @@ class CourseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      shape: const RoundedRectangleBorder(
-        side: BorderSide(
-          color: Color(0xffD1DAE9),
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
-      collapsedShape: const RoundedRectangleBorder(
-        side: BorderSide(
-          color: Color(0xffD1DAE9),
-          width: 2,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(12)),
-      ),
       title: Text(
         course.name,
-        style: const TextStyle(
-            fontWeight: FontWeight.w500, fontSize: 12, color: Colors.black),
+        style: Theme.of(context).textTheme.titleMedium,
       ),
       subtitle: Text(course.courseCode,
-          style: const TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 12,
-              color: Color(0xff898F9B))),
+          style: Theme.of(context).textTheme.bodyMedium),
       children: course.links.entries
           .map((e) => Column(
                 children: [
                   ListTile(
                     trailing: const Icon(
                       Icons.arrow_forward_ios,
-                      size: 12,
+                      size: Consts.defaultIconSizeSmall,
                       color: Color(0xff898F9B),
                     ),
                     title: Text(e.key,
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
-                            color: Color(0xff898F9B))),
+                        style: Theme.of(context).textTheme.bodyMedium),
                     onTap: () async {
                       // launch url
                       launchUrl(Uri.parse(e.value),
@@ -63,31 +43,24 @@ class CourseWidget extends StatelessWidget {
                   // course.links.entries.last.key != e.key
                   //     ?
                   const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    padding: EdgeInsets.symmetric(horizontal: Consts.paddingMedium),
                     child: Divider(),
                   ),
 
                   if (course.links.entries.last.key == e.key)
                     ListTile(
-                      title: const Text(
+                      title:  Text(
                         "متطلبات المادة",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 12,
-                          color: Colors.black,
-                        ),
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                       subtitle: Text(
                         course.requirements.join("\n"),
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                            color: Color(0xff898F9B)),
+                        style: Theme.of(context).textTheme.bodyMedium,
                       ),
                     ),
                   if (course.links.entries.last.key == e.key)
                     const SizedBox(
-                      height: 16,
+                      height: Consts.paddingMedium,
                     ),
                 ],
               ))

@@ -9,6 +9,7 @@ class NewsModel with _$NewsModel{
     required String title,
     required String content,
     required String publishedAt,
+     bool? isPinned,
      String? author,
      String? imageUrl,
      String? url,

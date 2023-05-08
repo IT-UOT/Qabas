@@ -1,19 +1,7 @@
-import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:itmentor/data/department_repository.dart';
-import 'package:itmentor/models/course.dart';
 import 'package:itmentor/screens/departments_screen.dart';
 import 'package:itmentor/screens/news_screen.dart';
-import 'package:itmentor/screens/widgets/course_widget.dart';
-import 'package:itmentor/services/locator.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
-import 'package:url_launcher/url_launcher.dart';
-import '../blocs/home_screen_bloc/home_screen_cubit.dart';
-import '../models/department.dart';
-import '../services/api_service.dart';
-import 'package:http/http.dart' as http;
+
 
 import 'about screen.dart';
 

@@ -51,5 +51,6 @@ To get started with the app, follow these instructions:
 Contributions to the project are welcome and encouraged! If you find a bug or have a feature request, please submit an issue. If you'd like to contribute code, please fork the repository and submit a pull request.
 
 ## Change Log
-3-may-2023: added "Department Map" & "Department Requirements" to the department screen
-7-may-2023: added "News" tab and almost everything related to it
+* 3-may-2023: added "Department Map" & "Department Requirements" to the department screen
+* 7-may-2023: added "News" tab and almost everything related to it
+* 8-may-2023: added "About" tab and almost everything related to it, also added "The dashboard" empty screen, some changes to the way themes work, added consts file

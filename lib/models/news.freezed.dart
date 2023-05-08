@@ -23,6 +23,7 @@ mixin _$NewsModel {
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   String get publishedAt => throw _privateConstructorUsedError;
+  bool? get isPinned => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   String? get imageUrl => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -42,6 +43,7 @@ abstract class $NewsModelCopyWith<$Res> {
       {String title,
       String content,
       String publishedAt,
+      bool? isPinned,
       String? author,
       String? imageUrl,
       String? url});
@@ -63,6 +65,7 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
+    Object? isPinned = freezed,
     Object? author = freezed,
     Object? imageUrl = freezed,
     Object? url = freezed,
@@ -80,6 +83,10 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      isPinned: freezed == isPinned
+          ? _value.isPinned
+          : isPinned // ignore: cast_nullable_to_non_nullable
+              as bool?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -107,6 +114,7 @@ abstract class _$$_NewsModelCopyWith<$Res> implements $NewsModelCopyWith<$Res> {
       {String title,
       String content,
       String publishedAt,
+      bool? isPinned,
       String? author,
       String? imageUrl,
       String? url});
@@ -126,6 +134,7 @@ class __$$_NewsModelCopyWithImpl<$Res>
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
+    Object? isPinned = freezed,
     Object? author = freezed,
     Object? imageUrl = freezed,
     Object? url = freezed,
@@ -143,6 +152,10 @@ class __$$_NewsModelCopyWithImpl<$Res>
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as String,
+      isPinned: freezed == isPinned
+          ? _value.isPinned
+          : isPinned // ignore: cast_nullable_to_non_nullable
+              as bool?,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -166,6 +179,7 @@ class _$_NewsModel implements _NewsModel {
       {required this.title,
       required this.content,
       required this.publishedAt,
+      this.isPinned,
       this.author,
       this.imageUrl,
       this.url});
@@ -180,6 +194,8 @@ class _$_NewsModel implements _NewsModel {
   @override
   final String publishedAt;
   @override
+  final bool? isPinned;
+  @override
   final String? author;
   @override
   final String? imageUrl;
@@ -188,7 +204,7 @@ class _$_NewsModel implements _NewsModel {
 
   @override
   String toString() {
-    return 'NewsModel(title: $title, content: $content, publishedAt: $publishedAt, author: $author, imageUrl: $imageUrl, url: $url)';
+    return 'NewsModel(title: $title, content: $content, publishedAt: $publishedAt, isPinned: $isPinned, author: $author, imageUrl: $imageUrl, url: $url)';
   }
 
   @override
@@ -200,6 +216,8 @@ class _$_NewsModel implements _NewsModel {
             (identical(other.content, content) || other.content == content) &&
             (identical(other.publishedAt, publishedAt) ||
                 other.publishedAt == publishedAt) &&
+            (identical(other.isPinned, isPinned) ||
+                other.isPinned == isPinned) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
@@ -208,8 +226,8 @@ class _$_NewsModel implements _NewsModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, title, content, publishedAt, author, imageUrl, url);
+  int get hashCode => Object.hash(runtimeType, title, content, publishedAt,
+      isPinned, author, imageUrl, url);
 
   @JsonKey(ignore: true)
   @override
@@ -230,6 +248,7 @@ abstract class _NewsModel implements NewsModel {
       {required final String title,
       required final String content,
       required final String publishedAt,
+      final bool? isPinned,
       final String? author,
       final String? imageUrl,
       final String? url}) = _$_NewsModel;
@@ -243,6 +262,8 @@ abstract class _NewsModel implements NewsModel {
   String get content;
   @override
   String get publishedAt;
+  @override
+  bool? get isPinned;
   @override
   String? get author;
   @override

@@ -5,26 +5,18 @@ import 'package:itmentor/models/news.dart';
 import 'package:itmentor/services/locator.dart';
 import 'package:logger/logger.dart';
 
+import '../models/about.dart';
 import '../models/department.dart';
 import '../models/course.dart';
 import 'logging_service.dart';
 
 class FirebaseService {
-  // static FirebaseService _instance;
-  // static FirebaseService get instance {
-  //   if (_instance == null) {
-  //     _instance = FirebaseService._init();
-  //   }
-  //   return _instance;
-  // }
 
-  // FirebaseService._init();
-
-  //final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseDatabase db = FirebaseDatabase.instance;
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
 
+  /// Authentication
   Future<User?> signInAnonymously() async {
     final UserCredential userCredential = await _auth.signInAnonymously();
     return userCredential.user;
@@ -34,6 +26,7 @@ class FirebaseService {
     await _auth.signOut();
   }
 
+  /// Departments
   Future<List<DepartmentModel>> fetchDepartments() async {
     DatabaseReference ref = db.ref().child('departments');
 
@@ -88,6 +81,7 @@ class FirebaseService {
     }
   }
 
+  /// Courses
   Future<void> uploadCourse(
       CourseModel courseModel, String departmentName) async {
     // upload a course to a specific department in firebase firestore
@@ -101,6 +95,7 @@ class FirebaseService {
     }
   }
 
+  /// News
   Future<void> uploadNews(NewsModel news) async {
     // upload new news item to firebase firestore
     try {
@@ -129,5 +124,35 @@ class FirebaseService {
       rethrow;
     }
     return news;
+  }
+
+  /// About
+  Future<AboutModel> fetchAbout() async {
+    // fetch about from firebase firestore
+    late AboutModel about;
+    try {
+      await firestore
+          .collection('about')
+          .get()
+          .then((QuerySnapshot querySnapshot) {
+        for (var doc in querySnapshot.docs) {
+          about = AboutModel.fromJson(doc.data() as Map<String, dynamic>);
+        }
+      });
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+    return about;
+  }
+
+  Future<void> uploadAbout(AboutModel about) async {
+    // upload about to firebase firestore
+    try {
+      await firestore.collection('about').add(about.toJson());
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
   }
 }

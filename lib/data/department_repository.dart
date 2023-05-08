@@ -1,6 +1,4 @@
 import 'package:itmentor/models/department.dart';
-import 'package:itmentor/services/api_service.dart';
-import 'package:itmentor/services/fake_data_service.dart';
 import 'package:itmentor/services/locator.dart';
 
 import '../services/firebase_service.dart';
