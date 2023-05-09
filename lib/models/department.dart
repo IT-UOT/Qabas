@@ -14,6 +14,6 @@ const factory DepartmentModel({
     required List<String> depRequirements,
   }) = _DepartmentModel;
 
-factory DepartmentModel.fromJson(Map<String, Object> json)  => _$DepartmentModelFromJson(json);
+factory DepartmentModel.fromJson(Map<String, dynamic> json)  => _$DepartmentModelFromJson(json);
 
 }

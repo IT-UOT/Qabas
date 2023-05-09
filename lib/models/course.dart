@@ -13,6 +13,6 @@ class CourseModel with _$CourseModel{
     required Map<dynamic, dynamic> links,
   }) = _CourseModel;
 
-  factory CourseModel.fromJson(Map<String, Object> json)  => _$CourseModelFromJson(json);
+  factory CourseModel.fromJson(Map<String, dynamic> json)  => _$CourseModelFromJson(json);
 
 }

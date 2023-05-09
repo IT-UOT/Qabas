@@ -11,7 +11,6 @@ import '../models/course.dart';
 import 'logging_service.dart';
 
 class FirebaseService {
-
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseDatabase db = FirebaseDatabase.instance;
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -28,44 +27,46 @@ class FirebaseService {
 
   /// Departments
   Future<List<DepartmentModel>> fetchDepartments() async {
-    DatabaseReference ref = db.ref().child('departments');
-
     List<DepartmentModel> departments = [];
+    // fetch departments from firebase firestore
     try {
-      // fetch data from firebase database
-      await ref.get().then((DataSnapshot snapshot) {
-        Map<dynamic, dynamic> values = snapshot.value as Map<dynamic, dynamic>;
-        values.forEach((key, values) {
-          List<CourseModel> courses = [];
-          values['courses'].forEach((course) {
-            var requirements = course['requirements'].keys.toList();
-            // print(course['courseCode']);
-            // course['requirements'].keys.toList().map((e) {
-            //   print("######$e");
-            //   requirements.add(e);
-            // });
-            //print(course['requirements'].keys.toList());
-            courses.add(CourseModel(
-                name: course['name'],
-                requirements: requirements,
-                links: course['links'],
-                courseCode: course['courseCode'].toString()));
-          });
-          List<String> depRequirements = [];
-          values['depRequirements'].keys.forEach((depRequirement) {
-            depRequirements.add(depRequirement);
-          });
-
-          departments.add(DepartmentModel(
-              name: values['name'],
-              courses: courses,
-              depMapImgSrc: values['depMapImgSrc'],
-              depRequirements: depRequirements));
-        });
+      await firestore
+          .collection('departments')
+          .get()
+          .then((QuerySnapshot querySnapshot) {
+        for (var doc in querySnapshot.docs) {
+          // locator<LoggingHelper>().debug(doc.data());
+          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+          List<dynamic> coursesIDs = data['courses'];
+          List<CourseModel> coursesList = [];
+          List<dynamic> depRequirements = data["depRequirements"];
+          // fetch courses for each department
+          for (var courseID in coursesIDs) {
+            firestore
+                .collection('courses')
+                .doc(courseID)
+                .get()
+                .then((DocumentSnapshot documentSnapshot) {
+              if (documentSnapshot.exists) {
+                coursesList.add(
+                  CourseModel.fromJson(
+                      documentSnapshot.data() as Map<String, dynamic>),
+                );
+              }
+            });
+          }
+          departments.add(
+            DepartmentModel(
+              name: data['name'],
+              depMapImgSrc: data['depMapImgSrc'],
+              depRequirements: depRequirements.map((e) => e.toString()).toList(),
+              courses: coursesList,
+            ),
+          );
+        }
       });
-      // print(departments);
     } catch (e) {
-      print(e);
+      locator<LoggingHelper>().error(e.toString());
       rethrow;
     }
     return departments;
