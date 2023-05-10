@@ -1,18 +1,21 @@
 import 'package:itmentor/models/department.dart';
-import 'package:itmentor/services/api_service.dart';
+import 'package:itmentor/services/locator.dart';
+
+import '../services/firebase_service.dart';
 
 class DepartmentRepository {
-
-  /*
-   You will get response from the API as JSON
-   your responsiblity:
-     1- You will have to convert from json to model
-   */
+  //final FakeDataService _apiService;
+  final FirebaseService _firebaseService = locator<FirebaseService>();
+  List<DepartmentModel> departments = [];
 
 
-  Future<void> getDepartments()async{
+ // DepartmentRepository(this._firebaseService);
 
-   // return DepartmentModel.fromJson(raw);
-    // return [];
+  Future<List<DepartmentModel>> getDepartments() async {
+    final res = await _firebaseService.fetchDepartments().onError((error, stackTrace) {
+      throw error.toString();
+    });
+    departments = res;
+    return departments;
   }
 }
