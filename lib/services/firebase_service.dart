@@ -33,7 +33,7 @@ class FirebaseService {
       await firestore
           .collection('departments')
           .get()
-          .then((QuerySnapshot querySnapshot) {
+          .then((QuerySnapshot querySnapshot) async{
         for (var doc in querySnapshot.docs) {
           // locator<LoggingHelper>().debug(doc.data());
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
@@ -42,7 +42,7 @@ class FirebaseService {
           List<dynamic> depRequirements = data["depRequirements"];
           // fetch courses for each department
           for (var courseID in coursesIDs) {
-            firestore
+            await firestore
                 .collection('courses')
                 .doc(courseID)
                 .get()
