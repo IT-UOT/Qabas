@@ -55,4 +55,7 @@ Contributions to the project are welcome and encouraged! If you find a bug or ha
 * `7-may-2023:` added "News" tab and almost everything related to it
 * `8-may-2023:` added "About" tab and almost everything related to it, also added "The dashboard" empty screen, some changes to the way themes work, added consts file
 * `9-may-2023:` switch departments from firebase realtime database to firebase firestore
-* `11-may-2023:` fix bug when loading the departments
+* `11-may-2023:`
+    - fix bug when loading the departments
+    - add NavigationRail to the dashboard screen
+ 
