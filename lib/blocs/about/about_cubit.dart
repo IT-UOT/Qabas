@@ -1,6 +1,5 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:itmentor/models/team_member.dart';
 
 import '../../data/about_repository.dart';
 import '../../models/about.dart';

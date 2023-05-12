@@ -3,7 +3,7 @@ import 'package:itmentor/screens/departments_screen.dart';
 import 'package:itmentor/screens/news_screen.dart';
 
 
-import 'about screen.dart';
+import 'about_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key});

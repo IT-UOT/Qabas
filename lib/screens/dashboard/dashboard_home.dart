@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:itmentor/screens/dashboard/tabs/courses_dashboard.dart';
+import 'package:itmentor/screens/dashboard/tabs/departments_dashboard.dart';
+import 'package:itmentor/screens/dashboard/tabs/info_dashboard.dart';
+import 'package:itmentor/screens/dashboard/tabs/news_dashboard.dart';
 import 'package:itmentor/utilities/consts.dart';
 
 class DashboardHome extends StatefulWidget {
@@ -38,7 +42,12 @@ class _DashboardHomeState extends State<DashboardHome> {
     ),
   ];
 
-  final List<Widget> _tabs = [];
+  final List<Widget> _tabs = const [
+    CoursesDashboard(),
+    DepartmentsDashboard(),
+    NewsDashboard(),
+    InfoDashboard(),
+  ];
   final List<String> _titles = [
     'المواد',
     'الأقسام',
@@ -73,21 +82,26 @@ class _DashboardHomeState extends State<DashboardHome> {
                 destinations: destinations,
               ),
               const VerticalDivider(thickness: 1, width: 1),
-              const SizedBox(
-                width: Consts.paddingSmall,
-              ),
               // This is the main content.
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      _titles[_selectedIndex],
-                      style: Theme.of(context).textTheme.titleMedium,
-                    ),
-                    Text('selectedIndex: $_selectedIndex'),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(Consts.paddingSmall),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        _titles[_selectedIndex],
+                        style: Theme.of(context).textTheme.headlineSmall,
+                      ),
+                      const SizedBox(
+                        height: Consts.paddingMedium,
+                      ),
+                      Expanded(
+                        child: _tabs[_selectedIndex],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

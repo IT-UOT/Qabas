@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
+
 
 import '../../data/department_repository.dart';
 import '../../models/department.dart';
@@ -29,33 +29,5 @@ class HomeScreenCubit extends Cubit<HomeScreenState> {
     }
   }
 
-  @override
-  HomeScreenState? fromJson(Map<String, dynamic> json) {
-    try {
-      return HomeScreenState.fromJson(json);
-    } catch (_) {
-      return null;
-    }
-  }
-
-  @override
-  Map<String, dynamic>? toJson(HomeScreenState state) {
-    return state.toJson();
-  }
-
-  @override
-  void onHydrate( event) {
-    // Load state from local storage
-    emit(fromJson(event.data) ?? const HomeScreenState.initial());
-  }
-
-  @override
-  void onDehydrate( event) {
-    // Save state to local storage
-    final state = toJson(this.state);
-    if (state != null) {
-      event.data = state;
-    }
-  }
 
 }

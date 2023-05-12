@@ -3,7 +3,6 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:itmentor/models/news.dart';
 import 'package:itmentor/services/locator.dart';
-import 'package:logger/logger.dart';
 
 import '../models/about.dart';
 import '../models/department.dart';
