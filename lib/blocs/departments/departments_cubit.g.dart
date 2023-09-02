@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_screen_cubit.dart';
+part of 'departments_cubit.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -36,9 +36,7 @@ Map<String, dynamic> _$$_LoadingToJson(_$_Loading instance) =>
 
 _$_Loaded _$$_LoadedFromJson(Map<String, dynamic> json) => _$_Loaded(
       (json['departments'] as List<dynamic>)
-          .map((e) => DepartmentModel.fromJson((e as Map<String, dynamic>).map(
-                (k, e) => MapEntry(k, e as Object),
-              )))
+          .map((e) => DepartmentModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       $type: json['runtimeType'] as String?,
     );

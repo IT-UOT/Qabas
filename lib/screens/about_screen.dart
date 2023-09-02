@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import 'package:itmentor/blocs/about/about_cubit.dart';
 import 'package:itmentor/screens/dashboard/dashboard_home.dart';
 import 'package:itmentor/screens/widgets/loading_widget.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../models/about.dart';
-import '../models/team_member.dart';
 import '../services/locator.dart';
 import '../utilities/consts.dart';
 
@@ -159,15 +158,7 @@ class AboutScreen extends StatelessWidget {
                                   ],
                                 ))
                             .toList(),
-                        const SizedBox(
-                 height: Consts.paddingLarge,),
-                        SizedBox(
-                            width: double.infinity,
-                            child: FilledButton(onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const DashboardHome()));
-                            }, child: const Text("لوحة التحكم"))),
-                        const SizedBox(
-                          height: Consts.paddingLarge,),
+
                       ],
                     ),
                   ),

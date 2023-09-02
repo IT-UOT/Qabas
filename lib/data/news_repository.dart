@@ -1,4 +1,3 @@
-import 'package:logger/logger.dart';
 
 import '../models/news.dart';
 import '../services/firebase_service.dart';

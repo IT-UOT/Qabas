@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'home_screen_cubit.dart';
+part of 'departments_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-HomeScreenState _$HomeScreenStateFromJson(Map<String, dynamic> json) {
+DepartmentsState _$DepartmentsStateFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'default':
       return _HomeScreenState.fromJson(json);
@@ -28,13 +28,13 @@ HomeScreenState _$HomeScreenStateFromJson(Map<String, dynamic> json) {
       return _Error.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'HomeScreenState',
+      throw CheckedFromJsonException(json, 'runtimeType', 'DepartmentsState',
           'Invalid union type "${json['runtimeType']}"!');
   }
 }
 
 /// @nodoc
-mixin _$HomeScreenState {
+mixin _$DepartmentsState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function() $default, {
@@ -95,16 +95,16 @@ mixin _$HomeScreenState {
 }
 
 /// @nodoc
-abstract class $HomeScreenStateCopyWith<$Res> {
-  factory $HomeScreenStateCopyWith(
-          HomeScreenState value, $Res Function(HomeScreenState) then) =
-      _$HomeScreenStateCopyWithImpl<$Res, HomeScreenState>;
+abstract class $DepartmentsStateCopyWith<$Res> {
+  factory $DepartmentsStateCopyWith(
+          DepartmentsState value, $Res Function(DepartmentsState) then) =
+      _$DepartmentsStateCopyWithImpl<$Res, DepartmentsState>;
 }
 
 /// @nodoc
-class _$HomeScreenStateCopyWithImpl<$Res, $Val extends HomeScreenState>
-    implements $HomeScreenStateCopyWith<$Res> {
-  _$HomeScreenStateCopyWithImpl(this._value, this._then);
+class _$DepartmentsStateCopyWithImpl<$Res, $Val extends DepartmentsState>
+    implements $DepartmentsStateCopyWith<$Res> {
+  _$DepartmentsStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -121,7 +121,7 @@ abstract class _$$_HomeScreenStateCopyWith<$Res> {
 
 /// @nodoc
 class __$$_HomeScreenStateCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$_HomeScreenState>
+    extends _$DepartmentsStateCopyWithImpl<$Res, _$_HomeScreenState>
     implements _$$_HomeScreenStateCopyWith<$Res> {
   __$$_HomeScreenStateCopyWithImpl(
       _$_HomeScreenState _value, $Res Function(_$_HomeScreenState) _then)
@@ -141,7 +141,7 @@ class _$_HomeScreenState implements _HomeScreenState {
 
   @override
   String toString() {
-    return 'HomeScreenState()';
+    return 'DepartmentsState()';
   }
 
   @override
@@ -242,7 +242,7 @@ class _$_HomeScreenState implements _HomeScreenState {
   }
 }
 
-abstract class _HomeScreenState implements HomeScreenState {
+abstract class _HomeScreenState implements DepartmentsState {
   const factory _HomeScreenState() = _$_HomeScreenState;
 
   factory _HomeScreenState.fromJson(Map<String, dynamic> json) =
@@ -258,7 +258,7 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$_Initial>
+    extends _$DepartmentsStateCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
@@ -277,7 +277,7 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'HomeScreenState.initial()';
+    return 'DepartmentsState.initial()';
   }
 
   @override
@@ -378,7 +378,7 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements HomeScreenState {
+abstract class _Initial implements DepartmentsState {
   const factory _Initial() = _$_Initial;
 
   factory _Initial.fromJson(Map<String, dynamic> json) = _$_Initial.fromJson;
@@ -393,7 +393,7 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$_Loading>
+    extends _$DepartmentsStateCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
       : super(_value, _then);
@@ -412,7 +412,7 @@ class _$_Loading implements _Loading {
 
   @override
   String toString() {
-    return 'HomeScreenState.loading()';
+    return 'DepartmentsState.loading()';
   }
 
   @override
@@ -513,7 +513,7 @@ class _$_Loading implements _Loading {
   }
 }
 
-abstract class _Loading implements HomeScreenState {
+abstract class _Loading implements DepartmentsState {
   const factory _Loading() = _$_Loading;
 
   factory _Loading.fromJson(Map<String, dynamic> json) = _$_Loading.fromJson;
@@ -529,7 +529,7 @@ abstract class _$$_LoadedCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadedCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$_Loaded>
+    extends _$DepartmentsStateCopyWithImpl<$Res, _$_Loaded>
     implements _$$_LoadedCopyWith<$Res> {
   __$$_LoadedCopyWithImpl(_$_Loaded _value, $Res Function(_$_Loaded) _then)
       : super(_value, _then);
@@ -572,7 +572,7 @@ class _$_Loaded implements _Loaded {
 
   @override
   String toString() {
-    return 'HomeScreenState.loaded(departments: $departments)';
+    return 'DepartmentsState.loaded(departments: $departments)';
   }
 
   @override
@@ -683,7 +683,7 @@ class _$_Loaded implements _Loaded {
   }
 }
 
-abstract class _Loaded implements HomeScreenState {
+abstract class _Loaded implements DepartmentsState {
   const factory _Loaded(final List<DepartmentModel> departments) = _$_Loaded;
 
   factory _Loaded.fromJson(Map<String, dynamic> json) = _$_Loaded.fromJson;
@@ -704,7 +704,7 @@ abstract class _$$_ErrorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$HomeScreenStateCopyWithImpl<$Res, _$_Error>
+    extends _$DepartmentsStateCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
       : super(_value, _then);
@@ -740,7 +740,7 @@ class _$_Error implements _Error {
 
   @override
   String toString() {
-    return 'HomeScreenState.error(message: $message)';
+    return 'DepartmentsState.error(message: $message)';
   }
 
   @override
@@ -849,7 +849,7 @@ class _$_Error implements _Error {
   }
 }
 
-abstract class _Error implements HomeScreenState {
+abstract class _Error implements DepartmentsState {
   const factory _Error(final String message) = _$_Error;
 
   factory _Error.fromJson(Map<String, dynamic> json) = _$_Error.fromJson;

@@ -7,6 +7,7 @@ part 'course.freezed.dart';
 class CourseModel with _$CourseModel{
 
   const factory CourseModel({
+    required String id,
     required String name,
     required String courseCode,
     required List<dynamic> requirements,
