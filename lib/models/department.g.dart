@@ -10,9 +10,7 @@ _$_DepartmentModel _$$_DepartmentModelFromJson(Map<String, dynamic> json) =>
     _$_DepartmentModel(
       name: json['name'] as String,
       courses: (json['courses'] as List<dynamic>)
-          .map((e) => CourseModel.fromJson((e as Map<String, dynamic>).map(
-                (k, e) => MapEntry(k, e as Object),
-              )))
+          .map((e) => CourseModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       depMapImgSrc: json['depMapImgSrc'] as String,
       depRequirements: (json['depRequirements'] as List<dynamic>)

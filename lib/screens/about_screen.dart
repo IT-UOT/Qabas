@@ -158,15 +158,7 @@ class AboutScreen extends StatelessWidget {
                                   ],
                                 ))
                             .toList(),
-                        const SizedBox(
-                 height: Consts.paddingLarge,),
-                        SizedBox(
-                            width: double.infinity,
-                            child: FilledButton(onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const DashboardHome()));
-                            }, child: const Text("لوحة التحكم"))),
-                        const SizedBox(
-                          height: Consts.paddingLarge,),
+
                       ],
                     ),
                   ),

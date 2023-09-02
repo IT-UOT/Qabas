@@ -5,7 +5,7 @@ import 'package:itmentor/screens/widgets/course_widget.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 
-import '../blocs/home_screen_bloc/home_screen_cubit.dart';
+import '../blocs/departments/departments_cubit.dart';
 import '../services/locator.dart';
 import '../utilities/consts.dart';
 import 'error_screen.dart';
@@ -28,12 +28,12 @@ class _DepartmentsScreenState extends State<DepartmentsScreen>
   Widget build(BuildContext context) {
     return BlocProvider(
       // the cubit should be implemented by injectable so it can be general in the app
-      create: (_) => locator<HomeScreenCubit>(),
+      create: (_) => locator<DepartmentsCubit>(),
 
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(
-          child: BlocBuilder<HomeScreenCubit, HomeScreenState>(
+          child: BlocBuilder<DepartmentsCubit, DepartmentsState>(
             builder: (context, state) {
               return state.when(
                       () => Container(),

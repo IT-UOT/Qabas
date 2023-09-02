@@ -61,47 +61,57 @@ class _DashboardHomeState extends State<DashboardHome> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         body: SafeArea(
-          child: Row(
-            children: <Widget>[
-              NavigationRail(
-                selectedIndex: _selectedIndex,
-                groupAlignment: groupAlignment,
-                trailing: FloatingActionButton(
+          child: Stack(
+            children: [
+
+              Row(
+                children: <Widget>[
+                  NavigationRail(
+                    selectedIndex: _selectedIndex,
+                    groupAlignment: groupAlignment,
+
+                    onDestinationSelected: (int index) {
+                      setState(() {
+                        _selectedIndex = index;
+                      });
+                    },
+                    labelType: labelType,
+                    destinations: destinations,
+                  ),
+                  const VerticalDivider(thickness: 1, width: 1),
+                  // This is the main content.
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(Consts.paddingSmall),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            _titles[_selectedIndex],
+                            style: Theme.of(context).textTheme.headlineSmall,
+                          ),
+                          const SizedBox(
+                            height: Consts.paddingMedium,
+                          ),
+                          Expanded(
+                            child: _tabs[_selectedIndex],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Positioned(
+                right: Consts.paddingMedium ,
+                bottom: Consts.paddingMedium,
+                child: FloatingActionButton(
                   elevation: 0,
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                   child: const Icon(Icons.exit_to_app),
-                ),
-                onDestinationSelected: (int index) {
-                  setState(() {
-                    _selectedIndex = index;
-                  });
-                },
-                labelType: labelType,
-                destinations: destinations,
-              ),
-              const VerticalDivider(thickness: 1, width: 1),
-              // This is the main content.
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(Consts.paddingSmall),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        _titles[_selectedIndex],
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      ),
-                      const SizedBox(
-                        height: Consts.paddingMedium,
-                      ),
-                      Expanded(
-                        child: _tabs[_selectedIndex],
-                      ),
-                    ],
-                  ),
                 ),
               ),
             ],

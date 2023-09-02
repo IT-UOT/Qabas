@@ -20,6 +20,7 @@ CourseModel _$CourseModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CourseModel {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get courseCode => throw _privateConstructorUsedError;
   List<dynamic> get requirements => throw _privateConstructorUsedError;
@@ -38,7 +39,8 @@ abstract class $CourseModelCopyWith<$Res> {
       _$CourseModelCopyWithImpl<$Res, CourseModel>;
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String courseCode,
       List<dynamic> requirements,
       Map<dynamic, dynamic> links});
@@ -57,12 +59,17 @@ class _$CourseModelCopyWithImpl<$Res, $Val extends CourseModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? courseCode = null,
     Object? requirements = null,
     Object? links = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -92,7 +99,8 @@ abstract class _$$_CourseModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name,
+      {String id,
+      String name,
       String courseCode,
       List<dynamic> requirements,
       Map<dynamic, dynamic> links});
@@ -109,12 +117,17 @@ class __$$_CourseModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? courseCode = null,
     Object? requirements = null,
     Object? links = null,
   }) {
     return _then(_$_CourseModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -139,7 +152,8 @@ class __$$_CourseModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CourseModel implements _CourseModel {
   const _$_CourseModel(
-      {required this.name,
+      {required this.id,
+      required this.name,
       required this.courseCode,
       required final List<dynamic> requirements,
       required final Map<dynamic, dynamic> links})
@@ -149,6 +163,8 @@ class _$_CourseModel implements _CourseModel {
   factory _$_CourseModel.fromJson(Map<String, dynamic> json) =>
       _$$_CourseModelFromJson(json);
 
+  @override
+  final String id;
   @override
   final String name;
   @override
@@ -171,7 +187,7 @@ class _$_CourseModel implements _CourseModel {
 
   @override
   String toString() {
-    return 'CourseModel(name: $name, courseCode: $courseCode, requirements: $requirements, links: $links)';
+    return 'CourseModel(id: $id, name: $name, courseCode: $courseCode, requirements: $requirements, links: $links)';
   }
 
   @override
@@ -179,6 +195,7 @@ class _$_CourseModel implements _CourseModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CourseModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.courseCode, courseCode) ||
                 other.courseCode == courseCode) &&
@@ -191,6 +208,7 @@ class _$_CourseModel implements _CourseModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      id,
       name,
       courseCode,
       const DeepCollectionEquality().hash(_requirements),
@@ -212,7 +230,8 @@ class _$_CourseModel implements _CourseModel {
 
 abstract class _CourseModel implements CourseModel {
   const factory _CourseModel(
-      {required final String name,
+      {required final String id,
+      required final String name,
       required final String courseCode,
       required final List<dynamic> requirements,
       required final Map<dynamic, dynamic> links}) = _$_CourseModel;
@@ -220,6 +239,8 @@ abstract class _CourseModel implements CourseModel {
   factory _CourseModel.fromJson(Map<String, dynamic> json) =
       _$_CourseModel.fromJson;
 
+  @override
+  String get id;
   @override
   String get name;
   @override

@@ -1,3 +1,4 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
 import '../../utilities/consts.dart';
@@ -21,14 +22,10 @@ class DashboardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceVariant,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      clipBehavior: Clip.hardEdge,
+
 
       child: InkWell(
+        borderRadius: BorderRadius.circular(Consts.defaultBorderRadius),
         onTap: onTap,
 
         child: Padding(

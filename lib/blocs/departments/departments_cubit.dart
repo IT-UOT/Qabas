@@ -7,25 +7,25 @@ import '../../models/department.dart';
 import '../../services/locator.dart';
 import '../../services/logging_service.dart';
 
-part 'home_screen_state.dart';
-part 'home_screen_cubit.g.dart';
-part 'home_screen_cubit.freezed.dart';
+part 'departments_state.dart';
+part 'departments_cubit.g.dart';
+part 'departments_cubit.freezed.dart';
 
-class HomeScreenCubit extends Cubit<HomeScreenState> {
+class DepartmentsCubit extends Cubit<DepartmentsState> {
   final DepartmentRepository _departmentRepository = DepartmentRepository();
 
-  HomeScreenCubit() : super(const HomeScreenState.initial()){
+  DepartmentsCubit() : super(const DepartmentsState.initial()){
      loadDepartments();
    }
 
   Future<void> loadDepartments() async {
-    emit(const HomeScreenState.loading());
+    emit(const DepartmentsState.loading());
     try {
       final departments = await _departmentRepository.getDepartments();
-      emit(HomeScreenState.loaded(departments));
+      emit(DepartmentsState.loaded(departments));
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
-      emit(HomeScreenState.error(e.toString()));
+      emit(DepartmentsState.error(e.toString()));
     }
   }
 
