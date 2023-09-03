@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Consts {
   /// Colors
   static const MaterialColor primaryColor =
-  MaterialColor(_primaryColorValue, <int, Color>{
+      MaterialColor(_primaryColorValue, <int, Color>{
     50: Color(0xFFEEE6FA),
     100: Color(0xFFD4C1F3),
     200: Color(0xFFB798EC),
@@ -18,7 +18,7 @@ class Consts {
   static const int _primaryColorValue = 0xFF6F30D8;
 
   static const MaterialColor accentColor =
-  MaterialColor(_accentValue, <int, Color>{
+      MaterialColor(_accentValue, <int, Color>{
     100: Color(0xFFF2EFFF),
     200: Color(_accentValue),
     400: Color(0xFFA389FF),
@@ -38,11 +38,11 @@ class Consts {
   static const double defaultIconSize = 24.0;
   static const double defaultIconSizeSmall = 16.0;
   static const double defaultIconSizeLarge = 32.0;
- // static const double defaultVerticalSpacing = 16.0;
- // static const double defaultHorizontalSpacing = 16.0;
+  // static const double defaultVerticalSpacing = 16.0;
+  // static const double defaultHorizontalSpacing = 16.0;
 
- // Input fields
- static const defaultInputBorder = OutlineInputBorder(
+  // Input fields
+  static const defaultInputBorder = OutlineInputBorder(
     borderSide: BorderSide(
       color: Color(0xffD1DAE9),
       width: defaultBorderWidth,
@@ -51,42 +51,45 @@ class Consts {
   );
 
   // gaps
-  static const  gap8 = SizedBox(height: 8, width: 8);
-  static const  gap16 = SizedBox(height: 16, width: 16);
-  static const  gap24 = SizedBox(height: 24, width: 24);
-  static const  gap32 = SizedBox(height: 32, width: 32);
-  static const  gap48 = SizedBox(height: 48, width: 48);
-  static const  gap64 = SizedBox(height: 64, width: 64);
+  static const gap8 = SizedBox(height: 8, width: 8);
+  static const gap16 = SizedBox(height: 16, width: 16);
+  static const gap24 = SizedBox(height: 24, width: 24);
+  static const gap32 = SizedBox(height: 32, width: 32);
+  static const gap48 = SizedBox(height: 48, width: 48);
+  static const gap64 = SizedBox(height: 64, width: 64);
 
   /// Themes
   static ThemeData lightTheme = ThemeData(
     fontFamily: 'Alexandria',
     useMaterial3: true,
-    colorScheme:  ColorScheme.fromSeed(seedColor: const Color(_primaryColorValue)),
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
     expansionTileTheme: const ExpansionTileThemeData(
       shape: RoundedRectangleBorder(
         side: BorderSide(
-          color:  Color(0xffD1DAE9),
+          color: Color(0xffD1DAE9),
           width: defaultBorderWidth,
         ),
-        borderRadius:  BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
+        borderRadius:
+            BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
       ),
       collapsedShape: RoundedRectangleBorder(
         side: BorderSide(
-          color:  Color(0xffD1DAE9),
+          color: Color(0xffD1DAE9),
           width: defaultBorderWidth,
         ),
-        borderRadius:  BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
+        borderRadius:
+            BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
       ),
     ),
-    cardTheme:const CardTheme(
+    cardTheme: const CardTheme(
       elevation: defaultElevation,
       shape: RoundedRectangleBorder(
         side: BorderSide(
-          color:  Color(0xffD1DAE9),
+          color: Color(0xffD1DAE9),
           width: defaultBorderWidth,
         ),
-        borderRadius:  BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
+        borderRadius:
+            BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
       ),
     ),
     textTheme: const TextTheme(
@@ -95,20 +98,18 @@ class Consts {
         fontSize: 12,
         color: Colors.black,
       ),
-      bodyMedium : TextStyle(
-           fontWeight: FontWeight.w500,
-           fontSize: 12,
-           color: Color(0xff898F9B)),
+      bodyMedium: TextStyle(
+          fontWeight: FontWeight.w500, fontSize: 12, color: Color(0xff898F9B)),
     ),
   );
 
   static ThemeData darkTheme = ThemeData(
     fontFamily: 'Alexandria',
     useMaterial3: true,
-    colorScheme:  ColorScheme.fromSeed(seedColor: const Color(_primaryColorValue)).copyWith(
+    colorScheme:
+        ColorScheme.fromSeed(seedColor: const Color(_primaryColorValue))
+            .copyWith(
       brightness: Brightness.dark,
     ),
   );
-
-  
 }
