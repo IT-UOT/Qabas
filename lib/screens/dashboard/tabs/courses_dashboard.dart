@@ -109,7 +109,7 @@ class CoursesDashboard extends StatelessWidget {
                 },
                 child: const Text('إلغاء'),
               ),
-              ElevatedButton(
+              TextButton(
                 onPressed: () {
                   locator<CoursesCubit>().deleteCourse(course);
                   Navigator.of(context).pop();

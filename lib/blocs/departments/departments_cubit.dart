@@ -45,7 +45,6 @@ class DepartmentsCubit extends Cubit<DepartmentsState> {
 
     try {
       await _departmentRepository.updateDepartment(department);
-      final currentState = state;
       loadDepartments();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());

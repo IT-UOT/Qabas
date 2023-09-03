@@ -11,7 +11,7 @@ part 'news_cubit.freezed.dart';
 
 class NewsCubit extends Cubit<NewsState> {
   final NewsRepository _newsRepository = NewsRepository();
-  NewsCubit() : super(const NewsState.initial()){
+  NewsCubit() : super(const NewsState.initial()) {
     loadNews();
   }
 
@@ -28,16 +28,38 @@ class NewsCubit extends Cubit<NewsState> {
   }
 
   // upload news
-  Future<void> uploadNews(NewsModel news) async {
+  Future<void> createPost(NewsModel news) async {
     emit(const NewsState.loading());
     try {
-      await _newsRepository.uploadNews(news);
-      emit(const NewsState.initial());
+      await _newsRepository.createPost(news);
+      loadNews();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       emit(NewsState.error(e.toString()));
     }
   }
 
+  // update news
+  Future<void> updatePost(NewsModel news) async {
+    emit(const NewsState.loading());
+    try {
+      await _newsRepository.updatePost(news);
+      loadNews();
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      emit(NewsState.error(e.toString()));
+    }
+  }
 
+  // delete news
+  Future<void> deletePost(String postId) async {
+    emit(const NewsState.loading());
+    try {
+      await _newsRepository.deletePost(postId);
+      loadNews();
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      emit(NewsState.error(e.toString()));
+    }
+  }
 }

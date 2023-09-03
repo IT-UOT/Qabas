@@ -109,7 +109,7 @@ class DepartmentsDashboard extends StatelessWidget {
                 },
                 child: const Text('إلغاء'),
               ),
-              ElevatedButton(
+              TextButton(
                 onPressed: () {
                   locator<DepartmentsCubit>().deleteDepartment(deparmtnt.id);
                   Navigator.of(context).pop();

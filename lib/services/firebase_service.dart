@@ -38,10 +38,10 @@ class FirebaseService {
           .then((QuerySnapshot querySnapshot) async {
         for (var doc in querySnapshot.docs) {
           locator<LoggingHelper>().debug(doc.data().runtimeType);
-          departments.add(DepartmentModel.fromJson(
-              doc.data() as Map<String, dynamic>));
+          departments.add(
+              DepartmentModel.fromJson(doc.data() as Map<String, dynamic>));
         }
-           });
+      });
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
@@ -138,10 +138,32 @@ class FirebaseService {
   }
 
   /// News
-  Future<void> uploadNews(NewsModel news) async {
+  Future<void> createPost(NewsModel news) async {
     // upload new news item to firebase firestore
     try {
-      await firestore.collection('news').add(news.toJson());
+      await firestore.collection('news').doc(news.id).set(news.toJson());
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+  }
+
+  Future<void> updatePost(NewsModel news) async {
+    // update existing news item in firebase firestore
+    try {
+      locator<LoggingHelper>().info('Updating post------------------');
+
+      await firestore.collection('news').doc(news.id).update(news.toJson());
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+  }
+
+  Future<void> deletePost(String postId) async {
+    // delete existing news item from firebase firestore
+    try {
+      await firestore.collection('news').doc(postId).delete();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;

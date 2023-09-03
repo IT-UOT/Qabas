@@ -22,33 +22,31 @@ class DashboardItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-
-
       child: InkWell(
         borderRadius: BorderRadius.circular(Consts.defaultBorderRadius),
         onTap: onTap,
-
         child: Padding(
           padding: const EdgeInsets.all(Consts.paddingMedium),
           child: Column(
-           // crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ListTile(
                 title: Text(
                   title,
                 ),
-                subtitle: subtitle != null?   Text(
-                  subtitle!,
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ):null,
-
+                subtitle: subtitle != null
+                    ? Text(
+                        subtitle!,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        softWrap: true,
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      )
+                    : null,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-
                 children: [
-
-
                   TextButton(
                     onPressed: onDelete,
                     child: const Text("حذف"),

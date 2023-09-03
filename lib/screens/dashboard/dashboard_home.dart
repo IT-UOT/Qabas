@@ -33,7 +33,7 @@ class _DashboardHomeState extends State<DashboardHome> {
     NavigationRailDestination(
       icon: Icon(Icons.description_outlined),
       selectedIcon: Icon(Icons.description),
-      label: Text('الأخبار'),
+      label: Text('المناشير'),
     ),
     NavigationRailDestination(
       icon: Icon(Icons.description_outlined),
@@ -51,7 +51,7 @@ class _DashboardHomeState extends State<DashboardHome> {
   final List<String> _titles = [
     'المواد',
     'الأقسام',
-    'الأخبار',
+    'المنشورات',
     'معلومات',
   ];
 
@@ -63,13 +63,11 @@ class _DashboardHomeState extends State<DashboardHome> {
         body: SafeArea(
           child: Stack(
             children: [
-
               Row(
                 children: <Widget>[
                   NavigationRail(
                     selectedIndex: _selectedIndex,
                     groupAlignment: groupAlignment,
-
                     onDestinationSelected: (int index) {
                       setState(() {
                         _selectedIndex = index;
@@ -104,7 +102,7 @@ class _DashboardHomeState extends State<DashboardHome> {
                 ],
               ),
               Positioned(
-                right: Consts.paddingMedium ,
+                right: Consts.paddingMedium,
                 bottom: Consts.paddingMedium,
                 child: FloatingActionButton(
                   elevation: 0,

@@ -30,16 +30,9 @@ class NewsScreen extends StatelessWidget {
                           const Text('لا يوجد عناصر'),
                           FilledButton(
                               onPressed: () {
-                                context.read<NewsCubit>().uploadNews(
-                                       NewsModel(
-                                        title: "تطبيق المرشد قريب يوصلكم (;",
-                                        content:  "معش مزال هلبا على إطلاق أول وأقوى تطبيق في الجامعة XD تطبيق المرشد هو تطبيق يساعد الطلبة على متابعة اخبار كليتهم أول بأول ويوريهم الطريق من بداية المسير إلى بعد ما تكمل",
-                                        publishedAt: DateTime.now().toString(),
-                                        author: 'عبدالله عراب',
-                                      ),
-                                    );
+                             
                               },
-                              child: const Text("اضف عنصر جديد")),
+                              child: const Text("إعادة المحاولة")),
                         ],
                       ),
                     );

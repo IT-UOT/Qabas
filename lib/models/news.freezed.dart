@@ -20,9 +20,10 @@ NewsModel _$NewsModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NewsModel {
+  String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
-  String get publishedAt => throw _privateConstructorUsedError;
+  DateTime get publishedAt => throw _privateConstructorUsedError;
   bool? get isPinned => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   String? get imageUrl => throw _privateConstructorUsedError;
@@ -40,9 +41,10 @@ abstract class $NewsModelCopyWith<$Res> {
       _$NewsModelCopyWithImpl<$Res, NewsModel>;
   @useResult
   $Res call(
-      {String title,
+      {String id,
+      String title,
       String content,
-      String publishedAt,
+      DateTime publishedAt,
       bool? isPinned,
       String? author,
       String? imageUrl,
@@ -62,6 +64,7 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
@@ -71,6 +74,10 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -82,7 +89,7 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
       publishedAt: null == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       isPinned: freezed == isPinned
           ? _value.isPinned
           : isPinned // ignore: cast_nullable_to_non_nullable
@@ -111,9 +118,10 @@ abstract class _$$_NewsModelCopyWith<$Res> implements $NewsModelCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {String title,
+      {String id,
+      String title,
       String content,
-      String publishedAt,
+      DateTime publishedAt,
       bool? isPinned,
       String? author,
       String? imageUrl,
@@ -131,6 +139,7 @@ class __$$_NewsModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
@@ -140,6 +149,10 @@ class __$$_NewsModelCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_$_NewsModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -151,7 +164,7 @@ class __$$_NewsModelCopyWithImpl<$Res>
       publishedAt: null == publishedAt
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
-              as String,
+              as DateTime,
       isPinned: freezed == isPinned
           ? _value.isPinned
           : isPinned // ignore: cast_nullable_to_non_nullable
@@ -176,7 +189,8 @@ class __$$_NewsModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_NewsModel implements _NewsModel {
   const _$_NewsModel(
-      {required this.title,
+      {required this.id,
+      required this.title,
       required this.content,
       required this.publishedAt,
       this.isPinned,
@@ -188,11 +202,13 @@ class _$_NewsModel implements _NewsModel {
       _$$_NewsModelFromJson(json);
 
   @override
+  final String id;
+  @override
   final String title;
   @override
   final String content;
   @override
-  final String publishedAt;
+  final DateTime publishedAt;
   @override
   final bool? isPinned;
   @override
@@ -204,7 +220,7 @@ class _$_NewsModel implements _NewsModel {
 
   @override
   String toString() {
-    return 'NewsModel(title: $title, content: $content, publishedAt: $publishedAt, isPinned: $isPinned, author: $author, imageUrl: $imageUrl, url: $url)';
+    return 'NewsModel(id: $id, title: $title, content: $content, publishedAt: $publishedAt, isPinned: $isPinned, author: $author, imageUrl: $imageUrl, url: $url)';
   }
 
   @override
@@ -212,6 +228,7 @@ class _$_NewsModel implements _NewsModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_NewsModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.publishedAt, publishedAt) ||
@@ -226,7 +243,7 @@ class _$_NewsModel implements _NewsModel {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, title, content, publishedAt,
+  int get hashCode => Object.hash(runtimeType, id, title, content, publishedAt,
       isPinned, author, imageUrl, url);
 
   @JsonKey(ignore: true)
@@ -245,9 +262,10 @@ class _$_NewsModel implements _NewsModel {
 
 abstract class _NewsModel implements NewsModel {
   const factory _NewsModel(
-      {required final String title,
+      {required final String id,
+      required final String title,
       required final String content,
-      required final String publishedAt,
+      required final DateTime publishedAt,
       final bool? isPinned,
       final String? author,
       final String? imageUrl,
@@ -257,11 +275,13 @@ abstract class _NewsModel implements NewsModel {
       _$_NewsModel.fromJson;
 
   @override
+  String get id;
+  @override
   String get title;
   @override
   String get content;
   @override
-  String get publishedAt;
+  DateTime get publishedAt;
   @override
   bool? get isPinned;
   @override

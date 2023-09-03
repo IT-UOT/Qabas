@@ -21,19 +21,30 @@ class _NewsTileState extends State<NewsTile> {
   @override
   Widget build(BuildContext context) {
     return Card(
-     // elevation: 0,
+      // elevation: 0,
 
-      margin: const EdgeInsets.symmetric(horizontal: Consts.paddingMedium, vertical: Consts.paddingSmall),
+      margin: const EdgeInsets.symmetric(
+          horizontal: Consts.paddingMedium, vertical: Consts.paddingSmall),
       child: Container(
           padding: const EdgeInsets.all(16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                DateFormat.yMMMd()
-                    .format(DateTime.parse(widget.newsModel.publishedAt)),
-                style: Theme.of(context).textTheme.bodyMedium,
+              Row(
+                children: [
+                  Text(
+                    DateFormat.yMMMd().format(widget.newsModel.publishedAt),
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  const Spacer(),
+                  widget.newsModel.isPinned!
+                      ? const Icon(
+                          Icons.push_pin,
+                          size: 16,
+                        )
+                      : const SizedBox(),
+                ],
               ),
               Text(
                 widget.newsModel.title,
@@ -42,7 +53,7 @@ class _NewsTileState extends State<NewsTile> {
               const SizedBox(height: 8),
 
               InkWell(
-                onTap: (){
+                onTap: () {
                   setState(() {
                     _showFullText = !_showFullText;
                   });
@@ -53,7 +64,10 @@ class _NewsTileState extends State<NewsTile> {
                       ? CrossFadeState.showSecond
                       : CrossFadeState.showFirst,
                   firstChild: Text(
-                    '${widget.newsModel.content.substring(0, 100)}...',
+                    widget.newsModel.content,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                    softWrap: true,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                   secondChild: Text(

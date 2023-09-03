@@ -6,9 +6,10 @@ part 'news.g.dart';
 @freezed
 class NewsModel with _$NewsModel{
   const factory NewsModel({
+    required String id,
     required String title,
     required String content,
-    required String publishedAt,
+    required DateTime publishedAt,
      bool? isPinned,
      String? author,
      String? imageUrl,
