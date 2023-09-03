@@ -1,0 +1,4250 @@
+{
+  "subjects": [
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في البرمجة",
+      "subject_code": "ITGS122",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. أسماء شعبان العصار",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "G",
+          "professor": "احمد علي صمود",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. أسماء شعبان العصار",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "H",
+          "professor": "احمد علي صمود",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. احمد علي الهوني",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "E",
+          "professor": "بيرم علي زرتي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. احمد علي الهوني",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "F",
+          "professor": "بيرم علي زرتي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تحليل وتصميم نظم",
+      "subject_code": "ITGS124",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "C",
+          "professor": "أ. فاطمة بشير القاضي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. فاطمة بشير القاضي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "د. محمد علي ابراهيم الطاهر",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. محمد علي ابراهيم الطاهر",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الحلول التقنية",
+      "subject_code": "ITGS113",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. ناهد فتحي فرح",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. ناهد فتحي فرح",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الشبكات المترامية",
+      "subject_code": "ITWT309",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التجارة الإلكترونية",
+      "subject_code": "ITWT304",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. فرحات امحمد زرقون",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في قواعد البيانات",
+      "subject_code": "ITGS228",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. حسن علي ابراهيم",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. حسن علي ابراهيم",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "عليا مفتاح علي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. علياء مفتاح قروم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "معمارية الحاسوب",
+      "subject_code": "ITGS223",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "D",
+          "professor": "ناجية خالد بن سعود",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "ناجية خالد بن سعود",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "د. رمزي حميد القانوني",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "د. رمزي حميد القانوني",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "رياضة 2",
+      "subject_code": "ITMM122",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. خديجة عبدالعاطى موسى",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(هندسة زراعية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(هندسة زراعية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. خديجة عبدالعاطى موسى",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(هندسة زراعية)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. أسامة رمضان الجدي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. خديجة عبدالعاطى موسى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(هندسة زراعية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "شبكات السرعات العالية - الألياف البصرية",
+      "subject_code": "ITNT422",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمود ميلود منصور",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الشبكات المترامية",
+      "subject_code": "ITNT321",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تحليل متطلبات برمجيات",
+      "subject_code": "ITSE311",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. فاطمه علي بن الاشهر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "رياضة 1",
+      "subject_code": "ITMM111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. أسامة رمضان الجدي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. رضوان علي حسين",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "البرمجة الشيئية",
+      "subject_code": "ITGS211",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "C",
+          "professor": "د. محمد احمد مغيدر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج 4 كلية الزراعة )"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. يوسف محمد أبوستة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "د. محمد احمد مغيدر",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج 4 كلية الزراعة )"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل الشبكات - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "د. عبدالناصر عبدالحميد ضياف",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التفاعل بين الإنسان والحاسوب",
+      "subject_code": "ITIS312",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أينور إدريس تربح",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التجارة المتنقلة",
+      "subject_code": "ITMC304",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. فرحات امحمد زرقون",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التفاعل بين الإنسان والحاسوب",
+      "subject_code": "ITNT302",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أينور إدريس تربح",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "القرصنة الأخلاقية",
+      "subject_code": "ITWT420",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. احمد علي الهوني",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في برمجة الانترنت",
+      "subject_code": "ITGS226",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "D",
+          "professor": "أ. فاطمه علي بن الاشهر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. فاطمه علي بن الاشهر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. ابتسام عبدالسلام العاشوري",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة (10) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. ابتسام عبدالسلام العاشوري",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم وتحليل الخوارزميات",
+      "subject_code": "ITGS301",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "B",
+          "professor": "أ. مي مفتاح البعباع",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. مروى نوري صولة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الإتصالات الرقمية",
+      "subject_code": "ITNT323",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مبادئ تطوير الألعاب",
+      "subject_code": "ITSE401",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمود غيث الجديد",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مبادئ تطوير الألعاب المتنقلة",
+      "subject_code": "ITMC404",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمود غيث الجديد",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "أساسيات الحوسبة في كل مكان",
+      "subject_code": "ITMC421",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد احمد مغيدر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إعادة إستخدام البرمجيات",
+      "subject_code": "ITSE422",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. علياء مفتاح قروم",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "قواعد البيانات المتنقلة وغير متجانسة",
+      "subject_code": "ITMC322",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد على وهيبة",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في الذكاء الاصطناعي",
+      "subject_code": "ITIS413",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أينور إدريس تربح",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "اساسيات الحوسبة فى كل مكان",
+      "subject_code": "ITNT403",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد احمد مغيدر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير الألعاب",
+      "subject_code": "ITWT305",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمود غيث الجديد",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في هندسة البرمجيات",
+      "subject_code": "ITGS213",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مي مفتاح البعباع",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. فاطمه علي بن الاشهر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "د. رمزي حميد القانوني",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. رمزي حميد القانوني",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التفاعل بين الإنسان والحاسوب",
+      "subject_code": "ITWT315",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في رسوم الحاسب الآلي ",
+      "subject_code": "ITWT303",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. احمد علي الهوني",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير أنظمة الصوت والصورة ",
+      "subject_code": "ITWT324",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. رمزي حميد القانوني",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نظم التشغيل",
+      "subject_code": "ITGS302",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "B",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. محمد معتوق الكوم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة (10) - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. محمد معتوق الكوم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التحليل العددي",
+      "subject_code": "ITGS219",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد على وهيبة",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. محمد على وهيبة",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إختيار الكلية الحر",
+      "subject_code": "ITNT406",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عمر عبدالمولى ابوسعدة",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "بروتوكولات وبرمجيات الشبكات",
+      "subject_code": "ITNT322",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "ناجية خالد بن سعود",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة الشبكات",
+      "subject_code": "ITSE405",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمود غيث الجديد",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة (10) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "البرمجة المرئية",
+      "subject_code": "ITSE423",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. حسن علي ابراهيم",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تراكيب البيانات",
+      "subject_code": "ITGS220",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "C",
+          "professor": "د. رضوان علي حسين",
+          "lectures": [
+            {
+              "day": "السبت",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. يوسف محمد أبوستة",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "قواعد البيانات المتقدمة",
+      "subject_code": "ITWT313",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالناصر عبدالحميد ضياف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "خدمات الإنترنت ",
+      "subject_code": "ITWT411",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. أسماء شعبان العصار",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الشبكات الاجتماعية",
+      "subject_code": "ITMC413",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. منار سامي عريف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم التفاعلي في الاجهزة  المتنقلة",
+      "subject_code": "ITMC321",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. ناهد فتحي فرح",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "جودة خدمات الشبكات",
+      "subject_code": "ITNT421",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. ريما الشيباني سعد",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "قواعد البيانات المتقدمة",
+      "subject_code": "ITIS325",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالسلام منصور الشريف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "النظم المؤسساتية",
+      "subject_code": "ITIS421",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. هديل رافت الجربي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الشبكات الاجتماعية",
+      "subject_code": "ITSE409",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. منار سامي عريف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "خدمات الإنترنت",
+      "subject_code": "ITSE407",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. أسماء شعبان العصار",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "قواعد البيانات المتقدمة",
+      "subject_code": "ITSE312",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالسلام منصور الشريف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "لغة انجليزية 1",
+      "subject_code": "ITEL111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة مسعود خليفة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (10) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الفيزياء الالكترونية والمغناطيسية",
+      "subject_code": "ITPH111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "سميرة امحمد ابوشناق",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في تقنية المعلومات",
+      "subject_code": "ITGS111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "B",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة (10) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم وإدارة الشبكات",
+      "subject_code": "ITNT412",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عزالدين محمد السلامي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "خورازميات و بروتوكولات التشفير",
+      "subject_code": "ITNT314",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عمر عبدالمولى ابوسعدة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "جودة واختبار البرمجيات",
+      "subject_code": "ITSE421",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالسلام الفيتوري النويصري",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "أنظمة دعم القرار",
+      "subject_code": "ITIS406",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. فاطمة بشير القاضي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التشفير وأمن المعلومات",
+      "subject_code": "ITSE306",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عمر عبدالمولى ابوسعدة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "البنيان المؤسساتي",
+      "subject_code": "ITIS411",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. هديل رافت الجربي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (9)- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "لغة انجليزية 2",
+      "subject_code": "ITEL121",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة مسعود خليفة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (10) - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. مروة مسعود خليفة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (10) - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. مروة مسعود خليفة",
+          "lectures": [
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. مروة مسعود خليفة",
+          "lectures": [
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم الدوائر المنطقية",
+      "subject_code": "ITGS126",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "D",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. زهرة عبدالله الاشعل",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(هندسة زراعية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. زهرة عبدالله الاشعل",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(هندسة زراعية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نظم التطوير المتكاملة ",
+      "subject_code": "ITWT415",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. احمد علي الهوني",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إدارة المشاريع",
+      "subject_code": "ITGS303",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "C",
+          "professor": "بيرم علي زرتي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. هديل رافت الجربي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(هندسة زراعية)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. هديل رافت الجربي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل الشبكات - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(هندسة زراعية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "بيرم علي زرتي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مقدمة في شبكات الحاسوب",
+      "subject_code": "ITGS215",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "B",
+          "professor": "أ. ريما الشيباني سعد",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. ريما الشيباني سعد",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. مريم ابوعجيله مساعد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. مريم ابوعجيله مساعد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نظم تشغيل الأجهزة  المتنقلة",
+      "subject_code": "ITMC313",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد معتوق الكوم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "اتصال بيانات",
+      "subject_code": "ITNT311",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالباسط الهادي التهامي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نظم الوسائط المتعددة",
+      "subject_code": "ITIS324",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أينور إدريس تربح",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير التطبيقات",
+      "subject_code": "ITIS311",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. فاطمة بشير القاضي",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "وسائط متعددة",
+      "subject_code": "ITSE404",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أينور إدريس تربح",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "كتابة التقارير العلمية - لغة انجليزية ",
+      "subject_code": "ITGS304",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. ندى ميلود سالم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج 4 كلية الزراعة )"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. ندى ميلود سالم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(مدرج 4 كلية الزراعة )"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. ندى ميلود سالم",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. ندى ميلود سالم",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نظم تشغيل الأجهزة المتنقلة",
+      "subject_code": "ITSE308",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد معتوق الكوم",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إدارة البيانات والمعلومات",
+      "subject_code": "ITIS313",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد علي ابراهيم الطاهر",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مشروع التخرج",
+      "subject_code": "ITSE500",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروى نوري صولة",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": " مشروع  التخرج",
+      "subject_code": "ITMC500",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. منار سامي عريف",
+          "lectures": [
+            {
+              "day": "الأحد",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "4:00",
+              "end_time": "6:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مواضيع مختارة",
+      "subject_code": "ITWT404",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. هالة منصور الشاعرى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إجراءات ولوائح الأمان ",
+      "subject_code": "ITWT317",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. إدريس عبدالهادي غميض",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير تطبيقات الإنترنت المتنقل ",
+      "subject_code": "ITWT422",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. خالد محمد بن حامد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التنقيب في البيانات",
+      "subject_code": "ITWT301",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. حنان الطاهر الداقيز",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مبادئ الاحصاء والاحتمالات",
+      "subject_code": "ITST111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عادل علي أوحيدة",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "د. عادل علي أوحيدة",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الحوسبة السحابية",
+      "subject_code": "ITMC422",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الحوسبة السحابية",
+      "subject_code": "ITNT404",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "السياسة الأمنية",
+      "subject_code": "ITNT304",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. إدريس عبدالهادي غميض",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الشبكات المحلية",
+      "subject_code": "ITNT312",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مريم ابوعجيله مساعد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تنقيب البيانات -  الذكاء التجاري",
+      "subject_code": "ITIS404",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. حنان الطاهر الداقيز",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الحوسبة السحابية",
+      "subject_code": "ITSE406",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تنقيب البيانات",
+      "subject_code": "ITSE302",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. حنان الطاهر الداقيز",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة التطبيقات الجوالة",
+      "subject_code": "ITSE304",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. خالد محمد بن حامد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "أساسيات نظم المعلومات",
+      "subject_code": "ITGS222",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "B",
+          "professor": "أ. ابتسام عبدالسلام العاشوري",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. ابتسام عبدالسلام العاشوري",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 5 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير التطبيقات المتنقلة",
+      "subject_code": "ITMC311",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. خالد محمد بن حامد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مواضيع مختارة",
+      "subject_code": "ITSE305",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. هالة منصور الشاعرى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الحوسبة السحابية",
+      "subject_code": "ITWT307",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة الإنترنت المتقدمة ",
+      "subject_code": "ITWT311",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. يوسف محمد أبوستة",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة الشبكات",
+      "subject_code": "ITNT313",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مروة ابراهيم عبدالهادي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الأنظمة الموزعة",
+      "subject_code": "ITNT411",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. إدريس عبدالهادي غميض",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة ((7))- الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "إدارة إستراتيجيات نظم المعلومات",
+      "subject_code": "ITIS422",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. هديل رافت الجربي",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الأمن وإدارة المخاطر",
+      "subject_code": "ITIS412",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. ابتسام عبدالسلام العاشوري",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مواضيع مختارة",
+      "subject_code": "ITMC305",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. خالد محمد بن حامد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة (10) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير تطبيقات الإنترنت ",
+      "subject_code": "ITWT413",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. هالة منصور الشاعرى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "التراكيب المنفصلة",
+      "subject_code": "ITGS217",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        },
+        {
+          "group_code": "C",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "D",
+          "professor": "أ. حمدي أحمد جابر",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة الشبكات",
+      "subject_code": "ITMC414",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. خالد محمد بن حامد",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "أنماط تصميم البرمجيات",
+      "subject_code": "ITSE424",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. مي مفتاح البعباع",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نقل الوسائط المتعددة عبر شبكات الحاسوب",
+      "subject_code": "ITNT405",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد مفتاح الرايس",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تطوير تطبيقات الإنترنت",
+      "subject_code": "ITSE408",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. هالة منصور الشاعرى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل 2 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "برمجة الخادم والعميل ",
+      "subject_code": "ITWT320",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. هالة منصور الشاعرى",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 6 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "مبادئ  شبكات  اللاسلكية  المتنقلة",
+      "subject_code": "ITMC312",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد مفتاح الرايس",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الإتصالات اللاسلكية والمحمولة",
+      "subject_code": "ITNT324",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد مفتاح الرايس",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "لغة برمجة الحديثة - جافا متقدمة",
+      "subject_code": "ITSE322",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالحميد الفلاح الواعر",
+          "lectures": [
+            {
+              "day": "الإثنين",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "لغة عربية 2",
+      "subject_code": "ITAR121",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "محمد حسين الفيتورى",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "لغة عربية 1",
+      "subject_code": "ITAR111",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "محمد حسين الفيتورى",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(... الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "امن المعلومات",
+      "subject_code": "ITGS224",
+      "subject_department": "القسم العام",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد عبدالسلام عزاقة",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/15 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        },
+        {
+          "group_code": "B",
+          "professor": "أ. محمد عبدالسلام عزاقة",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة 2/13 - الكيمياء)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(القاعة 2/10 - الكيمياء)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نماذج البرمجة",
+      "subject_code": "ITMC302",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (10) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نماذج البرمجة",
+      "subject_code": "ITSE309",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. اريج سمير امبارك",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(معمل (10) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل (8) - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "الأمن في الحوسبة المتنقلة",
+      "subject_code": "ITMC411",
+      "subject_department": "قسم الحوسبة المتنقلة",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. محمد معتوق الكوم",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل سامسونق - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "نمذجة وتقييم الاداء",
+      "subject_code": "ITNT301",
+      "subject_department": "قسم شبكات الحاسوب",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "احمد علي صمود",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(معمل الشبكات - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الثلاثاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(معمل الشبكات - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "بناء البرمجيات",
+      "subject_code": "ITSE321",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "بيرم علي زرتي",
+          "lectures": [
+            {
+              "day": "الثلاثاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(القاعة ( 7 ) - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "استرجاع المعلومات",
+      "subject_code": "ITWT302",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد عبدالدائم محبوب",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "بحث واسترجاع المعلومات",
+      "subject_code": "ITIS401",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد عبدالدائم محبوب",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "البنية التحتية لنظم المعلومات",
+      "subject_code": "ITIS323",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. أحمد أبورودس الكيلاني",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "بحث واسترجاع المعلومات",
+      "subject_code": "ITSE307",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. محمد عبدالدائم محبوب",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "8:00",
+              "end_time": "10:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "معالجة الصور ",
+      "subject_code": "ITWT308",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. عبدالناصر عبدالحميد ضياف",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 28 - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تحليل وتصميم النظم 2",
+      "subject_code": "ITIS326",
+      "subject_department": "قسم نظم المعلومات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. أحمد أبورودس الكيلاني",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(قاعة 2 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم واجهات المستخدم ",
+      "subject_code": "ITWT322",
+      "subject_department": "لم يتم تحديد القسم",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "أ. وفاء حسين المصباحي",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "12:00",
+              "end_time": "2:00",
+              "room": "(مدرج الهوني - مبني الكلية)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(قاعة 4 - الدرسات الكلية)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": 1,
+      "subject_name": "تصميم وهيكلة البرمجيات",
+      "subject_code": "ITSE411",
+      "subject_department": "قسم هندسة البرمجيات",
+      "groups": [
+        {
+          "group_code": "A",
+          "professor": "د. رضوان علي حسين",
+          "lectures": [
+            {
+              "day": "الأربعاء",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            },
+            {
+              "day": "الخميس",
+              "start_time": "2:00",
+              "end_time": "4:00",
+              "room": "(الزجاجية - مبني الكلية الجديد)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

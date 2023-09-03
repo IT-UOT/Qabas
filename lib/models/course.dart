@@ -10,8 +10,8 @@ class CourseModel with _$CourseModel{
     required String id,
     required String name,
     required String courseCode,
-    required List<dynamic> requirements,
-    required Map<dynamic, dynamic> links,
+    required List<String> requirements,
+    required Map<String, String> links,
   }) = _CourseModel;
 
   factory CourseModel.fromJson(Map<String, dynamic> json)  => _$CourseModelFromJson(json);

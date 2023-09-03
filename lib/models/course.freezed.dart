@@ -23,8 +23,8 @@ mixin _$CourseModel {
   String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get courseCode => throw _privateConstructorUsedError;
-  List<dynamic> get requirements => throw _privateConstructorUsedError;
-  Map<dynamic, dynamic> get links => throw _privateConstructorUsedError;
+  List<String> get requirements => throw _privateConstructorUsedError;
+  Map<String, String> get links => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,8 +42,8 @@ abstract class $CourseModelCopyWith<$Res> {
       {String id,
       String name,
       String courseCode,
-      List<dynamic> requirements,
-      Map<dynamic, dynamic> links});
+      List<String> requirements,
+      Map<String, String> links});
 }
 
 /// @nodoc
@@ -81,11 +81,11 @@ class _$CourseModelCopyWithImpl<$Res, $Val extends CourseModel>
       requirements: null == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       links: null == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as Map<dynamic, dynamic>,
+              as Map<String, String>,
     ) as $Val);
   }
 }
@@ -102,8 +102,8 @@ abstract class _$$_CourseModelCopyWith<$Res>
       {String id,
       String name,
       String courseCode,
-      List<dynamic> requirements,
-      Map<dynamic, dynamic> links});
+      List<String> requirements,
+      Map<String, String> links});
 }
 
 /// @nodoc
@@ -139,11 +139,11 @@ class __$$_CourseModelCopyWithImpl<$Res>
       requirements: null == requirements
           ? _value._requirements
           : requirements // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       links: null == links
           ? _value._links
           : links // ignore: cast_nullable_to_non_nullable
-              as Map<dynamic, dynamic>,
+              as Map<String, String>,
     ));
   }
 }
@@ -155,8 +155,8 @@ class _$_CourseModel implements _CourseModel {
       {required this.id,
       required this.name,
       required this.courseCode,
-      required final List<dynamic> requirements,
-      required final Map<dynamic, dynamic> links})
+      required final List<String> requirements,
+      required final Map<String, String> links})
       : _requirements = requirements,
         _links = links;
 
@@ -169,17 +169,17 @@ class _$_CourseModel implements _CourseModel {
   final String name;
   @override
   final String courseCode;
-  final List<dynamic> _requirements;
+  final List<String> _requirements;
   @override
-  List<dynamic> get requirements {
+  List<String> get requirements {
     if (_requirements is EqualUnmodifiableListView) return _requirements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_requirements);
   }
 
-  final Map<dynamic, dynamic> _links;
+  final Map<String, String> _links;
   @override
-  Map<dynamic, dynamic> get links {
+  Map<String, String> get links {
     if (_links is EqualUnmodifiableMapView) return _links;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_links);
@@ -233,8 +233,8 @@ abstract class _CourseModel implements CourseModel {
       {required final String id,
       required final String name,
       required final String courseCode,
-      required final List<dynamic> requirements,
-      required final Map<dynamic, dynamic> links}) = _$_CourseModel;
+      required final List<String> requirements,
+      required final Map<String, String> links}) = _$_CourseModel;
 
   factory _CourseModel.fromJson(Map<String, dynamic> json) =
       _$_CourseModel.fromJson;
@@ -246,9 +246,9 @@ abstract class _CourseModel implements CourseModel {
   @override
   String get courseCode;
   @override
-  List<dynamic> get requirements;
+  List<String> get requirements;
   @override
-  Map<dynamic, dynamic> get links;
+  Map<String, String> get links;
   @override
   @JsonKey(ignore: true)
   _$$_CourseModelCopyWith<_$_CourseModel> get copyWith =>

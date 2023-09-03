@@ -5,6 +5,7 @@ import 'course.dart';
 
 part 'department.g.dart';
 part 'department.freezed.dart';
+
 @freezed
 class DepartmentModel with _$DepartmentModel {
 const factory DepartmentModel({

@@ -1,6 +1,9 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 import 'package:itmentor/models/news.dart';
 import 'package:itmentor/services/locator.dart';
 
@@ -32,7 +35,7 @@ class FirebaseService {
       await firestore
           .collection('departments')
           .get()
-          .then((QuerySnapshot querySnapshot) async{
+          .then((QuerySnapshot querySnapshot) async {
         for (var doc in querySnapshot.docs) {
           // locator<LoggingHelper>().debug(doc.data());
           Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
@@ -58,7 +61,8 @@ class FirebaseService {
             DepartmentModel(
               name: data['name'],
               depMapImgSrc: data['depMapImgSrc'],
-              depRequirements: depRequirements.map((e) => e.toString()).toList(),
+              depRequirements:
+                  depRequirements.map((e) => e.toString()).toList(),
               courses: coursesList,
             ),
           );
@@ -106,18 +110,23 @@ class FirebaseService {
   Future<void> addCourse(CourseModel courseModel) async {
     // upload a course
     try {
-      await firestore.collection('courses').add(courseModel.toJson());
+      await firestore
+          .collection('courses')
+          .doc(courseModel.id)
+          .set(courseModel.toJson());
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
     }
-
   }
 
   Future<void> updateCourse(CourseModel courseModel) async {
     // update a course
     try {
-      await firestore.collection('courses').doc(courseModel.id).update(courseModel.toJson());
+      await firestore
+          .collection('courses')
+          .doc(courseModel.id)
+          .update(courseModel.toJson());
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
@@ -125,7 +134,6 @@ class FirebaseService {
   }
 
   Future<void> deleteCourse(CourseModel courseModel) async {
-    // delete a course
     try {
       await firestore.collection('courses').doc(courseModel.id).delete();
     } catch (e) {
@@ -193,5 +201,53 @@ class FirebaseService {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
     }
+  }
+
+  /// Bulk Courses
+
+  Future<void> addBulkCourses() async {
+    try {
+      Map<String, dynamic> coursesJson =
+          await loadJsonFromAssets('assets/json/subjects.json');
+      var listOfCourses = coursesJson['subjects'] as List<dynamic>;
+//      locator<LoggingHelper>().debug(listOfCourses);
+      for (Map<String, dynamic> course in listOfCourses) {
+        locator<LoggingHelper>().wtf("###################");
+     //   locator<LoggingHelper>().debug(course);
+
+        var c = CourseModel(
+          courseCode: course['subject_code'],
+          id: course['subject_code'],
+          links: {},
+          name: course['subject_name'],
+          requirements: [],
+        );
+       addCourse(c);
+      }
+              locator<LoggingHelper>().wtf(listOfCourses.length);
+
+
+      //   coursesJson.map((key, value) {
+      //  var cours =   MapEntry(
+      //         key,
+      //         CourseModel(
+      //           courseCode: value['subject_code'],
+      //           id: value['subject_code'],
+      //           links: {},
+      //           name: value['subject_name'],
+      //           requirements: [],
+      //         ));
+      //   locator<LoggingHelper>().debug(cours);
+
+      //   });
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+  }
+
+  Future<Map<String, dynamic>> loadJsonFromAssets(String filePath) async {
+    String jsonString = await rootBundle.loadString(filePath);
+    return jsonDecode(jsonString);
   }
 }

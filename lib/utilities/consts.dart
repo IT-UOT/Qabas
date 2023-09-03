@@ -41,6 +41,23 @@ class Consts {
  // static const double defaultVerticalSpacing = 16.0;
  // static const double defaultHorizontalSpacing = 16.0;
 
+ // Input fields
+ static const defaultInputBorder = OutlineInputBorder(
+    borderSide: BorderSide(
+      color: Color(0xffD1DAE9),
+      width: defaultBorderWidth,
+    ),
+    borderRadius: BorderRadius.all(Radius.circular(Consts.defaultBorderRadius)),
+  );
+
+  // gaps
+  static const  gap8 = SizedBox(height: 8, width: 8);
+  static const  gap16 = SizedBox(height: 16, width: 16);
+  static const  gap24 = SizedBox(height: 24, width: 24);
+  static const  gap32 = SizedBox(height: 32, width: 32);
+  static const  gap48 = SizedBox(height: 48, width: 48);
+  static const  gap64 = SizedBox(height: 64, width: 64);
+
   /// Themes
   static ThemeData lightTheme = ThemeData(
     fontFamily: 'Alexandria',
@@ -82,7 +99,7 @@ class Consts {
            fontWeight: FontWeight.w500,
            fontSize: 12,
            color: Color(0xff898F9B)),
-    )
+    ),
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -92,4 +109,6 @@ class Consts {
       brightness: Brightness.dark,
     ),
   );
+
+  
 }

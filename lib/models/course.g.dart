@@ -11,8 +11,10 @@ _$_CourseModel _$$_CourseModelFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       name: json['name'] as String,
       courseCode: json['courseCode'] as String,
-      requirements: json['requirements'] as List<dynamic>,
-      links: json['links'] as Map<String, dynamic>,
+      requirements: (json['requirements'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      links: Map<String, String>.from(json['links'] as Map),
     );
 
 Map<String, dynamic> _$$_CourseModelToJson(_$_CourseModel instance) =>

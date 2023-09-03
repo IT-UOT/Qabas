@@ -21,4 +21,8 @@ class CoursesRepository {
   Future<void> deleteCourse(CourseModel course) async {
     await _firebaseService.deleteCourse(course);
   }
+
+  Future<void> addBulkCourses() async {
+    await _firebaseService.addBulkCourses();
+  }
 }

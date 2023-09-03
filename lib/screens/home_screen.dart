@@ -29,12 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('مرشد الطالب'),
+          title: const Text('توجيه'),
           centerTitle: true,
           actions: [
             IconButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const DashboardHome()));
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const DashboardHome()));
               },
               icon: const Icon(Icons.dashboard),
             ),
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               selectedIcon: Icon(Icons.home),
-              label: 'الحوش',
+              label: 'الرئيسية',
             ),
             // NavigationDestination(
             //   icon: Icon(Icons.book_outlined),
@@ -62,12 +63,12 @@ class _HomeScreenState extends State<HomeScreen> {
             NavigationDestination(
               icon: Icon(Icons.article_outlined),
               selectedIcon: Icon(Icons.article),
-              label: 'شن صاير؟',
+              label: 'أخر الأخبار',
             ),
             NavigationDestination(
               icon: Icon(Icons.info_outline),
               selectedIcon: Icon(Icons.info),
-              label: 'مني انتو!',
+              label: 'معلومات',
             ),
           ],
         ),

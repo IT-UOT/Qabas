@@ -38,6 +38,7 @@ class DepartmentsDashboard extends StatelessWidget {
                     bottom: 20,
                     left: 20,
                     child: FloatingActionButton.extended(
+                      heroTag:  'addDepartment',
                       onPressed: () {},
                       icon: const Icon(Icons.add),
                       label: const Text('إضافة قسم'),
