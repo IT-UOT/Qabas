@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('توجيه'),
+          title: const Text('قبس'),
           centerTitle: true,
           actions: [
             IconButton(

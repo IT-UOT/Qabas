@@ -170,174 +170,176 @@ class _AddEditCourseDialogState extends State<AddEditCourseDialog> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: AlertDialog(
-        scrollable: true,
+        scrollable: false,
         title: Text(widget.course == null ? 'إضافة مقرر' : 'تعديل المقرر'),
         content: SizedBox(
           width: MediaQuery.of(context).size.width * 0.8,
           height: MediaQuery.of(context).size.height * 0.8,
-          child: Form(
-            key: _formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                TextFormField(
-                  controller: _nameController,
-                  decoration: const InputDecoration(
-                    border: Consts.defaultInputBorder,
-                    labelText: 'اسم المقرر',
+          child: SingleChildScrollView(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  TextFormField(
+                    controller: _nameController,
+                    decoration: const InputDecoration(
+                      border: Consts.defaultInputBorder,
+                      labelText: 'اسم المقرر',
+                    ),
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'يرجى إدخال اسم المقرر';
+                      }
+                      return null;
+                    },
                   ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'يرجى إدخال اسم المقرر';
-                    }
-                    return null;
-                  },
-                ),
-                Consts.gap16,
-                TextFormField(
-                  controller: _courseCodeController,
-                  decoration: const InputDecoration(
-                    border: Consts.defaultInputBorder,
-                    labelText: 'رمز المقرر',
+                  Consts.gap16,
+                  TextFormField(
+                    controller: _courseCodeController,
+                    decoration: const InputDecoration(
+                      border: Consts.defaultInputBorder,
+                      labelText: 'رمز المقرر',
+                    ),
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'يرجى إدخال رمز المقرر';
+                      }
+                      return null;
+                    },
                   ),
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'يرجى إدخال رمز المقرر';
-                    }
-                    return null;
-                  },
-                ),
-                Consts.gap16,
-                Text(
-                  'الروابط المرتبطة بالمقرر',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                Consts.gap16,
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: _links.length + 1,
-                  itemBuilder: (context, index) {
-                    if (index == _links.length) {
-                      return SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _links.add(const MapEntry('', ''));
-                            });
-                          },
-                          child: const Text('إضافة رابط جديد'),
-                        ),
-                      );
-                    }
-                    return Padding(
-                      padding:
-                          const EdgeInsets.only(bottom: Consts.paddingSmall),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              initialValue: _links[index].key,
-                              decoration: const InputDecoration(
-                                border: Consts.defaultInputBorder,
-                                labelText: 'الاسم',
-                              ),
-                              onChanged: (value) {
-                                setState(() {
-                                  _links[index] =
-                                      MapEntry(value, _links[index].value);
-                                });
-                              },
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: TextFormField(
-                              initialValue: _links[index].value,
-                              decoration: const InputDecoration(
-                                border: Consts.defaultInputBorder,
-                                labelText: 'الرابط',
-                              ),
-                              onChanged: (value) {
-                                setState(() {
-                                  _links[index] =
-                                      MapEntry(_links[index].key, value);
-                                });
-                              },
-                            ),
-                          ),
-                          IconButton(
+                  Consts.gap16,
+                  Text(
+                    'الروابط المرتبطة بالمقرر',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  Consts.gap16,
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: _links.length + 1,
+                    itemBuilder: (context, index) {
+                      if (index == _links.length) {
+                        return SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                _links.removeAt(index);
+                                _links.add(const MapEntry('', ''));
                               });
                             },
-                            icon: const Icon(Icons.delete),
+                            child: const Text('إضافة رابط جديد'),
                           ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-                Consts.gap16,
-                Text(
-                  'متطلبات المقرر',
-                  style: Theme.of(context).textTheme.titleMedium,
-                ),
-                const SizedBox(height: 8),
-                ListView.builder(
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemCount: _requirements.length + 1,
-                  itemBuilder: (context, index) {
-                    if (index == _requirements.length) {
-                      return SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _requirements.add('');
-                            });
-                          },
-                          child: const Text('إضافة متطلب جديد'),
-                        ),
-                      );
-                    }
-                    return Padding(
-                      padding:
-                          const EdgeInsets.only(bottom: Consts.paddingMedium),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              initialValue: _requirements[index],
-                              decoration: const InputDecoration(
-                                border: Consts.defaultInputBorder,
-                                labelText: 'المتطلب',
+                        );
+                      }
+                      return Padding(
+                        padding:
+                            const EdgeInsets.only(bottom: Consts.paddingSmall),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TextFormField(
+                                initialValue: _links[index].key,
+                                decoration: const InputDecoration(
+                                  border: Consts.defaultInputBorder,
+                                  labelText: 'الاسم',
+                                ),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _links[index] =
+                                        MapEntry(value, _links[index].value);
+                                  });
+                                },
                               ),
-                              onChanged: (value) {
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: TextFormField(
+                                initialValue: _links[index].value,
+                                decoration: const InputDecoration(
+                                  border: Consts.defaultInputBorder,
+                                  labelText: 'الرابط',
+                                ),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _links[index] =
+                                        MapEntry(_links[index].key, value);
+                                  });
+                                },
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
                                 setState(() {
-                                  _requirements[index] = value;
+                                  _links.removeAt(index);
                                 });
                               },
+                              icon: const Icon(Icons.delete),
                             ),
-                          ),
-                          IconButton(
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                  Consts.gap16,
+                  Text(
+                    'متطلبات المقرر',
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: _requirements.length + 1,
+                    itemBuilder: (context, index) {
+                      if (index == _requirements.length) {
+                        return SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
                             onPressed: () {
                               setState(() {
-                                _requirements.removeAt(index);
+                                _requirements.add('');
                               });
                             },
-                            icon: const Icon(Icons.delete),
+                            child: const Text('إضافة متطلب جديد'),
                           ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              ],
+                        );
+                      }
+                      return Padding(
+                        padding:
+                            const EdgeInsets.only(bottom: Consts.paddingMedium),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TextFormField(
+                                initialValue: _requirements[index],
+                                decoration: const InputDecoration(
+                                  border: Consts.defaultInputBorder,
+                                  labelText: 'المتطلب',
+                                ),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _requirements[index] = value;
+                                  });
+                                },
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  _requirements.removeAt(index);
+                                });
+                              },
+                              icon: const Icon(Icons.delete),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),

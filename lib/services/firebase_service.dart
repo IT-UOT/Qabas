@@ -37,37 +37,11 @@ class FirebaseService {
           .get()
           .then((QuerySnapshot querySnapshot) async {
         for (var doc in querySnapshot.docs) {
-          // locator<LoggingHelper>().debug(doc.data());
-          Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
-          List<dynamic> coursesIDs = data['courses'];
-          List<CourseModel> coursesList = [];
-          List<dynamic> depRequirements = data["depRequirements"];
-          // fetch courses for each department
-          for (var courseID in coursesIDs) {
-            await firestore
-                .collection('courses')
-                .doc(courseID)
-                .get()
-                .then((DocumentSnapshot documentSnapshot) {
-              if (documentSnapshot.exists) {
-                coursesList.add(
-                  CourseModel.fromJson(
-                      documentSnapshot.data() as Map<String, dynamic>),
-                );
-              }
-            });
-          }
-          departments.add(
-            DepartmentModel(
-              name: data['name'],
-              depMapImgSrc: data['depMapImgSrc'],
-              depRequirements:
-                  depRequirements.map((e) => e.toString()).toList(),
-              courses: coursesList,
-            ),
-          );
+          locator<LoggingHelper>().debug(doc.data().runtimeType);
+          departments.add(DepartmentModel.fromJson(
+              doc.data() as Map<String, dynamic>));
         }
-      });
+           });
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
@@ -75,13 +49,34 @@ class FirebaseService {
     return departments;
   }
 
-  Future<void> uploadDepartment(DepartmentModel departmentModel) async {
-    // upload department to firebase firestore
+  Future<void> createDepartment(DepartmentModel department) async {
     try {
-      await firestore.collection('departments').add(departmentModel.toJson());
+      await firestore
+          .collection('departments')
+          .doc(department.id)
+          .set(department.toJson());
     } catch (e) {
-      locator<LoggingHelper>().error(e.toString());
+      // handle error
       rethrow;
+    }
+  }
+
+  Future<void> updateDepartment(DepartmentModel department) async {
+    try {
+      await firestore
+          .collection('departments')
+          .doc(department.id)
+          .update(department.toJson());
+    } catch (e) {
+      // handle error
+    }
+  }
+
+  Future<void> deleteDepartment(String departmentId) async {
+    try {
+      await firestore.collection('departments').doc(departmentId).delete();
+    } catch (e) {
+      // handle error
     }
   }
 
@@ -213,7 +208,7 @@ class FirebaseService {
 //      locator<LoggingHelper>().debug(listOfCourses);
       for (Map<String, dynamic> course in listOfCourses) {
         locator<LoggingHelper>().wtf("###################");
-     //   locator<LoggingHelper>().debug(course);
+        //   locator<LoggingHelper>().debug(course);
 
         var c = CourseModel(
           courseCode: course['subject_code'],
@@ -222,10 +217,9 @@ class FirebaseService {
           name: course['subject_name'],
           requirements: [],
         );
-       addCourse(c);
+        addCourse(c);
       }
-              locator<LoggingHelper>().wtf(listOfCourses.length);
-
+      locator<LoggingHelper>().wtf(listOfCourses.length);
 
       //   coursesJson.map((key, value) {
       //  var cours =   MapEntry(

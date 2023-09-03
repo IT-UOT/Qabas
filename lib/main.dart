@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IT Mentor',
+      title: 'Qabas',
       locale: const Locale('ar'),
       debugShowCheckedModeBanner: false,
       theme: Consts.lightTheme,

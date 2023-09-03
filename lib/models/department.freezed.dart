@@ -20,10 +20,14 @@ DepartmentModel _$DepartmentModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DepartmentModel {
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  List<CourseModel> get courses => throw _privateConstructorUsedError;
+  List<String> get courses => throw _privateConstructorUsedError;
   String get depMapImgSrc => throw _privateConstructorUsedError;
   List<String> get depRequirements => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  String get depCode => throw _privateConstructorUsedError;
+  DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,10 +42,14 @@ abstract class $DepartmentModelCopyWith<$Res> {
       _$DepartmentModelCopyWithImpl<$Res, DepartmentModel>;
   @useResult
   $Res call(
-      {String name,
-      List<CourseModel> courses,
+      {String id,
+      String name,
+      List<String> courses,
       String depMapImgSrc,
-      List<String> depRequirements});
+      List<String> depRequirements,
+      String description,
+      String depCode,
+      DateTime createdAt});
 }
 
 /// @nodoc
@@ -57,12 +65,20 @@ class _$DepartmentModelCopyWithImpl<$Res, $Val extends DepartmentModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? courses = null,
     Object? depMapImgSrc = null,
     Object? depRequirements = null,
+    Object? description = null,
+    Object? depCode = null,
+    Object? createdAt = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -70,7 +86,7 @@ class _$DepartmentModelCopyWithImpl<$Res, $Val extends DepartmentModel>
       courses: null == courses
           ? _value.courses
           : courses // ignore: cast_nullable_to_non_nullable
-              as List<CourseModel>,
+              as List<String>,
       depMapImgSrc: null == depMapImgSrc
           ? _value.depMapImgSrc
           : depMapImgSrc // ignore: cast_nullable_to_non_nullable
@@ -79,6 +95,18 @@ class _$DepartmentModelCopyWithImpl<$Res, $Val extends DepartmentModel>
           ? _value.depRequirements
           : depRequirements // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      depCode: null == depCode
+          ? _value.depCode
+          : depCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ) as $Val);
   }
 }
@@ -92,10 +120,14 @@ abstract class _$$_DepartmentModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String name,
-      List<CourseModel> courses,
+      {String id,
+      String name,
+      List<String> courses,
       String depMapImgSrc,
-      List<String> depRequirements});
+      List<String> depRequirements,
+      String description,
+      String depCode,
+      DateTime createdAt});
 }
 
 /// @nodoc
@@ -109,12 +141,20 @@ class __$$_DepartmentModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? name = null,
     Object? courses = null,
     Object? depMapImgSrc = null,
     Object? depRequirements = null,
+    Object? description = null,
+    Object? depCode = null,
+    Object? createdAt = null,
   }) {
     return _then(_$_DepartmentModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -122,7 +162,7 @@ class __$$_DepartmentModelCopyWithImpl<$Res>
       courses: null == courses
           ? _value._courses
           : courses // ignore: cast_nullable_to_non_nullable
-              as List<CourseModel>,
+              as List<String>,
       depMapImgSrc: null == depMapImgSrc
           ? _value.depMapImgSrc
           : depMapImgSrc // ignore: cast_nullable_to_non_nullable
@@ -131,6 +171,18 @@ class __$$_DepartmentModelCopyWithImpl<$Res>
           ? _value._depRequirements
           : depRequirements // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      depCode: null == depCode
+          ? _value.depCode
+          : depCode // ignore: cast_nullable_to_non_nullable
+              as String,
+      createdAt: null == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -139,10 +191,14 @@ class __$$_DepartmentModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DepartmentModel implements _DepartmentModel {
   const _$_DepartmentModel(
-      {required this.name,
-      required final List<CourseModel> courses,
+      {required this.id,
+      required this.name,
+      required final List<String> courses,
       required this.depMapImgSrc,
-      required final List<String> depRequirements})
+      required final List<String> depRequirements,
+      required this.description,
+      required this.depCode,
+      required this.createdAt})
       : _courses = courses,
         _depRequirements = depRequirements;
 
@@ -150,10 +206,12 @@ class _$_DepartmentModel implements _DepartmentModel {
       _$$_DepartmentModelFromJson(json);
 
   @override
-  final String name;
-  final List<CourseModel> _courses;
+  final String id;
   @override
-  List<CourseModel> get courses {
+  final String name;
+  final List<String> _courses;
+  @override
+  List<String> get courses {
     if (_courses is EqualUnmodifiableListView) return _courses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_courses);
@@ -170,8 +228,15 @@ class _$_DepartmentModel implements _DepartmentModel {
   }
 
   @override
+  final String description;
+  @override
+  final String depCode;
+  @override
+  final DateTime createdAt;
+
+  @override
   String toString() {
-    return 'DepartmentModel(name: $name, courses: $courses, depMapImgSrc: $depMapImgSrc, depRequirements: $depRequirements)';
+    return 'DepartmentModel(id: $id, name: $name, courses: $courses, depMapImgSrc: $depMapImgSrc, depRequirements: $depRequirements, description: $description, depCode: $depCode, createdAt: $createdAt)';
   }
 
   @override
@@ -179,22 +244,32 @@ class _$_DepartmentModel implements _DepartmentModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DepartmentModel &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other._courses, _courses) &&
             (identical(other.depMapImgSrc, depMapImgSrc) ||
                 other.depMapImgSrc == depMapImgSrc) &&
             const DeepCollectionEquality()
-                .equals(other._depRequirements, _depRequirements));
+                .equals(other._depRequirements, _depRequirements) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.depCode, depCode) || other.depCode == depCode) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      id,
       name,
       const DeepCollectionEquality().hash(_courses),
       depMapImgSrc,
-      const DeepCollectionEquality().hash(_depRequirements));
+      const DeepCollectionEquality().hash(_depRequirements),
+      description,
+      depCode,
+      createdAt);
 
   @JsonKey(ignore: true)
   @override
@@ -212,22 +287,34 @@ class _$_DepartmentModel implements _DepartmentModel {
 
 abstract class _DepartmentModel implements DepartmentModel {
   const factory _DepartmentModel(
-      {required final String name,
-      required final List<CourseModel> courses,
+      {required final String id,
+      required final String name,
+      required final List<String> courses,
       required final String depMapImgSrc,
-      required final List<String> depRequirements}) = _$_DepartmentModel;
+      required final List<String> depRequirements,
+      required final String description,
+      required final String depCode,
+      required final DateTime createdAt}) = _$_DepartmentModel;
 
   factory _DepartmentModel.fromJson(Map<String, dynamic> json) =
       _$_DepartmentModel.fromJson;
 
   @override
+  String get id;
+  @override
   String get name;
   @override
-  List<CourseModel> get courses;
+  List<String> get courses;
   @override
   String get depMapImgSrc;
   @override
   List<String> get depRequirements;
+  @override
+  String get description;
+  @override
+  String get depCode;
+  @override
+  DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
   _$$_DepartmentModelCopyWith<_$_DepartmentModel> get copyWith =>
