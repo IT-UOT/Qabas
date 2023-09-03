@@ -15,50 +15,54 @@ class DepartmentsDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-        create: (context) => locator<DepartmentsCubit>(),
-        child: BlocBuilder<DepartmentsCubit, DepartmentsState>(
-          builder: (context, state) {
-            return state.when(
-              () => Container(),
-              initial: () => const LoadingWidget(),
-              loading: () => const LoadingWidget(),
-              loaded: (data) => Stack(
-                children: [
-                  ListView.builder(
-                    itemCount: data.length,
-                    itemBuilder: (context, index) {
-                      return DashboardItem(
-                        title: data[index].name,
-                        onTap: () {},
-                        onDelete: () {
-                          _showConfirmationDialog(context, data[index]);
-                        },
-                        onEdit: () {
-                          _showEditCourseDialog(context, data[index]);
-                        },
-                        //   subtitle: data[index].name,
-                      );
-                    },
-                  ),
-                  Positioned(
-                    bottom: 20,
-                    left: 20,
-                    child: FloatingActionButton.extended(
-                      heroTag: 'addDepartment',
-                      onPressed: () {
-                        _showAddDepartmentDialog(context);
+    return RefreshIndicator(
+      onRefresh: () async {
+        locator<DepartmentsCubit>().loadDepartments();
+      },
+      child: BlocBuilder<DepartmentsCubit, DepartmentsState>(
+        bloc: locator<DepartmentsCubit>(),
+        builder: (context, state) {
+          return state.when(
+            () => Container(),
+            initial: () => const LoadingWidget(),
+            loading: () => const LoadingWidget(),
+            loaded: (data) => Stack(
+              children: [
+                ListView.builder(
+                  itemCount: data.length,
+                  itemBuilder: (context, index) {
+                    return DashboardItem(
+                      title: data[index].name,
+                      onTap: () {},
+                      onDelete: () {
+                        _showConfirmationDialog(context, data[index]);
                       },
-                      icon: const Icon(Icons.add),
-                      label: const Text('إضافة قسم'),
-                    ),
-                  )
-                ],
-              ),
-              error: (message) => ErrorWidget(message),
-            );
-          },
-        ));
+                      onEdit: () {
+                        _showEditCourseDialog(context, data[index]);
+                      },
+                      //   subtitle: data[index].name,
+                    );
+                  },
+                ),
+                Positioned(
+                  bottom: 20,
+                  left: 20,
+                  child: FloatingActionButton.extended(
+                    heroTag: 'addDepartment',
+                    onPressed: () {
+                      _showAddDepartmentDialog(context);
+                    },
+                    icon: const Icon(Icons.add),
+                    label: const Text('إضافة قسم'),
+                  ),
+                )
+              ],
+            ),
+            error: (message) => ErrorWidget(message),
+          );
+        },
+      ),
+    );
   }
 
   void _showAddDepartmentDialog(BuildContext context) {
@@ -140,8 +144,8 @@ class _AddEditDepartmenteDialogState extends State<AddEditDepartmenteDialog> {
   final _departmentDescriptionController = TextEditingController();
   final _departmentCodeController = TextEditingController();
   DateTime? _createdAt;
-  List<String> _depRequirements = [];
-  List<String> _selectedCourses = [];
+  final _depRequirements = <String>[];
+  final _selectedCourses = <String>[];
 
   @override
   void initState() {
@@ -151,8 +155,8 @@ class _AddEditDepartmenteDialogState extends State<AddEditDepartmenteDialog> {
       _depMapImgSrcController.text = widget.department!.depMapImgSrc;
       _departmentDescriptionController.text = widget.department!.description;
       _departmentCodeController.text = widget.department!.depCode;
-      _depRequirements = widget.department!.depRequirements;
-      _selectedCourses = widget.department!.courses;
+      _depRequirements.addAll(widget.department!.depRequirements);
+      _selectedCourses.addAll(widget.department!.courses);
       _createdAt = widget.department!.createdAt;
     }
   }
@@ -288,39 +292,76 @@ class _AddEditDepartmenteDialogState extends State<AddEditDepartmenteDialog> {
                       return state.maybeMap(orElse: (() {
                         return const SizedBox();
                       }), loaded: (data) {
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Text('المقررات'),
-                            const SizedBox(height: 8),
-                            Wrap(
-                              spacing: 8,
-                              runSpacing: 16,
-                              children: data.courses.map((course) {
-                                return FilterChip(
-                                  label: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(course.name),
-                                      Text(course.courseCode),
-                                    ],
-                                  ),
-                                  selected: _selectedCourses.contains(course.id),
-                                  onSelected: (selected) {
+                        final groupedCourses = groupBy(data.courses,
+                            (course) => course.courseCode.substring(0, 4));
+
+                        return ListView(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          children: groupedCourses.entries.map((entry) {
+                            final sectionName = entry.key;
+                            final sectionCourses = entry.value;
+
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: Consts.paddingSmall),
+                              child: ExpansionTile(
+                                title: Text(
+                                    '$sectionName (${sectionCourses.length})'),
+                                leading: Checkbox(
+                                  //  title: const Text('Select all'),
+                                  value: sectionCourses.every((course) =>
+                                      _selectedCourses.contains(course.id)),
+                                  onChanged: (selected) {
                                     setState(() {
-                                      if (selected) {
-                                        _selectedCourses.add(course.id);
+                                      if (selected!) {
+                                        _selectedCourses.addAll(sectionCourses
+                                            .map((course) => course.id));
                                       } else {
-                                        _selectedCourses.remove(course.id);
+                                        _selectedCourses.removeWhere((id) =>
+                                            sectionCourses
+                                                .map((course) => course.id)
+                                                .contains(id));
                                       }
                                     });
                                   },
-                                );
-                              }).toList(),
-                            ),
-                          ],
+                                ),
+                                children: [
+                                  Wrap(
+                                    spacing: 8,
+                                    runSpacing: 16,
+                                    children: sectionCourses.map((course) {
+                                      return FilterChip(
+                                        label: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(course.name),
+                                            Text(course.courseCode),
+                                          ],
+                                        ),
+                                        selected: _selectedCourses
+                                            .contains(course.id),
+                                        onSelected: (selected) {
+                                          setState(() {
+                                            if (selected) {
+                                              _selectedCourses.add(course.id);
+                                            } else {
+                                              _selectedCourses
+                                                  .remove(course.id);
+                                            }
+                                          });
+                                        },
+                                      );
+                                    }).toList(),
+                                  ),
+                                  Consts.gap16,
+                                  const Divider(),
+                                ],
+                              ),
+                            );
+                          }).toList(),
                         );
                       });
                     },
@@ -366,5 +407,19 @@ class _AddEditDepartmenteDialogState extends State<AddEditDepartmenteDialog> {
     _departmentNameController.dispose();
     _depMapImgSrcController.dispose();
     super.dispose();
+  }
+
+  Map<String, List<CourseModel>> groupBy(
+      List<CourseModel> courses, String Function(CourseModel) key) {
+    final groupedCourses = <String, List<CourseModel>>{};
+    for (final course in courses) {
+      final courseKey = key(course);
+      if (groupedCourses.containsKey(courseKey)) {
+        groupedCourses[courseKey]!.add(course);
+      } else {
+        groupedCourses[courseKey] = [course];
+      }
+    }
+    return groupedCourses;
   }
 }

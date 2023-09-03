@@ -233,7 +233,8 @@ class _DepartmentsScreenState extends State<DepartmentsScreen>
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "المواد",
+                                            "المواد"
+                                            " ( ${department.courses.length} )",
                                             style: Theme.of(context)
                                                 .textTheme
                                                 .titleMedium,
