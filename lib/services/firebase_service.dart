@@ -1,11 +1,14 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:itmentor/models/news.dart';
 import 'package:itmentor/services/locator.dart';
+import 'package:uuid/uuid.dart';
 
 import '../models/about.dart';
 import '../models/department.dart';
@@ -137,10 +140,14 @@ class FirebaseService {
     }
   }
 
-  /// News
-  Future<void> createPost(NewsModel news) async {
-    // upload new news item to firebase firestore
+  Future<void> createPost(NewsModel news, List<File> images) async {
+    // upload new news item to firebase firestore and storage
     try {
+      // upload images to storage
+      final imageUrls = await _uploadImages(images);
+
+      // update news item with image URLs
+      news = news.copyWith(images: imageUrls);
       await firestore.collection('news').doc(news.id).set(news.toJson());
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
@@ -148,16 +155,34 @@ class FirebaseService {
     }
   }
 
-  Future<void> updatePost(NewsModel news) async {
-    // update existing news item in firebase firestore
+  Future<void> updatePost(NewsModel news, List<File> images) async {
+    // update existing news item in firebase firestore and storage
     try {
-      locator<LoggingHelper>().info('Updating post------------------');
+      // upload images to storage
+      final imageUrls = await _uploadImages(images);
 
+      // update news item with image URLs
+      news = news.copyWith(images: imageUrls);
       await firestore.collection('news').doc(news.id).update(news.toJson());
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;
     }
+  }
+
+  Future<List<String>> _uploadImages(List<File> images) async {
+    final storage = FirebaseStorage.instance;
+    final imageUrls = <String>[];
+
+    for (final image in images) {
+      final ref = storage.ref().child('images/${const Uuid().v4()}');
+      final uploadTask = ref.putFile(image);
+      final snapshot = await uploadTask.whenComplete(() {});
+      final imageUrl = await snapshot.ref.getDownloadURL();
+      imageUrls.add(imageUrl);
+    }
+
+    return imageUrls;
   }
 
   Future<void> deletePost(String postId) async {

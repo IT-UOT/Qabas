@@ -17,6 +17,7 @@ class NewsTile extends StatefulWidget {
 class _NewsTileState extends State<NewsTile> {
   bool _showFullText = false;
   bool _isFavorite = false;
+  int _currentImage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -52,54 +53,141 @@ class _NewsTileState extends State<NewsTile> {
               ),
               const SizedBox(height: 8),
 
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    _showFullText = !_showFullText;
-                  });
-                },
-                child: AnimatedCrossFade(
-                  duration: const Duration(milliseconds: 300),
-                  crossFadeState: _showFullText
-                      ? CrossFadeState.showSecond
-                      : CrossFadeState.showFirst,
-                  firstChild: Text(
-                    widget.newsModel.content,
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
-                    softWrap: true,
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ),
-                  secondChild: Text(
-                    widget.newsModel.content,
-                    style: Theme.of(context).textTheme.bodyMedium,
+              SizedBox(
+                width: double.infinity,
+                child: InkWell(
+                  onTap: () {
+                    setState(() {
+                      _showFullText = !_showFullText;
+                    });
+                  },
+                  child: AnimatedCrossFade(
+                    duration: const Duration(milliseconds: 300),
+                    crossFadeState: _showFullText
+                        ? CrossFadeState.showSecond
+                        : CrossFadeState.showFirst,
+                    firstChild: Text(
+                      widget.newsModel.content,
+                      maxLines: 3,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
+                    secondChild: Text(
+                      widget.newsModel.content,
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
                   ),
                 ),
               ),
               const SizedBox(
                 height: 8,
               ),
-              if (widget.newsModel.imageUrl != null)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: AspectRatio(
-                    aspectRatio: 16 / 9,
+              /**
+                
+                  Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Scaffold(
+                                body: Center(
+                                  child: PhotoView(
+                                    imageProvider: NetworkImage(
+                                      widget.newsModel.images![index],
+                                    ),
+                                    heroAttributes: PhotoViewHeroAttributes(
+                                      tag: widget.newsModel.images![index],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                       
+               */
+              if (widget.newsModel.images!.isNotEmpty)
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Scaffold(
+                          body: Center(
+                            child: PhotoView(
+                              imageProvider: NetworkImage(
+                                widget.newsModel.images![_currentImage],
+                              ),
+                              heroAttributes: PhotoViewHeroAttributes(
+                                tag: widget.newsModel.images![_currentImage],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    constraints: const BoxConstraints(
+                      maxHeight: 400,
+                      //minHeight: 100,
+                    ),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: PhotoView(
-                        initialScale: PhotoViewComputedScale.covered,
-                        imageProvider: NetworkImage(widget.newsModel.imageUrl!),
-                        errorBuilder: (context, error, stackTrace) {
-                          return const Center(
-                              child: Text("حدث خطأ أثناء تحميل الصورة"));
+                      borderRadius:
+                          BorderRadius.circular(Consts.defaultBorderRadius),
+                      child: PhotoViewGallery.builder(
+                        itemCount: widget.newsModel.images!.length,
+                        builder: (context, index) {
+                          _currentImage = index;
+                          return PhotoViewGalleryPageOptions(
+                            imageProvider:
+                                NetworkImage(widget.newsModel.images![index]),
+                            initialScale: PhotoViewComputedScale.covered,
+                            minScale: PhotoViewComputedScale.contained,
+                            maxScale: PhotoViewComputedScale.covered * 1.1,
+                            heroAttributes: PhotoViewHeroAttributes(
+                              tag: widget.newsModel.images![index],
+                            ),
+                            disableGestures: true,
+                          );
                         },
+                        scrollPhysics: const BouncingScrollPhysics(),
                         backgroundDecoration: BoxDecoration(
                           color: Theme.of(context).canvasColor,
+                        ),
+                        loadingBuilder: (context, event) => Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(
+                                Consts.defaultBorderRadius),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondaryContainer,
+                          ),
+                          alignment: Alignment.center,
+                          child: const CircularProgressIndicator(),
                         ),
                       ),
                     ),
                   ),
                 ),
+              // Padding(
+              //   padding: const EdgeInsets.symmetric(vertical: 8),
+              //   child: AspectRatio(
+              //     aspectRatio: 16 / 9,
+              //     child: ClipRRect(
+              //       borderRadius: BorderRadius.circular(12),
+              //       child: PhotoView(
+              //         initialScale: PhotoViewComputedScale.covered,
+              //         imageProvider: NetworkImage(widget.newsModel.images![1]),
+              //         errorBuilder: (context, error, stackTrace) {
+              //           return const Center(
+              //               child: Text("حدث خطأ أثناء تحميل الصورة"));
+              //         },
+              //         backgroundDecoration: BoxDecoration(
+              //           color: Theme.of(context).canvasColor,
+              //         ),
+              //       ),
+              //     ),
+              //   ),
+              // ),
 
               const SizedBox(height: 8),
               //const Divider(),

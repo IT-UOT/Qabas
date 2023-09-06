@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import '../models/news.dart';
 import '../services/firebase_service.dart';
 import '../services/locator.dart';
@@ -15,16 +17,17 @@ class NewsRepository {
   }
 
   // upload news
-  Future<void> createPost(NewsModel news) async {
-    await _firebaseService.createPost(news).onError((error, stackTrace) {
+  Future<void> createPost(NewsModel news,List<File> images) async {
+    await _firebaseService.createPost(news, images).onError((error, stackTrace) {
       locator<LoggingHelper>().error(error.toString());
       
       throw error.toString();
     });
   }
 
-  Future<void> updatePost(NewsModel news) async {
-    await _firebaseService.updatePost(news).onError((error, stackTrace) {
+  Future<void> updatePost(NewsModel news,List<File> images) async {
+        
+    await _firebaseService.updatePost(news,images).onError((error, stackTrace) {
       locator<LoggingHelper>().error(error.toString());
       //throw error.toString();
     });

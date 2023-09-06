@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:itmentor/data/news_repository.dart';
@@ -28,10 +30,10 @@ class NewsCubit extends Cubit<NewsState> {
   }
 
   // upload news
-  Future<void> createPost(NewsModel news) async {
+  Future<void> createPost(NewsModel news,List<File> images) async {
     emit(const NewsState.loading());
     try {
-      await _newsRepository.createPost(news);
+      await _newsRepository.createPost(news,images);
       loadNews();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
@@ -40,10 +42,11 @@ class NewsCubit extends Cubit<NewsState> {
   }
 
   // update news
-  Future<void> updatePost(NewsModel news) async {
+  Future<void> updatePost(NewsModel news,List<File> images) async {
     emit(const NewsState.loading());
     try {
-      await _newsRepository.updatePost(news);
+                  
+      await _newsRepository.updatePost(news, images);
       loadNews();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());

@@ -23,7 +23,7 @@ void main() async {
   ));
 
   //HydratedBloc.storage = await HydratedStorage.build(storageDirectory:  await getApplicationDocumentsDirectory());
- //locator<HomeScreenCubit>().hydrate();
+  //locator<HomeScreenCubit>().hydrate();
   Bloc.observer = Observer();
   runApp(const MyApp());
 }

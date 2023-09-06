@@ -11,9 +11,10 @@ _$_NewsModel _$$_NewsModelFromJson(Map<String, dynamic> json) => _$_NewsModel(
       title: json['title'] as String,
       content: json['content'] as String,
       publishedAt: DateTime.parse(json['publishedAt'] as String),
-      isPinned: json['isPinned'] as bool?,
+      isPinned: json['isPinned'] as bool,
       author: json['author'] as String?,
-      imageUrl: json['imageUrl'] as String?,
+      images:
+          (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
       url: json['url'] as String?,
     );
 
@@ -25,6 +26,6 @@ Map<String, dynamic> _$$_NewsModelToJson(_$_NewsModel instance) =>
       'publishedAt': instance.publishedAt.toIso8601String(),
       'isPinned': instance.isPinned,
       'author': instance.author,
-      'imageUrl': instance.imageUrl,
+      'images': instance.images,
       'url': instance.url,
     };

@@ -10,9 +10,9 @@ class NewsModel with _$NewsModel{
     required String title,
     required String content,
     required DateTime publishedAt,
-     bool? isPinned,
+    required bool isPinned,
      String? author,
-     String? imageUrl,
+     List<String>? images,
      String? url,
   }) = _NewsModel;
 

@@ -24,9 +24,9 @@ mixin _$NewsModel {
   String get title => throw _privateConstructorUsedError;
   String get content => throw _privateConstructorUsedError;
   DateTime get publishedAt => throw _privateConstructorUsedError;
-  bool? get isPinned => throw _privateConstructorUsedError;
+  bool get isPinned => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
-  String? get imageUrl => throw _privateConstructorUsedError;
+  List<String>? get images => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45,9 +45,9 @@ abstract class $NewsModelCopyWith<$Res> {
       String title,
       String content,
       DateTime publishedAt,
-      bool? isPinned,
+      bool isPinned,
       String? author,
-      String? imageUrl,
+      List<String>? images,
       String? url});
 }
 
@@ -68,9 +68,9 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
-    Object? isPinned = freezed,
+    Object? isPinned = null,
     Object? author = freezed,
-    Object? imageUrl = freezed,
+    Object? images = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
@@ -90,18 +90,18 @@ class _$NewsModelCopyWithImpl<$Res, $Val extends NewsModel>
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isPinned: freezed == isPinned
+      isPinned: null == isPinned
           ? _value.isPinned
           : isPinned // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+      images: freezed == images
+          ? _value.images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -122,9 +122,9 @@ abstract class _$$_NewsModelCopyWith<$Res> implements $NewsModelCopyWith<$Res> {
       String title,
       String content,
       DateTime publishedAt,
-      bool? isPinned,
+      bool isPinned,
       String? author,
-      String? imageUrl,
+      List<String>? images,
       String? url});
 }
 
@@ -143,9 +143,9 @@ class __$$_NewsModelCopyWithImpl<$Res>
     Object? title = null,
     Object? content = null,
     Object? publishedAt = null,
-    Object? isPinned = freezed,
+    Object? isPinned = null,
     Object? author = freezed,
-    Object? imageUrl = freezed,
+    Object? images = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_NewsModel(
@@ -165,18 +165,18 @@ class __$$_NewsModelCopyWithImpl<$Res>
           ? _value.publishedAt
           : publishedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isPinned: freezed == isPinned
+      isPinned: null == isPinned
           ? _value.isPinned
           : isPinned // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
       author: freezed == author
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+      images: freezed == images
+          ? _value._images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -193,10 +193,11 @@ class _$_NewsModel implements _NewsModel {
       required this.title,
       required this.content,
       required this.publishedAt,
-      this.isPinned,
+      required this.isPinned,
       this.author,
-      this.imageUrl,
-      this.url});
+      final List<String>? images,
+      this.url})
+      : _images = images;
 
   factory _$_NewsModel.fromJson(Map<String, dynamic> json) =>
       _$$_NewsModelFromJson(json);
@@ -210,17 +211,25 @@ class _$_NewsModel implements _NewsModel {
   @override
   final DateTime publishedAt;
   @override
-  final bool? isPinned;
+  final bool isPinned;
   @override
   final String? author;
+  final List<String>? _images;
   @override
-  final String? imageUrl;
+  List<String>? get images {
+    final value = _images;
+    if (value == null) return null;
+    if (_images is EqualUnmodifiableListView) return _images;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? url;
 
   @override
   String toString() {
-    return 'NewsModel(id: $id, title: $title, content: $content, publishedAt: $publishedAt, isPinned: $isPinned, author: $author, imageUrl: $imageUrl, url: $url)';
+    return 'NewsModel(id: $id, title: $title, content: $content, publishedAt: $publishedAt, isPinned: $isPinned, author: $author, images: $images, url: $url)';
   }
 
   @override
@@ -236,15 +245,14 @@ class _$_NewsModel implements _NewsModel {
             (identical(other.isPinned, isPinned) ||
                 other.isPinned == isPinned) &&
             (identical(other.author, author) || other.author == author) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
+            const DeepCollectionEquality().equals(other._images, _images) &&
             (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, content, publishedAt,
-      isPinned, author, imageUrl, url);
+      isPinned, author, const DeepCollectionEquality().hash(_images), url);
 
   @JsonKey(ignore: true)
   @override
@@ -266,9 +274,9 @@ abstract class _NewsModel implements NewsModel {
       required final String title,
       required final String content,
       required final DateTime publishedAt,
-      final bool? isPinned,
+      required final bool isPinned,
       final String? author,
-      final String? imageUrl,
+      final List<String>? images,
       final String? url}) = _$_NewsModel;
 
   factory _NewsModel.fromJson(Map<String, dynamic> json) =
@@ -283,11 +291,11 @@ abstract class _NewsModel implements NewsModel {
   @override
   DateTime get publishedAt;
   @override
-  bool? get isPinned;
+  bool get isPinned;
   @override
   String? get author;
   @override
-  String? get imageUrl;
+  List<String>? get images;
   @override
   String? get url;
   @override

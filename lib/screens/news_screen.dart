@@ -29,18 +29,26 @@ class NewsScreen extends StatelessWidget {
                         children: [
                           const Text('لا يوجد عناصر'),
                           FilledButton(
-                              onPressed: () {
-                             
-                              },
+                              onPressed: () {},
                               child: const Text("إعادة المحاولة")),
                         ],
                       ),
                     );
                   } else {
+                    final pinnedNews = news.where((n) => n.isPinned).toList();
+                    final unpinnedNews =
+                        news.where((n) => !n.isPinned).toList();
+
                     return ListView.builder(
-                      itemCount: news.length,
+                      itemCount: pinnedNews.length + unpinnedNews.length,
                       itemBuilder: (context, index) {
-                        return NewsTile(newsModel: news[index]);
+                        if (index < pinnedNews.length) {
+                          return NewsTile(newsModel: pinnedNews[index]);
+                        } else {
+                          return NewsTile(
+                              newsModel:
+                                  unpinnedNews[index - pinnedNews.length]);
+                        }
                       },
                     );
                   }
