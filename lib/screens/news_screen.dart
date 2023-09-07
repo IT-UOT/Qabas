@@ -39,17 +39,22 @@ class NewsScreen extends StatelessWidget {
                     final unpinnedNews =
                         news.where((n) => !n.isPinned).toList();
 
-                    return ListView.builder(
-                      itemCount: pinnedNews.length + unpinnedNews.length,
-                      itemBuilder: (context, index) {
-                        if (index < pinnedNews.length) {
-                          return NewsTile(newsModel: pinnedNews[index]);
-                        } else {
-                          return NewsTile(
-                              newsModel:
-                                  unpinnedNews[index - pinnedNews.length]);
-                        }
+                    return RefreshIndicator(
+                      onRefresh: () async {
+                        await context.read<NewsCubit>().loadNews();
                       },
+                      child: ListView.builder(
+                        itemCount: pinnedNews.length + unpinnedNews.length,
+                        itemBuilder: (context, index) {
+                          if (index < pinnedNews.length) {
+                            return NewsTile(newsModel: pinnedNews[index]);
+                          } else {
+                            return NewsTile(
+                                newsModel:
+                                    unpinnedNews[index - pinnedNews.length]);
+                          }
+                        },
+                      ),
                     );
                   }
                 },

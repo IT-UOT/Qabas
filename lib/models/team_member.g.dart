@@ -11,7 +11,9 @@ _$_TeamMemberModel _$$_TeamMemberModelFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       role: json['role'] as String,
       bio: json['bio'] as String,
-      links: Map<String, String>.from(json['links'] as Map),
+      links: (json['links'] as List<dynamic>)
+          .map((e) => SocialLink.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_TeamMemberModelToJson(_$_TeamMemberModel instance) =>

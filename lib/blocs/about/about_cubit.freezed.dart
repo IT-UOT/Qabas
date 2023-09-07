@@ -20,7 +20,7 @@ mixin _$AboutState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AboutModel about) loaded,
+    required TResult Function(AboutModel? about) loaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$AboutState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AboutModel about)? loaded,
+    TResult? Function(AboutModel? about)? loaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ mixin _$AboutState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AboutModel about)? loaded,
+    TResult Function(AboutModel? about)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -125,7 +125,7 @@ class _$_Initial implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AboutModel about) loaded,
+    required TResult Function(AboutModel? about) loaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -136,7 +136,7 @@ class _$_Initial implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AboutModel about)? loaded,
+    TResult? Function(AboutModel? about)? loaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -147,7 +147,7 @@ class _$_Initial implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AboutModel about)? loaded,
+    TResult Function(AboutModel? about)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -238,7 +238,7 @@ class _$_Loading implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AboutModel about) loaded,
+    required TResult Function(AboutModel? about) loaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -249,7 +249,7 @@ class _$_Loading implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AboutModel about)? loaded,
+    TResult? Function(AboutModel? about)? loaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -260,7 +260,7 @@ class _$_Loading implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AboutModel about)? loaded,
+    TResult Function(AboutModel? about)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -317,9 +317,9 @@ abstract class _$$_LoadedCopyWith<$Res> {
   factory _$$_LoadedCopyWith(_$_Loaded value, $Res Function(_$_Loaded) then) =
       __$$_LoadedCopyWithImpl<$Res>;
   @useResult
-  $Res call({AboutModel about});
+  $Res call({AboutModel? about});
 
-  $AboutModelCopyWith<$Res> get about;
+  $AboutModelCopyWith<$Res>? get about;
 }
 
 /// @nodoc
@@ -332,20 +332,24 @@ class __$$_LoadedCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? about = null,
+    Object? about = freezed,
   }) {
     return _then(_$_Loaded(
-      null == about
+      freezed == about
           ? _value.about
           : about // ignore: cast_nullable_to_non_nullable
-              as AboutModel,
+              as AboutModel?,
     ));
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $AboutModelCopyWith<$Res> get about {
-    return $AboutModelCopyWith<$Res>(_value.about, (value) {
+  $AboutModelCopyWith<$Res>? get about {
+    if (_value.about == null) {
+      return null;
+    }
+
+    return $AboutModelCopyWith<$Res>(_value.about!, (value) {
       return _then(_value.copyWith(about: value));
     });
   }
@@ -357,7 +361,7 @@ class _$_Loaded implements _Loaded {
   const _$_Loaded(this.about);
 
   @override
-  final AboutModel about;
+  final AboutModel? about;
 
   @override
   String toString() {
@@ -386,7 +390,7 @@ class _$_Loaded implements _Loaded {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AboutModel about) loaded,
+    required TResult Function(AboutModel? about) loaded,
     required TResult Function(String message) error,
   }) {
     return loaded(about);
@@ -397,7 +401,7 @@ class _$_Loaded implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AboutModel about)? loaded,
+    TResult? Function(AboutModel? about)? loaded,
     TResult? Function(String message)? error,
   }) {
     return loaded?.call(about);
@@ -408,7 +412,7 @@ class _$_Loaded implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AboutModel about)? loaded,
+    TResult Function(AboutModel? about)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -457,9 +461,9 @@ class _$_Loaded implements _Loaded {
 }
 
 abstract class _Loaded implements AboutState {
-  const factory _Loaded(final AboutModel about) = _$_Loaded;
+  const factory _Loaded(final AboutModel? about) = _$_Loaded;
 
-  AboutModel get about;
+  AboutModel? get about;
   @JsonKey(ignore: true)
   _$$_LoadedCopyWith<_$_Loaded> get copyWith =>
       throw _privateConstructorUsedError;
@@ -529,7 +533,7 @@ class _$_Error implements _Error {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(AboutModel about) loaded,
+    required TResult Function(AboutModel? about) loaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -540,7 +544,7 @@ class _$_Error implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(AboutModel about)? loaded,
+    TResult? Function(AboutModel? about)? loaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -551,7 +555,7 @@ class _$_Error implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(AboutModel about)? loaded,
+    TResult Function(AboutModel? about)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {

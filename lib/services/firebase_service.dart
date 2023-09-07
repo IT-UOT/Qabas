@@ -216,9 +216,9 @@ class FirebaseService {
   }
 
   /// About
-  Future<AboutModel> fetchAbout() async {
+  Future<AboutModel?> fetchAbout() async {
     // fetch about from firebase firestore
-    late AboutModel about;
+    AboutModel? about;
     try {
       await firestore
           .collection('about')
@@ -238,7 +238,29 @@ class FirebaseService {
   Future<void> uploadAbout(AboutModel about) async {
     // upload about to firebase firestore
     try {
-      await firestore.collection('about').add(about.toJson());
+      await firestore.collection('about').doc(about.id).set(about.toJson());
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+  }
+
+     Future<void> updateAbout(AboutModel about) async {
+    // update about in firebase firestore
+    try {
+      final docRef = firestore.collection('about').doc(about.id);
+      await docRef.update(about.toJson());
+    } catch (e) {
+      locator<LoggingHelper>().error(e.toString());
+      rethrow;
+    }
+  }
+
+  Future<void> deleteAbout(AboutModel about) async {
+    // delete about from firebase firestore
+    try {
+      final docRef = firestore.collection('about').doc(about.id);
+      await docRef.delete();
     } catch (e) {
       locator<LoggingHelper>().error(e.toString());
       rethrow;

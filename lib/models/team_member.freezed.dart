@@ -23,7 +23,7 @@ mixin _$TeamMemberModel {
   String get name => throw _privateConstructorUsedError;
   String get role => throw _privateConstructorUsedError;
   String get bio => throw _privateConstructorUsedError;
-  Map<String, String> get links => throw _privateConstructorUsedError;
+  List<SocialLink> get links => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +37,7 @@ abstract class $TeamMemberModelCopyWith<$Res> {
           TeamMemberModel value, $Res Function(TeamMemberModel) then) =
       _$TeamMemberModelCopyWithImpl<$Res, TeamMemberModel>;
   @useResult
-  $Res call({String name, String role, String bio, Map<String, String> links});
+  $Res call({String name, String role, String bio, List<SocialLink> links});
 }
 
 /// @nodoc
@@ -74,7 +74,7 @@ class _$TeamMemberModelCopyWithImpl<$Res, $Val extends TeamMemberModel>
       links: null == links
           ? _value.links
           : links // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<SocialLink>,
     ) as $Val);
   }
 }
@@ -87,7 +87,7 @@ abstract class _$$_TeamMemberModelCopyWith<$Res>
       __$$_TeamMemberModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String role, String bio, Map<String, String> links});
+  $Res call({String name, String role, String bio, List<SocialLink> links});
 }
 
 /// @nodoc
@@ -122,7 +122,7 @@ class __$$_TeamMemberModelCopyWithImpl<$Res>
       links: null == links
           ? _value._links
           : links // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<SocialLink>,
     ));
   }
 }
@@ -134,7 +134,7 @@ class _$_TeamMemberModel implements _TeamMemberModel {
       {required this.name,
       required this.role,
       required this.bio,
-      required final Map<String, String> links})
+      required final List<SocialLink> links})
       : _links = links;
 
   factory _$_TeamMemberModel.fromJson(Map<String, dynamic> json) =>
@@ -146,12 +146,12 @@ class _$_TeamMemberModel implements _TeamMemberModel {
   final String role;
   @override
   final String bio;
-  final Map<String, String> _links;
+  final List<SocialLink> _links;
   @override
-  Map<String, String> get links {
-    if (_links is EqualUnmodifiableMapView) return _links;
+  List<SocialLink> get links {
+    if (_links is EqualUnmodifiableListView) return _links;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_links);
+    return EqualUnmodifiableListView(_links);
   }
 
   @override
@@ -194,7 +194,7 @@ abstract class _TeamMemberModel implements TeamMemberModel {
       {required final String name,
       required final String role,
       required final String bio,
-      required final Map<String, String> links}) = _$_TeamMemberModel;
+      required final List<SocialLink> links}) = _$_TeamMemberModel;
 
   factory _TeamMemberModel.fromJson(Map<String, dynamic> json) =
       _$_TeamMemberModel.fromJson;
@@ -206,7 +206,7 @@ abstract class _TeamMemberModel implements TeamMemberModel {
   @override
   String get bio;
   @override
-  Map<String, String> get links;
+  List<SocialLink> get links;
   @override
   @JsonKey(ignore: true)
   _$$_TeamMemberModelCopyWith<_$_TeamMemberModel> get copyWith =>

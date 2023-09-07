@@ -20,9 +20,10 @@ AboutModel _$AboutModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AboutModel {
-  Map<String, String> get sections => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
+  List<Section> get sections => throw _privateConstructorUsedError;
   List<TeamMemberModel> get team => throw _privateConstructorUsedError;
-  Map<String, String> get socialMedia => throw _privateConstructorUsedError;
+  List<SocialLink> get socialMedia => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,9 +38,10 @@ abstract class $AboutModelCopyWith<$Res> {
       _$AboutModelCopyWithImpl<$Res, AboutModel>;
   @useResult
   $Res call(
-      {Map<String, String> sections,
+      {String id,
+      List<Section> sections,
       List<TeamMemberModel> team,
-      Map<String, String> socialMedia});
+      List<SocialLink> socialMedia});
 }
 
 /// @nodoc
@@ -55,15 +57,20 @@ class _$AboutModelCopyWithImpl<$Res, $Val extends AboutModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? sections = null,
     Object? team = null,
     Object? socialMedia = null,
   }) {
     return _then(_value.copyWith(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       sections: null == sections
           ? _value.sections
           : sections // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<Section>,
       team: null == team
           ? _value.team
           : team // ignore: cast_nullable_to_non_nullable
@@ -71,7 +78,7 @@ class _$AboutModelCopyWithImpl<$Res, $Val extends AboutModel>
       socialMedia: null == socialMedia
           ? _value.socialMedia
           : socialMedia // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<SocialLink>,
     ) as $Val);
   }
 }
@@ -85,9 +92,10 @@ abstract class _$$_AboutModelCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Map<String, String> sections,
+      {String id,
+      List<Section> sections,
       List<TeamMemberModel> team,
-      Map<String, String> socialMedia});
+      List<SocialLink> socialMedia});
 }
 
 /// @nodoc
@@ -101,15 +109,20 @@ class __$$_AboutModelCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = null,
     Object? sections = null,
     Object? team = null,
     Object? socialMedia = null,
   }) {
     return _then(_$_AboutModel(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
       sections: null == sections
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<Section>,
       team: null == team
           ? _value._team
           : team // ignore: cast_nullable_to_non_nullable
@@ -117,7 +130,7 @@ class __$$_AboutModelCopyWithImpl<$Res>
       socialMedia: null == socialMedia
           ? _value._socialMedia
           : socialMedia // ignore: cast_nullable_to_non_nullable
-              as Map<String, String>,
+              as List<SocialLink>,
     ));
   }
 }
@@ -127,9 +140,10 @@ class __$$_AboutModelCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_AboutModel implements _AboutModel {
   const _$_AboutModel(
-      {required final Map<String, String> sections,
+      {required this.id,
+      required final List<Section> sections,
       required final List<TeamMemberModel> team,
-      required final Map<String, String> socialMedia})
+      required final List<SocialLink> socialMedia})
       : _sections = sections,
         _team = team,
         _socialMedia = socialMedia;
@@ -137,12 +151,14 @@ class _$_AboutModel implements _AboutModel {
   factory _$_AboutModel.fromJson(Map<String, dynamic> json) =>
       _$$_AboutModelFromJson(json);
 
-  final Map<String, String> _sections;
   @override
-  Map<String, String> get sections {
-    if (_sections is EqualUnmodifiableMapView) return _sections;
+  final String id;
+  final List<Section> _sections;
+  @override
+  List<Section> get sections {
+    if (_sections is EqualUnmodifiableListView) return _sections;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_sections);
+    return EqualUnmodifiableListView(_sections);
   }
 
   final List<TeamMemberModel> _team;
@@ -153,17 +169,17 @@ class _$_AboutModel implements _AboutModel {
     return EqualUnmodifiableListView(_team);
   }
 
-  final Map<String, String> _socialMedia;
+  final List<SocialLink> _socialMedia;
   @override
-  Map<String, String> get socialMedia {
-    if (_socialMedia is EqualUnmodifiableMapView) return _socialMedia;
+  List<SocialLink> get socialMedia {
+    if (_socialMedia is EqualUnmodifiableListView) return _socialMedia;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_socialMedia);
+    return EqualUnmodifiableListView(_socialMedia);
   }
 
   @override
   String toString() {
-    return 'AboutModel(sections: $sections, team: $team, socialMedia: $socialMedia)';
+    return 'AboutModel(id: $id, sections: $sections, team: $team, socialMedia: $socialMedia)';
   }
 
   @override
@@ -171,6 +187,7 @@ class _$_AboutModel implements _AboutModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AboutModel &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality().equals(other._sections, _sections) &&
             const DeepCollectionEquality().equals(other._team, _team) &&
             const DeepCollectionEquality()
@@ -181,6 +198,7 @@ class _$_AboutModel implements _AboutModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
+      id,
       const DeepCollectionEquality().hash(_sections),
       const DeepCollectionEquality().hash(_team),
       const DeepCollectionEquality().hash(_socialMedia));
@@ -201,19 +219,22 @@ class _$_AboutModel implements _AboutModel {
 
 abstract class _AboutModel implements AboutModel {
   const factory _AboutModel(
-      {required final Map<String, String> sections,
+      {required final String id,
+      required final List<Section> sections,
       required final List<TeamMemberModel> team,
-      required final Map<String, String> socialMedia}) = _$_AboutModel;
+      required final List<SocialLink> socialMedia}) = _$_AboutModel;
 
   factory _AboutModel.fromJson(Map<String, dynamic> json) =
       _$_AboutModel.fromJson;
 
   @override
-  Map<String, String> get sections;
+  String get id;
+  @override
+  List<Section> get sections;
   @override
   List<TeamMemberModel> get team;
   @override
-  Map<String, String> get socialMedia;
+  List<SocialLink> get socialMedia;
   @override
   @JsonKey(ignore: true)
   _$$_AboutModelCopyWith<_$_AboutModel> get copyWith =>
