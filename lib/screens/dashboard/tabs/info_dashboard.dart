@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:itmentor/blocs/about/about_cubit.dart';
-import 'package:itmentor/blocs/news/news_cubit.dart';
 import 'package:itmentor/models/about.dart';
-import 'package:itmentor/screens/dashboard/dashboard_item.dart';
-import 'package:itmentor/screens/dashboard/tabs/add_about_page.dart';
 import 'package:itmentor/screens/widgets/loading_widget.dart';
+import 'package:itmentor/utilities/consts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../services/locator.dart';
-import '../../../utilities/consts.dart';
 
 class InfoDashboard extends StatelessWidget {
   const InfoDashboard({super.key});
@@ -22,99 +20,194 @@ class InfoDashboard extends StatelessWidget {
         return state.maybeWhen(
           loaded: (about) {
             return about == null
-                ? Center(
-                    child: FilledButton(
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const EditAboutScreen(
-                                    about: AboutModel(
-                                        id: '1',
-                                        sections: [],
-                                        team: [],
-                                        socialMedia: []),
-                                  )));
-                        },
-                        child: const Text('إضافة')),
+                ? const Center(
+                    child: Text('لا يوجد'),
                   )
-                : Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'ID: ${about.id}',
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'Sections:',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                      const SizedBox(height: 8),
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: about.sections.length,
-                          itemBuilder: (context, index) {
-                            final section = about.sections[index];
-                            return ListTile(
-                              title: Text(section.title),
-                              subtitle: Text(section.content),
-                            );
-                          },
+                : SizedBox(
+                    height: double.infinity,
+                    child: SingleChildScrollView(
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: Consts.paddingMedium,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: about.sections == null
+                              ? []
+                              : [
+                                  ...about.sections!
+                                      .map((e) => Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                e.title,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .titleMedium,
+                                              ),
+                                              const SizedBox(
+                                                height: Consts.paddingSmall,
+                                              ),
+                                              Text(
+                                                e.content,
+                                                style: Theme.of(context)
+                                                    .textTheme
+                                                    .bodyMedium,
+                                              ),
+                                              const SizedBox(
+                                                height: Consts.paddingLarge,
+                                              )
+                                            ],
+                                          ))
+                                      .toList(),
+                                  const SizedBox(
+                                    height: Consts.paddingSmall,
+                                  ),
+                                  ExpansionTile(
+                                    title: Text(
+                                      "روابط",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .titleMedium,
+                                    ),
+                                    children: about.socialMedia == null
+                                        ? []
+                                        : [
+                                            for (var link in about.socialMedia!)
+                                              Column(
+                                                children: [
+                                                  const Padding(
+                                                    padding:
+                                                        EdgeInsets.symmetric(
+                                                            horizontal: Consts
+                                                                .paddingMedium),
+                                                    child: Divider(),
+                                                  ),
+                                                  ListTile(
+                                                    trailing: const Icon(
+                                                      Icons.link,
+                                                      size: Consts
+                                                          .defaultIconSizeSmall,
+                                                      color: Color(0xff898F9B),
+                                                    ),
+                                                    title: Text(link.name,
+                                                        style: Theme.of(context)
+                                                            .textTheme
+                                                            .bodyMedium),
+                                                    onTap: () async {
+                                                      // launch url
+                                                      launchUrl(
+                                                          Uri.parse(link.url),
+                                                          mode: LaunchMode
+                                                              .externalApplication);
+                                                      //    : throw 'Could not launch $e.value';
+                                                    },
+                                                  ),
+                                                  if (about.socialMedia!.last
+                                                          .name ==
+                                                      link.name)
+                                                    const SizedBox(
+                                                      height:
+                                                          Consts.paddingMedium,
+                                                    ),
+                                                ],
+                                              )
+                                          ],
+                                  ),
+                                  const SizedBox(
+                                    height: Consts.paddingLarge * 2,
+                                  ),
+                                  Text(
+                                    "الفريق",
+                                    style:
+                                        Theme.of(context).textTheme.titleMedium,
+                                  ),
+                                  const SizedBox(
+                                    height: Consts.paddingSmall,
+                                  ),
+                                  if (about.team != null)
+                                    ...about.team!
+                                        .map((member) => Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Padding(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      vertical:
+                                                          Consts.paddingSmall),
+                                                  child: ExpansionTile(
+                                                    title: Text(
+                                                      member.name,
+                                                      style: Theme.of(context)
+                                                          .textTheme
+                                                          .titleMedium,
+                                                    ),
+                                                    subtitle: Text(member.role,
+                                                        style: Theme.of(context)
+                                                            .textTheme
+                                                            .bodyMedium),
+                                                    children: [
+                                                      for (var link
+                                                          in member.links)
+                                                        Column(
+                                                          children: [
+                                                            const Padding(
+                                                              padding: EdgeInsets
+                                                                  .symmetric(
+                                                                      horizontal:
+                                                                          Consts
+                                                                              .paddingMedium),
+                                                              child: Divider(),
+                                                            ),
+                                                            ListTile(
+                                                              trailing:
+                                                                  const Icon(
+                                                                Icons.link,
+                                                                size: Consts
+                                                                    .defaultIconSizeSmall,
+                                                                color: Color(
+                                                                    0xff898F9B),
+                                                              ),
+                                                              title: Text(
+                                                                  link.name,
+                                                                  style: Theme.of(
+                                                                          context)
+                                                                      .textTheme
+                                                                      .bodyMedium),
+                                                              onTap: () async {
+                                                                // launch url
+                                                                launchUrl(
+                                                                    Uri.parse(link
+                                                                        .url),
+                                                                    mode: LaunchMode
+                                                                        .externalApplication);
+                                                                //    : throw 'Could not launch $e.value';
+                                                              },
+                                                            ),
+                                                            if (member
+                                                                    .links
+                                                                    .last
+                                                                    .name ==
+                                                                link.name)
+                                                              const SizedBox(
+                                                                height: Consts
+                                                                    .paddingMedium,
+                                                              ),
+                                                          ],
+                                                        )
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ))
+                                        .toList(),
+                                ],
                         ),
                       ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'Team Members:',
-                        style: Theme.of(context).textTheme.subtitle1,
-                      ),
-                      const SizedBox(height: 8),
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: about.team.length,
-                          itemBuilder: (context, index) {
-                            final teamMember = about.team[index];
-                            return ListTile(
-                              title: Text(teamMember.name),
-                              subtitle: Text(teamMember.role),
-                            );
-                          },
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'Social Media Links:',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                      const SizedBox(height: 8),
-                      Expanded(
-                        child: ListView.builder(
-                          itemCount: about.socialMedia.length,
-                          itemBuilder: (context, index) {
-                            final socialLink = about.socialMedia[index];
-                            return ListTile(
-                              title: Text(socialLink.name),
-                              subtitle: Text(socialLink.url),
-                            );
-                          },
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, '/edit_about');
-                        },
-                        child: const Text('Edit'),
-                      ),
-                      const SizedBox(height: 8),
-                      ElevatedButton(
-                        onPressed: () {
-                          context.read<AboutCubit>().deleteAbout(
-                                about,
-                              );
-                          Navigator.pop(context);
-                        },
-                        child: const Text('Delete'),
-                      ),
-                    ],
+                    ),
                   );
           },
           error: (message) {
@@ -128,4 +221,3 @@ class InfoDashboard extends StatelessWidget {
     );
   }
 }
-

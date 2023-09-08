@@ -12,9 +12,9 @@ class AboutModel with _$AboutModel {
   @JsonSerializable(explicitToJson: true)
   const factory AboutModel({
     required String id,
-    required List<Section> sections,
-    required List<TeamMemberModel> team,
-    required List<SocialLink> socialMedia,
+    required List<Section>? sections,
+    required List<TeamMemberModel>? team,
+    required List<SocialLink>? socialMedia,
   }) = _AboutModel;
   factory AboutModel.fromJson(Map<String, dynamic> json) =>
       _$AboutModelFromJson(json);

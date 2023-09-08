@@ -21,9 +21,9 @@ AboutModel _$AboutModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AboutModel {
   String get id => throw _privateConstructorUsedError;
-  List<Section> get sections => throw _privateConstructorUsedError;
-  List<TeamMemberModel> get team => throw _privateConstructorUsedError;
-  List<SocialLink> get socialMedia => throw _privateConstructorUsedError;
+  List<Section>? get sections => throw _privateConstructorUsedError;
+  List<TeamMemberModel>? get team => throw _privateConstructorUsedError;
+  List<SocialLink>? get socialMedia => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,9 +39,9 @@ abstract class $AboutModelCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      List<Section> sections,
-      List<TeamMemberModel> team,
-      List<SocialLink> socialMedia});
+      List<Section>? sections,
+      List<TeamMemberModel>? team,
+      List<SocialLink>? socialMedia});
 }
 
 /// @nodoc
@@ -58,27 +58,27 @@ class _$AboutModelCopyWithImpl<$Res, $Val extends AboutModel>
   @override
   $Res call({
     Object? id = null,
-    Object? sections = null,
-    Object? team = null,
-    Object? socialMedia = null,
+    Object? sections = freezed,
+    Object? team = freezed,
+    Object? socialMedia = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      sections: null == sections
+      sections: freezed == sections
           ? _value.sections
           : sections // ignore: cast_nullable_to_non_nullable
-              as List<Section>,
-      team: null == team
+              as List<Section>?,
+      team: freezed == team
           ? _value.team
           : team // ignore: cast_nullable_to_non_nullable
-              as List<TeamMemberModel>,
-      socialMedia: null == socialMedia
+              as List<TeamMemberModel>?,
+      socialMedia: freezed == socialMedia
           ? _value.socialMedia
           : socialMedia // ignore: cast_nullable_to_non_nullable
-              as List<SocialLink>,
+              as List<SocialLink>?,
     ) as $Val);
   }
 }
@@ -93,9 +93,9 @@ abstract class _$$_AboutModelCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      List<Section> sections,
-      List<TeamMemberModel> team,
-      List<SocialLink> socialMedia});
+      List<Section>? sections,
+      List<TeamMemberModel>? team,
+      List<SocialLink>? socialMedia});
 }
 
 /// @nodoc
@@ -110,27 +110,27 @@ class __$$_AboutModelCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? sections = null,
-    Object? team = null,
-    Object? socialMedia = null,
+    Object? sections = freezed,
+    Object? team = freezed,
+    Object? socialMedia = freezed,
   }) {
     return _then(_$_AboutModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      sections: null == sections
+      sections: freezed == sections
           ? _value._sections
           : sections // ignore: cast_nullable_to_non_nullable
-              as List<Section>,
-      team: null == team
+              as List<Section>?,
+      team: freezed == team
           ? _value._team
           : team // ignore: cast_nullable_to_non_nullable
-              as List<TeamMemberModel>,
-      socialMedia: null == socialMedia
+              as List<TeamMemberModel>?,
+      socialMedia: freezed == socialMedia
           ? _value._socialMedia
           : socialMedia // ignore: cast_nullable_to_non_nullable
-              as List<SocialLink>,
+              as List<SocialLink>?,
     ));
   }
 }
@@ -141,9 +141,9 @@ class __$$_AboutModelCopyWithImpl<$Res>
 class _$_AboutModel implements _AboutModel {
   const _$_AboutModel(
       {required this.id,
-      required final List<Section> sections,
-      required final List<TeamMemberModel> team,
-      required final List<SocialLink> socialMedia})
+      required final List<Section>? sections,
+      required final List<TeamMemberModel>? team,
+      required final List<SocialLink>? socialMedia})
       : _sections = sections,
         _team = team,
         _socialMedia = socialMedia;
@@ -153,28 +153,34 @@ class _$_AboutModel implements _AboutModel {
 
   @override
   final String id;
-  final List<Section> _sections;
+  final List<Section>? _sections;
   @override
-  List<Section> get sections {
+  List<Section>? get sections {
+    final value = _sections;
+    if (value == null) return null;
     if (_sections is EqualUnmodifiableListView) return _sections;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_sections);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<TeamMemberModel> _team;
+  final List<TeamMemberModel>? _team;
   @override
-  List<TeamMemberModel> get team {
+  List<TeamMemberModel>? get team {
+    final value = _team;
+    if (value == null) return null;
     if (_team is EqualUnmodifiableListView) return _team;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_team);
+    return EqualUnmodifiableListView(value);
   }
 
-  final List<SocialLink> _socialMedia;
+  final List<SocialLink>? _socialMedia;
   @override
-  List<SocialLink> get socialMedia {
+  List<SocialLink>? get socialMedia {
+    final value = _socialMedia;
+    if (value == null) return null;
     if (_socialMedia is EqualUnmodifiableListView) return _socialMedia;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_socialMedia);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -220,9 +226,9 @@ class _$_AboutModel implements _AboutModel {
 abstract class _AboutModel implements AboutModel {
   const factory _AboutModel(
       {required final String id,
-      required final List<Section> sections,
-      required final List<TeamMemberModel> team,
-      required final List<SocialLink> socialMedia}) = _$_AboutModel;
+      required final List<Section>? sections,
+      required final List<TeamMemberModel>? team,
+      required final List<SocialLink>? socialMedia}) = _$_AboutModel;
 
   factory _AboutModel.fromJson(Map<String, dynamic> json) =
       _$_AboutModel.fromJson;
@@ -230,11 +236,11 @@ abstract class _AboutModel implements AboutModel {
   @override
   String get id;
   @override
-  List<Section> get sections;
+  List<Section>? get sections;
   @override
-  List<TeamMemberModel> get team;
+  List<TeamMemberModel>? get team;
   @override
-  List<SocialLink> get socialMedia;
+  List<SocialLink>? get socialMedia;
   @override
   @JsonKey(ignore: true)
   _$$_AboutModelCopyWith<_$_AboutModel> get copyWith =>
